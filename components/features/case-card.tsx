@@ -7,11 +7,20 @@ interface CaseCardProps {
 }
 
 const tagLabels: Record<string, string> = {
+  "agentic-ai": "Agentic AI",
+  "mcp": "MCP 协议",
+  "multi-modal": "多模态 AI",
+  "ecommerce": "电商",
+  "automation": "自动化",
+  "video-generation": "视频生成",
+  "image-generation": "图像生成",
+  "comfyui": "ComfyUI",
   "computer-vision": "计算机视觉",
   "nlp": "NLP",
   "recommendation": "推荐系统",
   "deep-learning": "深度学习",
   "data-engineering": "数据工程",
+  "bi-analytics": "BI 分析",
   "high-performance": "高性能计算",
   "mlops": "MLOps",
   "distributed-system": "分布式系统",
@@ -62,11 +71,19 @@ export default function CaseCard({ case: caseData }: CaseCardProps) {
 
         {/* 项目规模 */}
         <div className="mt-auto pt-4 border-t border-border">
-          <div className="flex justify-between text-xs text-muted-foreground">
+          <div className="flex flex-col gap-1 text-xs text-muted-foreground">
             {caseData.scale.budget && (
-              <span>规模：{caseData.scale.budget}</span>
+              <span>💰 规模：{caseData.scale.budget}</span>
             )}
-            <span>工期：{caseData.scale.duration}</span>
+            {caseData.scale.duration && (
+              <span>⏱️ 工期：{caseData.scale.duration}</span>
+            )}
+            {caseData.scale.codeLines && (
+              <span>📦 代码：{caseData.scale.codeLines}</span>
+            )}
+            {caseData.scale.repos && (
+              <span>🔗 仓库：{caseData.scale.repos}</span>
+            )}
           </div>
         </div>
       </CardContent>

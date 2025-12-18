@@ -1,9 +1,18 @@
 export type TechTag =
+  | "agentic-ai"
+  | "mcp"
+  | "multi-modal"
+  | "ecommerce"
+  | "automation"
+  | "video-generation"
+  | "image-generation"
+  | "comfyui"
   | "computer-vision"
   | "nlp"
   | "recommendation"
   | "deep-learning"
   | "data-engineering"
+  | "bi-analytics"
   | "high-performance"
   | "mlops"
   | "distributed-system"
@@ -20,7 +29,9 @@ export interface Case {
   highlights: string[]
   scale: {
     budget?: string
-    duration: string
+    duration?: string
+    codeLines?: string
+    repos?: string
   }
   tags: TechTag[]
   image?: string
