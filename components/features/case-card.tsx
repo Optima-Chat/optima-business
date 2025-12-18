@@ -1,6 +1,10 @@
+"use client"
+
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Case } from "@/types"
+import { motion } from "framer-motion"
+import { useState } from "react"
 
 interface CaseCardProps {
   case: Case
@@ -28,64 +32,135 @@ const tagLabels: Record<string, string> = {
 }
 
 export default function CaseCard({ case: caseData }: CaseCardProps) {
-  return (
-    <Card className="group hover:border-blue-400 transition-all duration-300 h-full flex flex-col card-hover shine-effect bg-white border-slate-200">
-      <CardHeader>
-        <div className="flex flex-wrap gap-2 mb-3">
-          {caseData.tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-xs bg-blue-100 hover:bg-blue-200 border border-blue-200 transition-colors">
-              {tagLabels[tag] || tag}
-            </Badge>
-          ))}
-        </div>
-        <CardTitle className="text-xl mb-2 group-hover:text-blue-600 transition-colors">
-          {caseData.title}
-        </CardTitle>
-        <CardDescription className="text-sm">
-          <span className="font-semibold">行业：</span>{caseData.industry}
-        </CardDescription>
-      </CardHeader>
+  const [isHovered, setIsHovered] = useState(false)
 
-      <CardContent className="flex-1 flex flex-col">
+  return (
+    <motion.div
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+    >
+      <Card className="group h-full flex flex-col bg-gradient-to-br from-white via-white to-slate-50 border-2 border-slate-200 hover:border-blue-400 shadow-md hover:shadow-2xl hover:shadow-blue-100/50 transition-all duration-300 relative overflow-hidden">
+        {/* 悬停渐变背景 */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-cyan-500/0"
+          animate={isHovered ? { opacity: [0, 0.05, 0.03] } : { opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        />
+
+        {/* 装饰性角标 */}
+        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+        <CardHeader className="relative">
+          <div className="flex flex-wrap gap-2 mb-3">
+            {caseData.tags.map((tag, index) => (
+              <motion.div
+                key={tag}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+              >
+                <Badge
+                  variant="secondary"
+                  className="text-xs bg-gradient-to-r from-blue-100 to-cyan-100 hover:from-blue-200 hover:to-cyan-200 border-blue-200 transition-all duration-200 hover:scale-105"
+                >
+                  {tagLabels[tag] || tag}
+                </Badge>
+              </motion.div>
+            ))}
+          </div>
+          <CardTitle className="text-xl mb-2 group-hover:text-blue-600 transition-colors">
+            {caseData.title}
+          </CardTitle>
+          <CardDescription className="text-sm">
+            <span className="font-semibold">行业：</span>{caseData.industry}
+          </CardDescription>
+        </CardHeader>
+
+      <CardContent className="flex-1 flex flex-col relative">
         {/* 技术栈 */}
         <div className="mb-4">
-          <h4 className="text-sm font-semibold mb-2">技术栈</h4>
-          <p className="text-sm text-muted-foreground">
+          <h4 className="text-sm font-semibold mb-2 flex items-center">
+            <span className="w-1 h-4 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-2" />
+            技术栈
+          </h4>
+          <p className="text-sm text-muted-foreground pl-3">
             {caseData.techStack.join(" · ")}
           </p>
         </div>
 
         {/* 关键成果 */}
         <div className="mb-4">
-          <h4 className="text-sm font-semibold mb-2">关键成果</h4>
-          <ul className="space-y-1">
+          <h4 className="text-sm font-semibold mb-2 flex items-center">
+            <span className="w-1 h-4 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-2" />
+            关键成果
+          </h4>
+          <ul className="space-y-1.5 pl-3">
             {caseData.achievements.map((achievement, i) => (
-              <li key={i} className="text-sm text-muted-foreground flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>{achievement}</span>
-              </li>
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: i * 0.1 }}
+                className="text-sm text-muted-foreground flex items-start group/item"
+              >
+                <motion.span
+                  className="text-blue-500 mr-2 inline-block"
+                  whileHover={{ scale: 1.3, rotate: 90 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  •
+                </motion.span>
+                <span className="group-hover/item:text-foreground transition-colors">{achievement}</span>
+              </motion.li>
             ))}
           </ul>
         </div>
 
         {/* 项目规模 */}
-        <div className="mt-auto pt-4 border-t border-border">
-          <div className="flex flex-col gap-1 text-xs text-muted-foreground">
+        <div className="mt-auto pt-4 border-t border-slate-200 group-hover:border-blue-200 transition-colors">
+          <div className="grid grid-cols-2 gap-2 text-xs">
             {caseData.scale.budget && (
-              <span>💰 规模：{caseData.scale.budget}</span>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50"
+              >
+                <span className="text-base">💰</span>
+                <span>{caseData.scale.budget}</span>
+              </motion.div>
             )}
             {caseData.scale.duration && (
-              <span>⏱️ 工期：{caseData.scale.duration}</span>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50"
+              >
+                <span className="text-base">⏱️</span>
+                <span>{caseData.scale.duration}</span>
+              </motion.div>
             )}
             {caseData.scale.codeLines && (
-              <span>📦 代码：{caseData.scale.codeLines}</span>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50"
+              >
+                <span className="text-base">📦</span>
+                <span>{caseData.scale.codeLines}</span>
+              </motion.div>
             )}
             {caseData.scale.repos && (
-              <span>🔗 仓库：{caseData.scale.repos}</span>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50"
+              >
+                <span className="text-base">🔗</span>
+                <span>{caseData.scale.repos}</span>
+              </motion.div>
             )}
           </div>
         </div>
       </CardContent>
     </Card>
+    </motion.div>
   )
 }

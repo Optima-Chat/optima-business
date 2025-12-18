@@ -1,38 +1,65 @@
+"use client"
+
 import Link from "next/link"
 import Container from "@/components/layout/container"
 import { Button } from "@/components/ui/button"
 import CaseCard from "@/components/features/case-card"
 import { cases } from "@/lib/data/cases"
+import { motion } from "framer-motion"
+import { useInView } from "framer-motion"
+import { useRef } from "react"
 
 export default function FeaturedCases() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
+
   // 显示前3个案例
   const featuredCases = cases.slice(0, 3)
 
   return (
-    <section className="py-20 md:py-32 border-t border-border">
+    <section className="py-20 md:py-32 border-t border-border" ref={ref}>
       <Container>
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             精选案例
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             深度 AI 技术，端到端交付，实际业务验证
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {featuredCases.map((caseItem) => (
-            <CaseCard key={caseItem.id} case={caseItem} />
+          {featuredCases.map((caseItem, index) => (
+            <motion.div
+              key={caseItem.id}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+            >
+              <CaseCard case={caseItem} />
+            </motion.div>
           ))}
         </div>
 
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
           <Link href="/cases">
-            <Button variant="outline" size="lg">
-              查看全部案例
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <Button variant="outline" size="lg">
+                查看全部案例
+              </Button>
+            </motion.div>
           </Link>
-        </div>
+        </motion.div>
       </Container>
     </section>
   )
