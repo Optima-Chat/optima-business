@@ -203,7 +203,7 @@
 - **联系方式卡片**:
   ```
   📧 邮箱咨询
-  dev@optima.chat
+  business@optima.chat
 
   💬 在线咨询
   [咨询表单]
@@ -237,7 +237,7 @@
   - 案例
   - 联系我们
 - 联系方式:
-  - 邮箱: dev@optima.chat
+  - 邮箱: business@optima.chat
 - 版权信息: © 2025 Optima AI Limited. All rights reserved.
 
 ---

@@ -483,7 +483,7 @@ export async function POST(request: Request) {
     // 发送邮件通知
     await resend.emails.send({
       from: 'noreply@optima.business',
-      to: 'dev@optima.chat',
+      to: 'business@optima.chat',
       subject: `[官网咨询] ${validatedData.name} - ${validatedData.company}`,
       html: `
         <h2>新的咨询表单</h2>
@@ -782,7 +782,7 @@ RESEND_API_KEY=re_xxxxxxxxxxxx
 
 # 网站配置
 NEXT_PUBLIC_SITE_URL=https://optima.business
-NEXT_PUBLIC_CONTACT_EMAIL=dev@optima.chat
+NEXT_PUBLIC_CONTACT_EMAIL=business@optima.chat
 ```
 
 ### 9.3 CI/CD 流程

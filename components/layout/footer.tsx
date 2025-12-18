@@ -58,10 +58,10 @@ export default function Footer() {
                 <li className="text-sm text-muted-foreground">
                   邮箱：{" "}
                   <a
-                    href="mailto:dev@optima.chat"
+                    href="mailto:business@optima.chat"
                     className="hover:text-foreground transition-colors"
                   >
-                    dev@optima.chat
+                    business@optima.chat
                   </a>
                 </li>
               </ul>

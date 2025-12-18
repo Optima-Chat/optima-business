@@ -62,7 +62,7 @@ npm start
 
 **極致智能科技有限公司（Optima AI Limited）**
 - 官网: https://ai.optima.shop
-- 邮箱: dev@optima.chat
+- 商务咨询: business@optima.chat
 
 ---
 

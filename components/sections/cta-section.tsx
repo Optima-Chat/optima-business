@@ -19,7 +19,7 @@ export default function CTASection() {
                 立即咨询
               </Button>
             </Link>
-            <Link href="mailto:dev@optima.chat">
+            <Link href="mailto:business@optima.chat">
               <Button size="lg" variant="outline" className="text-base px-8">
                 发送邮件
               </Button>

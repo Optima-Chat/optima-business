@@ -66,10 +66,10 @@ export default function ContactForm() {
             <div>
               <h3 className="text-sm font-semibold mb-2">邮箱咨询</h3>
               <a
-                href="mailto:dev@optima.chat"
+                href="mailto:business@optima.chat"
                 className="text-primary hover:underline"
               >
-                dev@optima.chat
+                business@optima.chat
               </a>
             </div>
             <div>
@@ -176,7 +176,7 @@ export default function ContactForm() {
             )}
             {submitStatus === "error" && (
               <div className="p-3 bg-destructive/10 border border-destructive/50 rounded-md text-sm text-destructive">
-                提交失败，请重试或直接发送邮件至 dev@optima.chat
+                提交失败，请重试或直接发送邮件至 business@optima.chat
               </div>
             )}
 
