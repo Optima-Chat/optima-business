@@ -125,7 +125,7 @@ export default function Hero() {
             </Link>
             <Link href="/cases">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                <Button size="lg" variant="outline" className="text-base px-8 border-2 border-slate-300 hover:border-blue-500 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 transition-all duration-300">
+                <Button size="lg" variant="outline" className="text-base px-8 border-2 border-slate-300 hover:border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-sm hover:shadow-md">
                   查看案例
                 </Button>
               </motion.div>

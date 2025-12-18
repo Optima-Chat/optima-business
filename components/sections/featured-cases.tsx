@@ -54,7 +54,7 @@ export default function FeaturedCases() {
         >
           <Link href="/cases">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-sm hover:shadow-md">
                 查看全部案例
               </Button>
             </motion.div>
