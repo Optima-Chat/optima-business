@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export default function CTASection() {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-primary/10 via-purple-500/10 to-background">
+    <section className="py-20 md:py-32 bg-gradient-to-br from-blue-50 to-purple-50">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
 
       <Container className="relative">
         <div className="mx-auto max-w-4xl text-center">
@@ -28,7 +28,7 @@ export default function Hero() {
 
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12">
-            <Card className="p-6 bg-card/50 backdrop-blur border-border/50 hover:border-primary/50 transition-colors">
+            <Card className="p-6 bg-white/80 backdrop-blur border hover:border-primary/50 transition-colors hover:shadow-md">
               <div className="text-3xl font-bold text-primary mb-2">2个月</div>
               <div className="text-sm text-muted-foreground">快速交付</div>
               <div className="text-xs text-muted-foreground/60 mt-1">
@@ -36,7 +36,7 @@ export default function Hero() {
               </div>
             </Card>
 
-            <Card className="p-6 bg-card/50 backdrop-blur border-border/50 hover:border-primary/50 transition-colors">
+            <Card className="p-6 bg-white/80 backdrop-blur border hover:border-primary/50 transition-colors hover:shadow-md">
               <div className="text-3xl font-bold text-primary mb-2">60万+</div>
               <div className="text-sm text-muted-foreground">行生产代码</div>
               <div className="text-xs text-muted-foreground/60 mt-1">
@@ -44,7 +44,7 @@ export default function Hero() {
               </div>
             </Card>
 
-            <Card className="p-6 bg-card/50 backdrop-blur border-border/50 hover:border-primary/50 transition-colors">
+            <Card className="p-6 bg-white/80 backdrop-blur border hover:border-primary/50 transition-colors hover:shadow-md">
               <div className="text-3xl font-bold text-primary mb-2">顶级</div>
               <div className="text-sm text-muted-foreground">技术团队</div>
               <div className="text-xs text-muted-foreground/60 mt-1">

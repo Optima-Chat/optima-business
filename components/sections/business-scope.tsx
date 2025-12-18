@@ -5,7 +5,7 @@ import { businessScopes } from "@/lib/data/business-scope"
 
 export default function BusinessScope() {
   return (
-    <section className="py-20 md:py-32 bg-muted/30">
+    <section className="py-20 md:py-32 bg-gray-50">
       <Container>
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
