@@ -3,13 +3,18 @@ import Link from 'next/link'
 import Container from "@/components/layout/container"
 import CaseCard from "@/components/features/case-card"
 import { cases } from "@/lib/data/cases"
+import { locales } from '@/i18n/request'
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'cases' })
 
   return {
-    title: t('pageTitle'),
+    title: `${t('pageTitle')} | Optima AI`,
     description: t('pageSubtitle'),
   }
 }

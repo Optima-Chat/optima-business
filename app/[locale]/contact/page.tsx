@@ -1,13 +1,18 @@
 import { getTranslations } from 'next-intl/server'
 import Container from "@/components/layout/container"
 import ContactForm from "@/components/features/contact-form"
+import { locales } from '@/i18n/request'
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'contact' })
 
   return {
-    title: t('title'),
+    title: `${t('title')} | Optima AI`,
     description: t('subtitle'),
   }
 }
