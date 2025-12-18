@@ -16,14 +16,15 @@ export default function CoreCapabilities() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {capabilities.map((capability) => (
+          {capabilities.map((capability, index) => (
             <Card
               key={capability.id}
-              className="relative group hover:border-primary/50 transition-all duration-300"
+              className="relative group hover:border-primary/50 transition-all duration-300 card-hover shine-effect bg-gradient-to-br from-white via-white to-blue-50/20 animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
-                <div className="text-5xl mb-4">{capability.icon}</div>
-                <CardTitle className="text-xl mb-3">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{capability.icon}</div>
+                <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors">
                   {capability.title}
                 </CardTitle>
                 <CardDescription className="text-base leading-relaxed">
