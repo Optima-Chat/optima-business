@@ -55,7 +55,8 @@ export async function POST(request: Request) {
     const origin = request.headers.get("origin")
     const allowedOrigins = [
       "http://localhost:3000",
-      "https://optima.business",
+      "https://optima-ai.biz",
+      "https://optima-business.vercel.app",
       process.env.NEXT_PUBLIC_SITE_URL,
     ].filter(Boolean)
 
