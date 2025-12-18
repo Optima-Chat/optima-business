@@ -255,7 +255,35 @@ nslookup optima-ai.biz
 - 部署到 Vercel 生产环境
 - 自定义域名：optima-ai.biz
 
+## 🔧 故障排查历史
+
+### 2025-12-18: 联系表单 403 错误
+
+**问题**: 用户在 optima-ai.biz 提交表单时出现 "禁止访问" 错误
+
+**原因**: API 路由的 Origin 验证中硬编码了旧域名 `optima.business`
+
+**解决方案**:
+```typescript
+// app/api/contact/route.ts
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://optima-ai.biz",           // ✅ 更新为新域名
+  "https://optima-business.vercel.app", // ✅ 添加 Vercel 域名
+  process.env.NEXT_PUBLIC_SITE_URL,
+]
+```
+
+**验证**:
+```bash
+curl -X POST https://optima-ai.biz/api/contact \
+  -H "Content-Type: application/json" \
+  -H "Origin: https://optima-ai.biz" \
+  -d '{"name":"测试","email":"test@example.com","message":"测试消息至少十个字符"}'
+# 返回: {"success":true} ✅
+```
+
 ---
 
 **最后更新**: 2025-12-18
-**部署版本**: v1.0.0
+**部署版本**: v1.0.1
