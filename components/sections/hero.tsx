@@ -32,7 +32,7 @@ export default function Hero() {
               <div className="text-3xl font-bold text-primary mb-2">🤖 Agentic AI</div>
               <div className="text-sm text-muted-foreground">企业级 AI Agent</div>
               <div className="text-xs text-muted-foreground/60 mt-1">
-                MCP 协议、Claude SDK、多轮对话
+                智能决策、工具调用、多轮对话
               </div>
             </Card>
 
@@ -40,7 +40,7 @@ export default function Hero() {
               <div className="text-3xl font-bold text-primary mb-2">🎬 AI 创作</div>
               <div className="text-sm text-muted-foreground">图像/视频生成</div>
               <div className="text-xs text-muted-foreground/60 mt-1">
-                ComfyUI 商业化、Workflow 编排
+                工作流编排、自动化创作、风格迁移
               </div>
             </Card>
 
@@ -48,7 +48,7 @@ export default function Hero() {
               <div className="text-3xl font-bold text-primary mb-2">👁️ 判别模型</div>
               <div className="text-sm text-muted-foreground">CV + BI 分析</div>
               <div className="text-xs text-muted-foreground/60 mt-1">
-                CLIP/FAISS、数据洞察、推荐系统
+                特征提取、相似度检索、数据洞察
               </div>
             </Card>
           </div>

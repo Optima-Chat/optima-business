@@ -8,13 +8,12 @@ interface CaseCardProps {
 
 const tagLabels: Record<string, string> = {
   "agentic-ai": "Agentic AI",
-  "mcp": "MCP 协议",
+  "mcp": "标准协议",
   "multi-modal": "多模态 AI",
   "ecommerce": "电商",
   "automation": "自动化",
   "video-generation": "视频生成",
   "image-generation": "图像生成",
-  "comfyui": "ComfyUI",
   "computer-vision": "计算机视觉",
   "nlp": "NLP",
   "recommendation": "推荐系统",

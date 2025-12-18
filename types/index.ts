@@ -6,7 +6,6 @@ export type TechTag =
   | "automation"
   | "video-generation"
   | "image-generation"
-  | "comfyui"
   | "computer-vision"
   | "nlp"
   | "recommendation"
