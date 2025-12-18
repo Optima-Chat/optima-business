@@ -28,15 +28,17 @@ export default function ContactForm() {
     setSubmitStatus("idle")
 
     try {
-      // TODO: 实现 API 调用
-      // const response = await fetch("/api/contact", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(data),
-      // })
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
 
-      // 模拟提交
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || "提交失败")
+      }
 
       setSubmitStatus("success")
       reset()
