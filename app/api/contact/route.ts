@@ -2,7 +2,19 @@ import { NextResponse } from "next/server"
 import { Resend } from "resend"
 import { contactFormSchema } from "@/lib/validations/contact"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// 延迟初始化 Resend，避免构建时报错
+let resend: Resend | null = null
+
+function getResendClient() {
+  if (!resend) {
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      throw new Error("缺少 RESEND_API_KEY 环境变量")
+    }
+    resend = new Resend(apiKey)
+  }
+  return resend
+}
 
 // 简单的内存速率限制
 const rateLimit = new Map<string, { count: number; resetTime: number }>()
@@ -59,7 +71,8 @@ export async function POST(request: Request) {
     const validatedData = contactFormSchema.parse(body)
 
     // 发送邮件通知
-    const emailResult = await resend.emails.send({
+    const resendClient = getResendClient()
+    const emailResult = await resendClient.emails.send({
       from: "Optima AI 官网 <noreply@optima.sh>",
       to: "business@optima.chat",
       subject: `[官网咨询] ${validatedData.name}${validatedData.company ? ` - ${validatedData.company}` : ""}`,
