@@ -66,20 +66,41 @@ export default function ContactForm() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <h3 className="text-sm font-semibold mb-2">邮箱咨询</h3>
-              <a
-                href="mailto:business@optima.chat"
-                className="text-primary hover:underline"
-              >
-                business@optima.chat
-              </a>
-            </div>
-            <div>
               <h3 className="text-sm font-semibold mb-2">公司名称</h3>
               <p className="text-sm text-muted-foreground">
                 極致智能科技有限公司
                 <br />
                 Optima AI Limited
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-semibold mb-2">业务范围</h3>
+              <p className="text-sm text-muted-foreground">
+                人工智能软件开发<br />
+                大数据技术应用与解决方案
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-semibold mb-2">邮箱咨询</h3>
+              <a
+                href="mailto:business@optima.chat"
+                className="text-primary hover:underline text-sm"
+              >
+                business@optima.chat
+              </a>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-semibold mb-2">香港办公室</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                香港尖沙咀加连威老道100号<br />
+                港晶中心10楼1001(H)室
+              </p>
+              <p className="text-xs text-muted-foreground/70 mt-2">
+                Room 1001(H), 10/F., Harbour Crystal Centre,<br />
+                100 Granville Road, Tsim Sha Tsui, HK
               </p>
             </div>
           </CardContent>

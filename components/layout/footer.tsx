@@ -41,11 +41,17 @@ export default function Footer() {
             {/* 公司信息 */}
             <div>
               <FooterLogo />
-              <p className="text-sm text-muted-foreground mb-2">
+              <p className="text-sm font-medium text-foreground mb-1">
                 極致智能科技有限公司
               </p>
-              <p className="text-sm text-muted-foreground">
-                AI 驱动的全栈技术服务
+              <p className="text-sm text-muted-foreground mb-3">
+                Optima AI Limited
+              </p>
+              <p className="text-xs text-muted-foreground mb-2">
+                人工智能软件开发 · 大数据技术
+              </p>
+              <p className="text-xs text-muted-foreground">
+                应用与解决方案
               </p>
             </div>
 
@@ -82,7 +88,7 @@ export default function Footer() {
                 <span className="w-1 h-4 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-2" />
                 联系方式
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 <li className="text-sm text-muted-foreground">
                   <motion.a
                     href="mailto:business@optima.chat"
@@ -93,6 +99,19 @@ export default function Footer() {
                     <span className="text-base">📧</span>
                     <span className="group-hover:underline">business@optima.chat</span>
                   </motion.a>
+                </li>
+                <li className="text-xs text-muted-foreground leading-relaxed">
+                  <div className="flex items-start gap-2">
+                    <span className="text-base mt-0.5">📍</span>
+                    <div>
+                      <p>香港尖沙咀加连威老道100号</p>
+                      <p>港晶中心10楼1001(H)室</p>
+                      <p className="text-[10px] text-muted-foreground/70 mt-1">
+                        Room 1001(H), 10/F., Harbour Crystal Centre,<br />
+                        100 Granville Road, Tsim Sha Tsui, HK
+                      </p>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
