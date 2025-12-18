@@ -1,12 +1,16 @@
 "use client"
 
 import Link from "next/link"
+import { useTranslations, useLocale } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { motion } from "framer-motion"
 
 export default function Hero() {
+  const t = useTranslations('hero')
+  const tNav = useTranslations('nav')
+  const locale = useLocale()
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
       {/* Enhanced Background with animated gradient - 商务蓝色调 */}
@@ -34,7 +38,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="gradient-text">
-              極致智能 Optima AI
+              {t('title')}
             </span>
           </motion.h1>
 
@@ -45,7 +49,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            AI 驱动的全栈技术服务
+            {t('subtitle')}
           </motion.p>
           <motion.p
             className="text-lg md:text-xl text-muted-foreground/80 mb-12"
@@ -53,7 +57,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
-            从算法到产品，端到端交付
+            {t('description')}
           </motion.p>
 
           {/* Tech Highlights with enhanced effects - 商务蓝色系 */}
@@ -61,25 +65,25 @@ export default function Hero() {
             {[
               {
                 icon: "🤖",
-                title: "Agentic AI",
-                subtitle: "企业级 AI Agent",
-                description: "智能决策、工具调用、多轮对话",
+                title: t('agenticAI'),
+                subtitle: t('agenticAISubtitle'),
+                description: t('agenticAIDesc'),
                 gradient: "from-blue-600 to-blue-500",
                 delay: 0.4
               },
               {
                 icon: "🎬",
-                title: "AI 创作",
-                subtitle: "图像/视频生成",
-                description: "工作流编排、自动化创作、风格迁移",
+                title: t('aiCreation'),
+                subtitle: t('aiCreationSubtitle'),
+                description: t('aiCreationDesc'),
                 gradient: "from-cyan-600 to-blue-600",
                 delay: 0.5
               },
               {
                 icon: "👁️",
-                title: "判别模型",
-                subtitle: "CV + BI 分析",
-                description: "特征提取、相似度检索、数据洞察",
+                title: t('discriminativeModel'),
+                subtitle: t('discriminativeModelSubtitle'),
+                description: t('discriminativeModelDesc'),
                 gradient: "from-blue-700 to-cyan-600",
                 delay: 0.6
               }
@@ -116,17 +120,17 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
           >
-            <Link href="/contact">
+            <Link href={`/${locale}/contact`}>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Button size="lg" className="text-base px-8 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 transition-all duration-300">
-                  开始咨询
+                  {tNav('startConsulting')}
                 </Button>
               </motion.div>
             </Link>
-            <Link href="/cases">
+            <Link href={`/${locale}/cases`}>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Button size="lg" variant="outline" className="text-base px-8 border-2 border-slate-300 hover:border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-sm hover:shadow-md">
-                  查看案例
+                  {t('viewCases')}
                 </Button>
               </motion.div>
             </Link>

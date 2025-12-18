@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useTranslations, useLocale } from 'next-intl'
 import Container from "./container"
 import { motion } from "framer-motion"
 
@@ -27,6 +28,18 @@ function FooterLogo() {
 }
 
 export default function Footer() {
+  const t = useTranslations('footer')
+  const tCommon = useTranslations('common')
+  const tNav = useTranslations('nav')
+  const tContact = useTranslations('contact')
+  const locale = useLocale()
+
+  const navLinks = [
+    { href: `/${locale}`, label: tNav('home') },
+    { href: `/${locale}/cases`, label: tNav('cases') },
+    { href: `/${locale}/contact`, label: tNav('contact') }
+  ]
+
   return (
     <footer className="border-t border-border bg-gradient-to-b from-gray-50 to-slate-100 relative overflow-hidden">
       {/* 装饰性背景 */}
@@ -42,16 +55,16 @@ export default function Footer() {
             <div>
               <FooterLogo />
               <p className="text-sm font-medium text-foreground mb-1">
-                極致智能科技有限公司
+                {tCommon('companyName')}
               </p>
               <p className="text-sm text-muted-foreground mb-3">
-                Optima AI Limited
+                {tCommon('companyNameEn')}
               </p>
               <p className="text-xs text-muted-foreground mb-2">
-                人工智能软件开发 · 大数据技术
+                {tCommon('businessScope')}
               </p>
               <p className="text-xs text-muted-foreground">
-                应用与解决方案
+                {tCommon('businessScopeDetail')}
               </p>
             </div>
 
@@ -59,14 +72,10 @@ export default function Footer() {
             <div>
               <h3 className="text-sm font-semibold mb-3 flex items-center">
                 <span className="w-1 h-4 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-2" />
-                导航
+                {t('navigation')}
               </h3>
               <ul className="space-y-2">
-                {[
-                  { href: "/", label: "首页" },
-                  { href: "/cases", label: "案例" },
-                  { href: "/contact", label: "联系我们" }
-                ].map((link) => (
+                {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link href={link.href}>
                       <motion.span
@@ -86,29 +95,27 @@ export default function Footer() {
             <div>
               <h3 className="text-sm font-semibold mb-3 flex items-center">
                 <span className="w-1 h-4 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-2" />
-                联系方式
+                {t('contactInfo')}
               </h3>
               <ul className="space-y-3">
                 <li className="text-sm text-muted-foreground">
                   <motion.a
-                    href="mailto:business@optima.chat"
+                    href={`mailto:${tCommon('email')}`}
                     className="hover:text-blue-600 transition-colors inline-flex items-center gap-2 group"
                     whileHover={{ x: 3 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <span className="text-base">📧</span>
-                    <span className="group-hover:underline">business@optima.chat</span>
+                    <span className="group-hover:underline">{tCommon('email')}</span>
                   </motion.a>
                 </li>
                 <li className="text-xs text-muted-foreground leading-relaxed">
                   <div className="flex items-start gap-2">
                     <span className="text-base mt-0.5">📍</span>
                     <div>
-                      <p>香港尖沙咀加连威老道100号</p>
-                      <p>港晶中心10楼1001(H)室</p>
-                      <p className="text-[10px] text-muted-foreground/70 mt-1">
-                        Room 1001(H), 10/F., Harbour Crystal Centre,<br />
-                        100 Granville Road, Tsim Sha Tsui, HK
+                      <div className="whitespace-pre-line mb-1">{tContact('addressZh')}</div>
+                      <p className="text-[10px] text-muted-foreground/70 mt-1 whitespace-pre-line">
+                        {tContact('addressEn')}
                       </p>
                     </div>
                   </div>
@@ -126,7 +133,7 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <p className="text-sm text-muted-foreground text-center">
-              © {new Date().getFullYear()} Optima AI Limited. All rights reserved.
+              {t('copyright', { year: new Date().getFullYear() })}
             </p>
           </motion.div>
         </div>

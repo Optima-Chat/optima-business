@@ -1,0 +1,90 @@
+{
+  "common": {
+    "companyName": "極致智能科技有限公司",
+    "companyNameEn": "Optima AI Limited",
+    "companyShort": "Optima AI",
+    "businessScope": "AI Software Development · Big Data Technology",
+    "businessScopeDetail": "Applications & Solutions",
+    "tagline": "AI-Driven Full-Stack Technology Services",
+    "email": "business@optima.chat"
+  },
+  "nav": {
+    "home": "Home",
+    "cases": "Cases",
+    "contact": "Contact Us",
+    "startConsulting": "Get Started"
+  },
+  "hero": {
+    "title": "Optima AI",
+    "subtitle": "AI-Driven Full-Stack Technology Services",
+    "description": "From Algorithms to Products, End-to-End Delivery",
+    "agenticAI": "Agentic AI",
+    "agenticAISubtitle": "Enterprise AI Agent",
+    "agenticAIDesc": "Intelligent decision-making, tool invocation, multi-turn dialogue",
+    "aiCreation": "AI Creation",
+    "aiCreationSubtitle": "Image/Video Generation",
+    "aiCreationDesc": "Workflow orchestration, automated creation, style transfer",
+    "discriminativeModel": "Discriminative Models",
+    "discriminativeModelSubtitle": "CV + BI Analysis",
+    "discriminativeModelDesc": "Feature extraction, similarity search, data insights",
+    "viewCases": "View Cases"
+  },
+  "capabilities": {
+    "title": "Core Capabilities",
+    "subtitle": "Deep AI Technology × Full-Stack Engineering × Rapid Delivery"
+  },
+  "businessScope": {
+    "title": "Business Scope",
+    "subtitle": "Comprehensive AI Technology Services: Computer Vision, NLP, Recommendation Systems, Data Engineering"
+  },
+  "cases": {
+    "title": "Featured Cases",
+    "subtitle": "Deep AI Technology, End-to-End Delivery, Proven in Production",
+    "viewAll": "View All Cases",
+    "pageTitle": "Project Cases",
+    "pageSubtitle": "Deep AI Technology, End-to-End Delivery, Proven in Production",
+    "industry": "Industry",
+    "techStack": "Tech Stack",
+    "achievements": "Key Achievements",
+    "contactCTA": "Want to learn more about our cases?",
+    "contactLink": "Contact us for consultation →"
+  },
+  "cta": {
+    "title": "Ready to Start Your AI Project?",
+    "subtitle": "Our technical team is ready to provide professional AI solutions",
+    "startNow": "Get Started",
+    "sendEmail": "Send Email"
+  },
+  "contact": {
+    "title": "Start Your AI Project",
+    "subtitle": "Fill out the form or send us an email, our technical team will contact you soon",
+    "infoTitle": "Contact Information",
+    "infoSubtitle": "We will respond to your inquiry as soon as possible",
+    "companyName": "Company Name",
+    "businessScope": "Business Scope",
+    "businessScopeText": "AI Software Development\nBig Data Technology Applications & Solutions",
+    "emailConsulting": "Email Consultation",
+    "hongKongOffice": "Hong Kong Office",
+    "addressZh": "香港尖沙咀加連威老道100號\n港晶中心10樓1001(H)室",
+    "addressEn": "Room 1001(H), 10/F., Harbour Crystal Centre,\n100 Granville Road, Tsim Sha Tsui, HK",
+    "formTitle": "Online Consultation",
+    "formSubtitle": "Fill out the form and we will contact you soon",
+    "name": "Name",
+    "company": "Company",
+    "phone": "Phone",
+    "message": "Message",
+    "submit": "Submit Inquiry",
+    "submitting": "Submitting...",
+    "required": "Required",
+    "optional": "Optional",
+    "successTitle": "Submitted Successfully",
+    "successMessage": "We have received your inquiry and will contact you soon",
+    "errorTitle": "Submission Failed",
+    "errorMessage": "Please try again later or send us an email directly"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "contactInfo": "Contact Information",
+    "copyright": "© {year} Optima AI Limited. All rights reserved."
+  }
+}

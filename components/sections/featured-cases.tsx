@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useTranslations, useLocale } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Button } from "@/components/ui/button"
 import CaseCard from "@/components/features/case-card"
@@ -10,6 +11,8 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 
 export default function FeaturedCases() {
+  const t = useTranslations('cases')
+  const locale = useLocale()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -26,10 +29,10 @@ export default function FeaturedCases() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            精选案例
+            {t('title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            深度 AI 技术，端到端交付，实际业务验证
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -52,10 +55,10 @@ export default function FeaturedCases() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <Link href="/cases">
+          <Link href={`/${locale}/cases`}>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-sm hover:shadow-md">
-                查看全部案例
+                {t('viewAll')}
               </Button>
             </motion.div>
           </Link>

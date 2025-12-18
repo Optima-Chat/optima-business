@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -9,6 +10,7 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 
 export default function BusinessScope() {
+  const t = useTranslations('businessScope')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -22,10 +24,10 @@ export default function BusinessScope() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            业务范围
+            {t('title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            全方位 AI 技术服务，覆盖计算机视觉、NLP、推荐系统、数据工程
+            {t('subtitle')}
           </p>
         </motion.div>
 

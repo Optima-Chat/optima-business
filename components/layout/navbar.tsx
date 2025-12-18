@@ -2,9 +2,12 @@
 
 import Link from "next/link"
 import { useState } from "react"
+import { useTranslations, useLocale } from 'next-intl'
+import { usePathname, useRouter } from 'next/navigation'
 import Container from "./container"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import { localeNames } from '@/i18n/request'
 
 // 简约科技感 Logo 组件
 function Logo() {
@@ -37,40 +40,81 @@ function Logo() {
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [langMenuOpen, setLangMenuOpen] = useState(false)
+  const t = useTranslations('nav')
+  const locale = useLocale()
+  const pathname = usePathname()
+  const router = useRouter()
+
+  const switchLocale = (newLocale: string) => {
+    const segments = pathname.split('/')
+    segments[1] = newLocale
+    router.push(segments.join('/'))
+    setLangMenuOpen(false)
+  }
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
       <Container>
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href={`/${locale}`} className="flex items-center space-x-2">
             <Logo />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
+          <div className="hidden md:flex md:items-center md:space-x-6">
             <Link
-              href="/"
+              href={`/${locale}`}
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
-              首页
+              {t('home')}
             </Link>
             <Link
-              href="/cases"
+              href={`/${locale}/cases`}
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
-              案例
+              {t('cases')}
             </Link>
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
-              联系我们
+              {t('contact')}
             </Link>
-            <Link href="/contact">
+
+            {/* Language Switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setLangMenuOpen(!langMenuOpen)}
+                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
+                {localeNames[locale as keyof typeof localeNames]}
+              </button>
+              {langMenuOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-border py-1">
+                  {Object.entries(localeNames).map(([code, name]) => (
+                    <button
+                      key={code}
+                      onClick={() => switchLocale(code)}
+                      className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
+                        locale === code ? 'text-blue-600 font-medium' : 'text-foreground/80'
+                      }`}
+                    >
+                      {name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link href={`/${locale}/contact`}>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-md hover:shadow-lg transition-all duration-300">
-                  开始咨询
+                  {t('startConsulting')}
                 </Button>
               </motion.div>
             </Link>
@@ -103,29 +147,49 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
             <Link
-              href="/"
+              href={`/${locale}`}
               className="block text-sm font-medium text-foreground/80 hover:text-foreground"
               onClick={() => setMobileMenuOpen(false)}
             >
-              首页
+              {t('home')}
             </Link>
             <Link
-              href="/cases"
+              href={`/${locale}/cases`}
               className="block text-sm font-medium text-foreground/80 hover:text-foreground"
               onClick={() => setMobileMenuOpen(false)}
             >
-              案例
+              {t('cases')}
             </Link>
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className="block text-sm font-medium text-foreground/80 hover:text-foreground"
               onClick={() => setMobileMenuOpen(false)}
             >
-              联系我们
+              {t('contact')}
             </Link>
-            <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+
+            {/* Mobile Language Switcher */}
+            <div className="border-t border-border pt-4 space-y-2">
+              <p className="text-xs text-muted-foreground mb-2">Language / 语言</p>
+              {Object.entries(localeNames).map(([code, name]) => (
+                <button
+                  key={code}
+                  onClick={() => {
+                    switchLocale(code)
+                    setMobileMenuOpen(false)
+                  }}
+                  className={`block w-full text-left text-sm px-3 py-2 rounded-md hover:bg-gray-50 transition-colors ${
+                    locale === code ? 'text-blue-600 font-medium bg-blue-50' : 'text-foreground/80'
+                  }`}
+                >
+                  {name}
+                </button>
+              ))}
+            </div>
+
+            <Link href={`/${locale}/contact`} onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-md hover:shadow-lg transition-all duration-300">
-                开始咨询
+                {t('startConsulting')}
               </Button>
             </Link>
           </div>

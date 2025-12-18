@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { capabilities } from "@/lib/data/capabilities"
@@ -8,6 +9,7 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 
 export default function CoreCapabilities() {
+  const t = useTranslations('capabilities')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -21,10 +23,10 @@ export default function CoreCapabilities() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            核心能力
+            {t('title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            深度 AI 技术 × 全栈工程能力 × 快速交付
+            {t('subtitle')}
           </p>
         </motion.div>
 

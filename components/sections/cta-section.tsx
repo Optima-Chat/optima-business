@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useTranslations, useLocale } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -8,6 +9,9 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 
 export default function CTASection() {
+  const t = useTranslations('cta')
+  const tCommon = useTranslations('common')
+  const locale = useLocale()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -28,7 +32,7 @@ export default function CTASection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
           >
-            准备开启您的 AI 项目？
+            {t('title')}
           </motion.h2>
           <motion.p
             className="text-lg text-muted-foreground mb-8"
@@ -36,7 +40,7 @@ export default function CTASection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            我们的技术团队随时为您提供专业的 AI 解决方案
+            {t('subtitle')}
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -44,17 +48,17 @@ export default function CTASection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Link href="/contact">
+            <Link href={`/${locale}/contact`}>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Button size="lg" className="text-base px-8 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 transition-all duration-300">
-                  立即咨询
+                  {t('startNow')}
                 </Button>
               </motion.div>
             </Link>
-            <Link href="mailto:business@optima.chat">
+            <Link href={`mailto:${tCommon('email')}`}>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Button size="lg" variant="outline" className="text-base px-8 border-2 border-slate-300 bg-white/90 backdrop-blur-sm hover:border-blue-500 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 transition-all duration-300">
-                  发送邮件
+                  {t('sendEmail')}
                 </Button>
               </motion.div>
             </Link>
