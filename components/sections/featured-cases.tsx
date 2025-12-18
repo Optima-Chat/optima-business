@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Button } from "@/components/ui/button"
 import CaseCard from "@/components/features/case-card"
-import { cases } from "@/lib/data/cases"
+import { Case } from "@/types"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
@@ -16,8 +16,9 @@ export default function FeaturedCases() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  // 显示前3个案例
-  const featuredCases = cases.slice(0, 3)
+  // 从翻译文件读取 cases 数据，显示前3个案例
+  const allCases = t.raw('items') as Case[]
+  const featuredCases = allCases.slice(0, 3)
 
   return (
     <section className="py-20 md:py-32 border-t border-border" ref={ref}>

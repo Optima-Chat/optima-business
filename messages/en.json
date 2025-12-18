@@ -93,7 +93,81 @@
     "techStack": "Tech Stack",
     "achievements": "Key Achievements",
     "contactCTA": "Want to learn more about our cases?",
-    "contactLink": "Contact us for consultation →"
+    "contactLink": "Contact us for consultation →",
+    "items": [
+      {
+        "id": "mcp-agentic-platform",
+        "title": "Enterprise AI Agent Development Platform",
+        "industry": "AI Infrastructure",
+        "description": "Enterprise-grade AI Agent platform based on standard protocols, supporting 20+ mainstream AI models",
+        "techStack": ["AI Agent Framework", "Next.js", "WebSocket", "Zustand", "Multi-modal AI"],
+        "achievements": ["Integrated 20+ AI models (GPT-4/Claude/Gemini)","Stateful conversation system with intelligent context management","Workspace file system + intelligent file references","Multi-tenant authentication (GitHub/Google OAuth)"],
+        "highlights": ["Unified protocol for managing multiple AI services","Virtualized message list supporting ultra-long conversations","Professional search engine integration","Deep e-commerce platform integration","Tool invocation lifecycle management","Personal API key configuration"],
+        "scale": {"codeLines": "15+ independent services, industrial-grade architecture","repos": "agentic-chat, mcp-host, user-auth"},
+        "tags": ["agentic-ai", "mcp", "multi-modal"],
+        "order": 1
+      },
+      {
+        "id": "ecommerce-ai-agent",
+        "title": "E-commerce Operations AI Agent",
+        "industry": "E-commerce SaaS",
+        "description": "Intelligent e-commerce assistant for natural language store management",
+        "techStack": ["AI Agent Engine", "TypeScript", "WebSocket", "Video Generation Engine"],
+        "achievements": ["10+ business modules integrated","Multiple execution modes (streaming/headless/server)","AI image/video generation integration","Automated ad placement"],
+        "highlights": ["Intelligent product/order/inventory management","Automated internationalization translation","AI product research and analysis","BI data analysis and insights","Context visualization + real-time statistics","Session recovery + multi-conversation management"],
+        "scale": {"codeLines": "commerce-cli + optima-agent","repos": "NPM package, globally available"},
+        "tags": ["agentic-ai", "ecommerce", "automation"],
+        "order": 2
+      },
+      {
+        "id": "intelligent-customer-service",
+        "title": "Maternity & Infant Intelligent Customer Service Platform",
+        "industry": "Maternity & Infant E-commerce",
+        "description": "Multi-turn dialogue intelligent customer service system, awarded 7 software copyrights",
+        "techStack": ["NLP", "Knowledge Graph", "Dialogue Management", "Python", "PostgreSQL"],
+        "achievements": ["7 software copyright applications","Intelligent reminder marketing system","User tag intelligent analysis system","AI customer service training & optimization system"],
+        "highlights": ["Multi-turn dialogue engine","Intent recognition + knowledge base retrieval","User profiling and tag management","Marketing data full-link tracking","SKU-level user behavior analysis","7x24 automatic response"],
+        "scale": {"codeLines": "7 independent systems","repos": "Optima-Unicall organization"},
+        "tags": ["nlp", "knowledge-graph", "agentic-ai"],
+        "order": 3
+      },
+      {
+        "id": "ai-content-generation",
+        "title": "AI Content Generation Engine",
+        "industry": "AI Creation",
+        "description": "Self-developed AI workflow engine supporting automated image and video generation",
+        "techStack": ["Workflow Engine", "Deep Learning", "TypeScript", "WebSocket", "Docker"],
+        "achievements": ["Visual workflow orchestration","Standardized API interface","Batch image and video generation","Seamless business system integration"],
+        "highlights": ["Preset template library","RESTful API encapsulation","Asynchronous task queue","Real-time generation status push","Multi-tenant resource isolation","GPU resource scheduling optimization"],
+        "scale": {"codeLines": "Core engine + business integration","repos": "Standardized API interface"},
+        "tags": ["video-generation", "image-generation", "automation"],
+        "order": 4
+      },
+      {
+        "id": "ai-photo-selection",
+        "title": "AI Intelligent Photo Selection System",
+        "industry": "Film & TV Production",
+        "description": "Intelligent photo screening system based on CLIP + FAISS + MUSIQ",
+        "techStack": ["CLIP", "FAISS", "MUSIQ", "TypeScript", "Python", "RabbitMQ"],
+        "achievements": ["Process 1000 photos in 4.4 minutes","80x performance improvement (6 hours → 4.4 minutes)","Automatic similarity clustering + quality scoring","Streaming architecture + GPU optimization"],
+        "highlights": ["CLIP visual feature extraction","FAISS efficient similarity search","MUSIQ image quality assessment","Distributed task queue (RabbitMQ)","Real-time monitoring and alerts","Scalable to video processing"],
+        "scale": {"budget": "200,000 CNY","duration": "2-month rapid delivery"},
+        "tags": ["computer-vision", "deep-learning", "high-performance"],
+        "order": 5
+      },
+      {
+        "id": "ai-product-scout",
+        "title": "AI Intelligent Product Selection & Data Analysis",
+        "industry": "E-commerce SaaS",
+        "description": "Amazon product analysis + BI data insights empowering e-commerce decisions",
+        "techStack": ["Data Mining", "BI Analysis", "React", "Python", "Time-series Database"],
+        "achievements": ["Amazon product data scraping and analysis","Sales trend forecasting and product recommendations","Real-time BI dashboard updates","SKU-level user behavior tracking"],
+        "highlights": ["Product competitiveness analysis","Market trend insights","User behavior heatmap","Automated report generation","Anomaly detection alerts","A/B testing analysis"],
+        "scale": {"codeLines": "optima-scout + optima-bi","repos": "E-commerce data intelligence platform"},
+        "tags": ["data-engineering", "recommendation", "bi-analytics"],
+        "order": 6
+      }
+    ]
   },
   "cta": {
     "title": "Ready to Start Your AI Project?",

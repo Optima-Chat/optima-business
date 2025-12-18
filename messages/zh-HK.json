@@ -93,7 +93,81 @@
     "techStack": "技術棧",
     "achievements": "關鍵成果",
     "contactCTA": "想了解更多案例詳情？",
-    "contactLink": "聯絡我們諮詢 →"
+    "contactLink": "聯絡我們諮詢 →",
+    "items": [
+      {
+        "id": "mcp-agentic-platform",
+        "title": "企業級 AI Agent 開發平台",
+        "industry": "AI 基礎設施",
+        "description": "基於標準協議的企業級 AI Agent 平台，支持 20+ 主流 AI 模型",
+        "techStack": ["AI Agent 框架", "Next.js", "WebSocket", "Zustand", "多模態 AI"],
+        "achievements": ["集成 20+ AI 模型（GPT-4/Claude/Gemini）","有狀態對話系統，智能上下文管理","工作空間文件系統 + 智能文件引用","多租戶認證（GitHub/Google OAuth）"],
+        "highlights": ["統一協議管理多 AI 服務","虛擬化消息列表支持超長對話","專業搜索引擎集成","電商平台深度集成","工具調用生命週期管理","個人 API 密鑰配置"],
+        "scale": {"codeLines": "15+ 獨立服務，工業級架構","repos": "agentic-chat, mcp-host, user-auth"},
+        "tags": ["agentic-ai", "mcp", "multi-modal"],
+        "order": 1
+      },
+      {
+        "id": "ecommerce-ai-agent",
+        "title": "電商運營 AI Agent",
+        "industry": "電商 SaaS",
+        "description": "智能電商助手，自然語言管理店鋪全流程",
+        "techStack": ["AI Agent 引擎", "TypeScript", "WebSocket", "視頻生成引擎"],
+        "achievements": ["10+ 業務模組集成","多執行模式（流式/無頭/服務器）","AI 圖像/視頻生成集成","廣告自動化投放"],
+        "highlights": ["商品/訂單/庫存智能管理","國際化翻譯自動化","AI 選品調研與分析","BI 數據分析與洞察","上下文可視化 + 實時統計","會話恢復 + 多對話管理"],
+        "scale": {"codeLines": "commerce-cli + optima-agent","repos": "NPM 包，全球可用"},
+        "tags": ["agentic-ai", "ecommerce", "automation"],
+        "order": 2
+      },
+      {
+        "id": "intelligent-customer-service",
+        "title": "母嬰智能客服平台",
+        "industry": "母嬰電商",
+        "description": "多輪對話智能客服系統，獲得 7 項軟件著作權",
+        "techStack": ["NLP", "知識圖譜", "對話管理", "Python", "PostgreSQL"],
+        "achievements": ["7 個軟件著作權申請","智能催拍催付營銷系統","用戶標籤智能分析系統","AI客服訓練與優化系統"],
+        "highlights": ["多輪對話引擎","意圖識別 + 知識庫檢索","用戶畫像與標籤管理","營銷數據全鏈路追蹤","SKU級用戶行為分析","7x24小時自動響應"],
+        "scale": {"codeLines": "7 個獨立系統","repos": "Optima-Unicall 組織"},
+        "tags": ["nlp", "knowledge-graph", "agentic-ai"],
+        "order": 3
+      },
+      {
+        "id": "ai-content-generation",
+        "title": "AI 內容生成引擎",
+        "industry": "AI 創作",
+        "description": "自研 AI 工作流引擎，支持圖像和視頻自動化生成",
+        "techStack": ["工作流引擎", "深度學習", "TypeScript", "WebSocket", "Docker"],
+        "achievements": ["可視化工作流編排","標準化 API 接口","圖像和視頻批量生成","無縫集成業務系統"],
+        "highlights": ["預置模板庫","RESTful API 封裝","異步任務隊列","實時生成狀態推送","多租戶資源隔離","GPU 資源調度優化"],
+        "scale": {"codeLines": "核心引擎 + 業務集成","repos": "標準化 API 接口"},
+        "tags": ["video-generation", "image-generation", "automation"],
+        "order": 4
+      },
+      {
+        "id": "ai-photo-selection",
+        "title": "AI 照片智能選片系統",
+        "industry": "影視製作",
+        "description": "基於 CLIP + FAISS + MUSIQ 的智能照片篩選系統",
+        "techStack": ["CLIP", "FAISS", "MUSIQ", "TypeScript", "Python", "RabbitMQ"],
+        "achievements": ["1000 張照片 4.4 分鐘處理","性能提升 80 倍（6小時 → 4.4分鐘）","自動相似度聚類 + 質量評分","流式處理架構 + GPU 優化"],
+        "highlights": ["CLIP 視覺特徵提取","FAISS 高效相似度檢索","MUSIQ 圖像質量評估","分佈式任務隊列（RabbitMQ）","實時監控告警","可擴展到視頻處理"],
+        "scale": {"budget": "20 萬元","duration": "2 個月快速交付"},
+        "tags": ["computer-vision", "deep-learning", "high-performance"],
+        "order": 5
+      },
+      {
+        "id": "ai-product-scout",
+        "title": "AI 智能選品與數據分析",
+        "industry": "電商 SaaS",
+        "description": "Amazon 產品分析 + BI 數據洞察，賦能電商決策",
+        "techStack": ["數據挖掘", "BI 分析", "React", "Python", "時序數據庫"],
+        "achievements": ["Amazon 產品數據抓取與分析","銷售趨勢預測與選品建議","BI 看板實時更新","SKU 級用戶行為追蹤"],
+        "highlights": ["產品競爭力分析","市場趨勢洞察","用戶行為熱力圖","自動化報表生成","異常檢測告警","A/B 測試分析"],
+        "scale": {"codeLines": "optima-scout + optima-bi","repos": "電商數據智能平台"},
+        "tags": ["data-engineering", "recommendation", "bi-analytics"],
+        "order": 6
+      }
+    ]
   },
   "cta": {
     "title": "準備開啟您的 AI 項目？",

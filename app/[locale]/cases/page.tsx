@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
 import Container from "@/components/layout/container"
 import CaseCard from "@/components/features/case-card"
-import { cases } from "@/lib/data/cases"
+import { Case } from "@/types"
 import { locales } from '@/i18n/request'
 
 export function generateStaticParams() {
@@ -22,6 +22,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function CasesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'cases' })
+
+  // 从翻译文件读取 cases 数据
+  const cases = t.raw('items') as Case[]
 
   return (
     <div className="py-20">
