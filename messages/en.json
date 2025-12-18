@@ -31,7 +31,27 @@
   },
   "capabilities": {
     "title": "Core Capabilities",
-    "subtitle": "Deep AI Technology × Full-Stack Engineering × Rapid Delivery"
+    "subtitle": "Deep AI Technology × Full-Stack Engineering × Rapid Delivery",
+    "items": [
+      {
+        "id": "deep-ai",
+        "icon": "🤖",
+        "title": "Deep AI Capabilities",
+        "description": "Cutting-edge models like CLIP, FAISS, MUSIQ. Full coverage of computer vision, NLP, and recommendation systems. GPU cluster optimization for 10x+ performance boost."
+      },
+      {
+        "id": "full-stack",
+        "icon": "🚀",
+        "title": "Full-Stack Delivery",
+        "description": "From React/Next.js frontend to Python/Node.js backend, databases to message queues, complete architecture design. Docker/K8s deployment with monitoring and alerting all-in-one."
+      },
+      {
+        "id": "fast-iteration",
+        "icon": "⚡",
+        "title": "Rapid Iteration",
+        "description": "Deliver enterprise-grade systems in 2 months. Top-tier team with Tencent/Alibaba/HKUST backgrounds. Agile development, continuous delivery, quick response to changing requirements."
+      }
+    ]
   },
   "businessScope": {
     "title": "Business Scope",

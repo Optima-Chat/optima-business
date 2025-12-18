@@ -3,7 +3,6 @@
 import { useTranslations } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { capabilities } from "@/lib/data/capabilities"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
@@ -12,6 +11,14 @@ export default function CoreCapabilities() {
   const t = useTranslations('capabilities')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+  // 从翻译文件读取 capabilities 数据
+  const capabilities = t.raw('items') as Array<{
+    id: string
+    icon: string
+    title: string
+    description: string
+  }>
 
   return (
     <section className="py-20 md:py-32 border-t border-border" ref={ref}>

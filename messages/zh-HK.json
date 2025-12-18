@@ -31,7 +31,27 @@
   },
   "capabilities": {
     "title": "核心能力",
-    "subtitle": "深度 AI 技術 × 全棧工程能力 × 快速交付"
+    "subtitle": "深度 AI 技術 × 全棧工程能力 × 快速交付",
+    "items": [
+      {
+        "id": "deep-ai",
+        "icon": "🤖",
+        "title": "深度AI能力",
+        "description": "CLIP、FAISS、MUSIQ 等前沿模型，計算機視覺、NLP、推薦系統全覆蓋。GPU集群優化，性能提升數十倍。"
+      },
+      {
+        "id": "full-stack",
+        "icon": "🚀",
+        "title": "全棧交付",
+        "description": "從前端 React/Next.js 到後端 Python/Node.js，數據庫到消息隊列，完整架構設計。Docker/K8s 部署，監控告警一站式。"
+      },
+      {
+        "id": "fast-iteration",
+        "icon": "⚡",
+        "title": "快速迭代",
+        "description": "2個月交付企業級系統。頂級團隊，騰訊/阿里/港科大背景。敏捷開發，持續交付，快速響應需求變化。"
+      }
+    ]
   },
   "businessScope": {
     "title": "業務範圍",
