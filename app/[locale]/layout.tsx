@@ -20,12 +20,10 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  // 验证语言是否支持
-  if (!locales.includes(locale as any)) {
-    notFound()
-  }
 
   // 获取翻译消息
+  // 注意：locale 验证已在 i18n/request.ts 和 middleware.ts 中处理
+  // 这里不需要再次验证，避免静态生成时出错
   const messages = await getMessages({ locale })
 
   return (

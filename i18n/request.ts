@@ -16,13 +16,11 @@ export const localeNames: Record<Locale, string> = {
 }
 
 export default getRequestConfig(async ({ locale }) => {
-  // 验证语言是否支持
-  if (!locale || !locales.includes(locale as Locale)) {
-    notFound()
-  }
+  // 确保 locale 有效，使用默认语言作为回退
+  const validLocale = locale && locales.includes(locale as Locale) ? locale : defaultLocale
 
   return {
-    locale: locale as string,
-    messages: (await import(`../messages/${locale}.json`)).default
+    locale: validLocale,
+    messages: (await import(`../messages/${validLocale}.json`)).default
   }
 })
