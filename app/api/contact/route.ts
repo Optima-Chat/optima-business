@@ -59,8 +59,8 @@ export async function POST(request: Request) {
     const validatedData = contactFormSchema.parse(body)
 
     // 发送邮件通知
-    await resend.emails.send({
-      from: "Optima AI 官网 <noreply@mail.optima.chat>",
+    const emailResult = await resend.emails.send({
+      from: "Optima AI 官网 <noreply@optima.sh>",
       to: "business@optima.chat",
       subject: `[官网咨询] ${validatedData.name}${validatedData.company ? ` - ${validatedData.company}` : ""}`,
       html: `
