@@ -68,7 +68,11 @@ export default function Navbar() {
               联系我们
             </Link>
             <Link href="/contact">
-              <Button>开始咨询</Button>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-md hover:shadow-lg transition-all duration-300">
+                  开始咨询
+                </Button>
+              </motion.div>
             </Link>
           </div>
 
@@ -120,7 +124,9 @@ export default function Navbar() {
               联系我们
             </Link>
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full">开始咨询</Button>
+              <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-md hover:shadow-lg transition-all duration-300">
+                开始咨询
+              </Button>
             </Link>
           </div>
         )}
