@@ -50,20 +50,14 @@ export default function BusinessScope() {
                     {scope.description}
                   </CardDescription>
                   <div className="flex flex-wrap gap-2">
-                    {scope.keywords.map((keyword, kidx) => (
-                      <motion.div
+                    {scope.keywords.map((keyword) => (
+                      <Badge
                         key={keyword}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                        transition={{ duration: 0.3, delay: index * 0.1 + kidx * 0.05 }}
+                        variant="secondary"
+                        className="text-xs hover:bg-blue-100 hover:text-blue-700 transition-colors cursor-default"
                       >
-                        <Badge
-                          variant="secondary"
-                          className="text-xs hover:bg-blue-100 hover:text-blue-700 transition-colors cursor-default"
-                        >
-                          {keyword}
-                        </Badge>
-                      </motion.div>
+                        {keyword}
+                      </Badge>
                     ))}
                   </div>
                 </CardHeader>

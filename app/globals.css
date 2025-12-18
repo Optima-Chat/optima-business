@@ -115,4 +115,55 @@
   .shine-effect:hover::after {
     transform: translateX(100%) translateY(100%) rotate(45deg);
   }
+
+  /* 浮动动画 - 用于背景装饰元素 */
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -20px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 10px) scale(0.95);
+    }
+  }
+
+  @keyframes float-delayed {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(-40px, 30px) scale(1.15);
+    }
+    66% {
+      transform: translate(20px, -15px) scale(0.9);
+    }
+  }
+
+  @keyframes float-slow {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(20px, -30px) scale(1.1);
+    }
+  }
+
+  .animate-float {
+    animation: float 20s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 25s ease-in-out infinite;
+    animation-delay: 5s;
+    will-change: transform;
+  }
+
+  .animate-float-slow {
+    animation: float-slow 30s ease-in-out infinite;
+    animation-delay: 10s;
+    will-change: transform;
+  }
 }

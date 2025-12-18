@@ -15,33 +15,9 @@ export default function CTASection() {
     <section className="relative py-20 md:py-32 overflow-hidden" ref={ref}>
       {/* Enhanced gradient background - 商务蓝色调 */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
-        <motion.div
-          className="absolute top-10 right-10 w-64 h-64 bg-blue-200/60 rounded-full mix-blend-multiply filter blur-xl opacity-40"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, -30, 0],
-            y: [0, 20, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-10 left-10 w-64 h-64 bg-cyan-200/60 rounded-full mix-blend-multiply filter blur-xl opacity-40"
-          animate={{
-            scale: [1, 1.3, 1],
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
+        {/* 使用 CSS 动画替代 JS 动画 */}
+        <div className="absolute top-10 right-10 w-64 h-64 bg-blue-200/60 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-cyan-200/60 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float-delayed" />
       </div>
 
       <Container className="relative">

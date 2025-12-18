@@ -11,48 +11,10 @@ export default function Hero() {
     <section className="relative py-20 md:py-32 overflow-hidden">
       {/* Enhanced Background with animated gradient - 商务蓝色调 */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50">
-        {/* Animated gradient orbs - 蓝色系 with enhanced motion */}
-        <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-blue-200/60 rounded-full mix-blend-multiply filter blur-xl opacity-40"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute top-40 right-10 w-72 h-72 bg-cyan-200/60 rounded-full mix-blend-multiply filter blur-xl opacity-40"
-          animate={{
-            scale: [1, 1.3, 1],
-            x: [0, -40, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-1/2 w-72 h-72 bg-blue-300/60 rounded-full mix-blend-multiply filter blur-xl opacity-40"
-          animate={{
-            scale: [1, 1.25, 1],
-            x: [0, 20, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
+        {/* Static gradient orbs - 使用 CSS 动画替代 JS 动画以提升性能 */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/60 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float" />
+        <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-200/60 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float-delayed" />
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-blue-300/60 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float-slow" />
 
         {/* 添加网格背景效果 */}
         <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.5))] opacity-20" style={{

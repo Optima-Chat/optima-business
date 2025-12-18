@@ -54,20 +54,14 @@ export default function CaseCard({ case: caseData }: CaseCardProps) {
 
         <CardHeader className="relative">
           <div className="flex flex-wrap gap-2 mb-3">
-            {caseData.tags.map((tag, index) => (
-              <motion.div
+            {caseData.tags.map((tag) => (
+              <Badge
                 key={tag}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
+                variant="secondary"
+                className="text-xs bg-gradient-to-r from-blue-100 to-cyan-100 hover:from-blue-200 hover:to-cyan-200 border-blue-200 transition-colors duration-200"
               >
-                <Badge
-                  variant="secondary"
-                  className="text-xs bg-gradient-to-r from-blue-100 to-cyan-100 hover:from-blue-200 hover:to-cyan-200 border-blue-200 transition-all duration-200 hover:scale-105"
-                >
-                  {tagLabels[tag] || tag}
-                </Badge>
-              </motion.div>
+                {tagLabels[tag] || tag}
+              </Badge>
             ))}
           </div>
           <CardTitle className="text-xl mb-2 group-hover:text-blue-600 transition-colors">
@@ -98,22 +92,13 @@ export default function CaseCard({ case: caseData }: CaseCardProps) {
           </h4>
           <ul className="space-y-1.5 pl-3">
             {caseData.achievements.map((achievement, i) => (
-              <motion.li
+              <li
                 key={i}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: i * 0.1 }}
                 className="text-sm text-muted-foreground flex items-start group/item"
               >
-                <motion.span
-                  className="text-blue-500 mr-2 inline-block"
-                  whileHover={{ scale: 1.3, rotate: 90 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  •
-                </motion.span>
+                <span className="text-blue-500 mr-2">•</span>
                 <span className="group-hover/item:text-foreground transition-colors">{achievement}</span>
-              </motion.li>
+              </li>
             ))}
           </ul>
         </div>
@@ -122,40 +107,28 @@ export default function CaseCard({ case: caseData }: CaseCardProps) {
         <div className="mt-auto pt-4 border-t border-slate-200 group-hover:border-blue-200 transition-colors">
           <div className="grid grid-cols-2 gap-2 text-xs">
             {caseData.scale.budget && (
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50"
-              >
+              <div className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50">
                 <span className="text-base">💰</span>
                 <span>{caseData.scale.budget}</span>
-              </motion.div>
+              </div>
             )}
             {caseData.scale.duration && (
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50"
-              >
+              <div className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50">
                 <span className="text-base">⏱️</span>
                 <span>{caseData.scale.duration}</span>
-              </motion.div>
+              </div>
             )}
             {caseData.scale.codeLines && (
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50"
-              >
+              <div className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50">
                 <span className="text-base">📦</span>
                 <span>{caseData.scale.codeLines}</span>
-              </motion.div>
+              </div>
             )}
             {caseData.scale.repos && (
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50"
-              >
+              <div className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50">
                 <span className="text-base">🔗</span>
                 <span>{caseData.scale.repos}</span>
-              </motion.div>
+              </div>
             )}
           </div>
         </div>
