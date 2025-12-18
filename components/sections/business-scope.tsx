@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { businessScopes } from "@/lib/data/business-scope"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
@@ -13,6 +12,14 @@ export default function BusinessScope() {
   const t = useTranslations('businessScope')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+  // 从翻译文件读取 business scope 数据
+  const businessScopes = t.raw('items') as Array<{
+    id: string
+    title: string
+    description: string
+    keywords: string[]
+  }>
 
   return (
     <section className="py-20 md:py-32 bg-gray-50" ref={ref}>

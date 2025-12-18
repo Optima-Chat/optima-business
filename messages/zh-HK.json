@@ -55,7 +55,33 @@
   },
   "businessScope": {
     "title": "業務範圍",
-    "subtitle": "全方位 AI 技術服務，覆蓋計算機視覺、NLP、推薦系統、數據工程"
+    "subtitle": "全方位 AI 技術服務，覆蓋計算機視覺、NLP、推薦系統、數據工程",
+    "items": [
+      {
+        "id": "computer-vision",
+        "title": "計算機視覺",
+        "description": "圖像識別、視頻分析、質量評估、目標檢測",
+        "keywords": ["CLIP", "YOLO", "目標檢測", "圖像分類", "OCR", "人臉識別"]
+      },
+      {
+        "id": "nlp",
+        "title": "自然語言處理",
+        "description": "智能客服、文本分析、多語言支持、語義理解",
+        "keywords": ["對話系統", "情感分析", "文本分類", "命名實體識別", "機器翻譯"]
+      },
+      {
+        "id": "recommendation",
+        "title": "推薦系統",
+        "description": "個性化推薦、用戶畫像、精準營銷、協同過濾",
+        "keywords": ["協同過濾", "深度學習推薦", "實時推薦", "冷啟動", "A/B測試"]
+      },
+      {
+        "id": "data-engineering",
+        "title": "數據工程",
+        "description": "高性能計算、分佈式系統、實時處理、大數據分析",
+        "keywords": ["數據管道", "實時計算", "離線分析", "數據倉庫", "BI平台"]
+      }
+    ]
   },
   "cases": {
     "title": "精選案例",

@@ -55,7 +55,33 @@
   },
   "businessScope": {
     "title": "Business Scope",
-    "subtitle": "Comprehensive AI Technology Services: Computer Vision, NLP, Recommendation Systems, Data Engineering"
+    "subtitle": "Comprehensive AI Technology Services: Computer Vision, NLP, Recommendation Systems, Data Engineering",
+    "items": [
+      {
+        "id": "computer-vision",
+        "title": "Computer Vision",
+        "description": "Image recognition, video analysis, quality assessment, object detection",
+        "keywords": ["CLIP", "YOLO", "Object Detection", "Image Classification", "OCR", "Face Recognition"]
+      },
+      {
+        "id": "nlp",
+        "title": "Natural Language Processing",
+        "description": "Intelligent customer service, text analysis, multilingual support, semantic understanding",
+        "keywords": ["Dialogue Systems", "Sentiment Analysis", "Text Classification", "Named Entity Recognition", "Machine Translation"]
+      },
+      {
+        "id": "recommendation",
+        "title": "Recommendation Systems",
+        "description": "Personalized recommendations, user profiling, precision marketing, collaborative filtering",
+        "keywords": ["Collaborative Filtering", "Deep Learning Recommendation", "Real-time Recommendation", "Cold Start", "A/B Testing"]
+      },
+      {
+        "id": "data-engineering",
+        "title": "Data Engineering",
+        "description": "High-performance computing, distributed systems, real-time processing, big data analysis",
+        "keywords": ["Data Pipelines", "Real-time Computing", "Offline Analysis", "Data Warehouse", "BI Platform"]
+      }
+    ]
   },
   "cases": {
     "title": "Featured Cases",
