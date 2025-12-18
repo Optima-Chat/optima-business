@@ -29,16 +29,16 @@ const tagLabels: Record<string, string> = {
 
 export default function CaseCard({ case: caseData }: CaseCardProps) {
   return (
-    <Card className="group hover:border-primary/50 transition-all duration-300 h-full flex flex-col card-hover shine-effect bg-gradient-to-br from-white to-blue-50/30">
+    <Card className="group hover:border-blue-400 transition-all duration-300 h-full flex flex-col card-hover shine-effect bg-gradient-to-br from-white via-white to-slate-50 border-slate-200">
       <CardHeader>
         <div className="flex flex-wrap gap-2 mb-3">
           {caseData.tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-xs bg-gradient-to-r from-blue-100 to-purple-100 hover:from-blue-200 hover:to-purple-200 transition-colors">
+            <Badge key={tag} variant="secondary" className="text-xs bg-gradient-to-r from-blue-100 to-cyan-100 hover:from-blue-200 hover:to-cyan-200 border-blue-200 transition-colors">
               {tagLabels[tag] || tag}
             </Badge>
           ))}
         </div>
-        <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+        <CardTitle className="text-xl mb-2 group-hover:text-blue-600 transition-colors">
           {caseData.title}
         </CardTitle>
         <CardDescription className="text-sm">

@@ -19,12 +19,12 @@ export default function CoreCapabilities() {
           {capabilities.map((capability, index) => (
             <Card
               key={capability.id}
-              className="relative group hover:border-primary/50 transition-all duration-300 card-hover shine-effect bg-gradient-to-br from-white via-white to-blue-50/20 animate-fade-in"
+              className="relative group hover:border-blue-400 transition-all duration-300 card-hover shine-effect bg-gradient-to-br from-white via-white to-slate-50 border-slate-200 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{capability.icon}</div>
-                <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors">
+                <CardTitle className="text-xl mb-3 group-hover:text-blue-600 transition-colors">
                   {capability.title}
                 </CardTitle>
                 <CardDescription className="text-base leading-relaxed">
