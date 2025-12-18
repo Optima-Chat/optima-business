@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from 'next-intl'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Case } from "@/types"
@@ -33,6 +34,7 @@ const tagLabels: Record<string, string> = {
 
 export default function CaseCard({ case: caseData }: CaseCardProps) {
   const [isHovered, setIsHovered] = useState(false)
+  const t = useTranslations('cases')
 
   return (
     <motion.div
@@ -68,7 +70,7 @@ export default function CaseCard({ case: caseData }: CaseCardProps) {
             {caseData.title}
           </CardTitle>
           <CardDescription className="text-sm">
-            <span className="font-semibold">行业：</span>{caseData.industry}
+            <span className="font-semibold">{t('industry')}：</span>{caseData.industry}
           </CardDescription>
         </CardHeader>
 
@@ -77,7 +79,7 @@ export default function CaseCard({ case: caseData }: CaseCardProps) {
         <div className="mb-4">
           <h4 className="text-sm font-semibold mb-2 flex items-center">
             <span className="w-1 h-4 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-2" />
-            技术栈
+            {t('techStack')}
           </h4>
           <p className="text-sm text-muted-foreground pl-3">
             {caseData.techStack.join(" · ")}
@@ -88,7 +90,7 @@ export default function CaseCard({ case: caseData }: CaseCardProps) {
         <div className="mb-4">
           <h4 className="text-sm font-semibold mb-2 flex items-center">
             <span className="w-1 h-4 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-2" />
-            关键成果
+            {t('achievements')}
           </h4>
           <ul className="space-y-1.5 pl-3">
             {caseData.achievements.map((achievement, i) => (
