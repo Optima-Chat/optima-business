@@ -26,29 +26,29 @@ export default function Hero() {
             从算法到产品，端到端交付
           </p>
 
-          {/* Stats Cards */}
+          {/* Tech Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12">
             <Card className="p-6 bg-white/80 backdrop-blur border hover:border-primary/50 transition-colors hover:shadow-md">
-              <div className="text-3xl font-bold text-primary mb-2">2个月</div>
-              <div className="text-sm text-muted-foreground">快速交付</div>
+              <div className="text-3xl font-bold text-primary mb-2">🤖 Agentic AI</div>
+              <div className="text-sm text-muted-foreground">企业级 AI Agent</div>
               <div className="text-xs text-muted-foreground/60 mt-1">
-                企业级系统，敏捷开发
+                MCP 协议、Claude SDK、多轮对话
               </div>
             </Card>
 
             <Card className="p-6 bg-white/80 backdrop-blur border hover:border-primary/50 transition-colors hover:shadow-md">
-              <div className="text-3xl font-bold text-primary mb-2">60万+</div>
-              <div className="text-sm text-muted-foreground">行生产代码</div>
+              <div className="text-3xl font-bold text-primary mb-2">🎬 AI 创作</div>
+              <div className="text-sm text-muted-foreground">图像/视频生成</div>
               <div className="text-xs text-muted-foreground/60 mt-1">
-                18个独立仓库，工业级质量
+                ComfyUI 商业化、Workflow 编排
               </div>
             </Card>
 
             <Card className="p-6 bg-white/80 backdrop-blur border hover:border-primary/50 transition-colors hover:shadow-md">
-              <div className="text-3xl font-bold text-primary mb-2">顶级</div>
-              <div className="text-sm text-muted-foreground">技术团队</div>
+              <div className="text-3xl font-bold text-primary mb-2">👁️ 判别模型</div>
+              <div className="text-sm text-muted-foreground">CV + BI 分析</div>
               <div className="text-xs text-muted-foreground/60 mt-1">
-                腾讯/阿里/港科大背景
+                CLIP/FAISS、数据洞察、推荐系统
               </div>
             </Card>
           </div>
