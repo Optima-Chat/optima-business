@@ -2,7 +2,8 @@ import { getTranslations } from 'next-intl/server'
 import Container from "@/components/layout/container"
 import ContactForm from "@/components/features/contact-form"
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'contact' })
 
   return {
@@ -11,7 +12,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   }
 }
 
-export default async function ContactPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'contact' })
 
   return (

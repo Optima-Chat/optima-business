@@ -8,13 +8,18 @@ import Footer from "@/components/layout/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
+
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
+  const { locale } = await params
   // 验证语言是否支持
   if (!locales.includes(locale as any)) {
     notFound()

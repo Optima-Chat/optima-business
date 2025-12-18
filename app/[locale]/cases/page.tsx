@@ -5,7 +5,8 @@ import Container from "@/components/layout/container"
 import CaseCard from "@/components/features/case-card"
 import { cases } from "@/lib/data/cases"
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'cases' })
 
   return {
@@ -14,7 +15,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   }
 }
 
-export default async function CasesPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function CasesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'cases' })
 
   return (
