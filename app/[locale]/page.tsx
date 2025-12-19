@@ -9,7 +9,10 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
-export default function HomePage() {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  // 等待 params 确保 locale 正确传递
+  await params
+
   return (
     <>
       <Hero />
