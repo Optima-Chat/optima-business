@@ -18,7 +18,7 @@
 
 ## ARTICLE 1: SCOPE OF COOPERATION
 
-1.1 Party B, as an independent sales consultant of Party A, shall be responsible for referring potential clients to Party A and facilitating business collaborations.
+1.1 Party B, as an independent sales consultant of Party A, shall act as **Account Manager** with full responsibility for client development, contract execution, project delivery coordination, and client relationship management. Party A, as the technology service provider, shall be responsible for technical solution design, development implementation, and technical support.
 
 1.2 Party A's business scope includes but is not limited to:
 - AI software development services
@@ -26,14 +26,21 @@
 - Enterprise-level AI Agent system development
 - AI technology services including computer vision and natural language processing
 
-1.3 Party B's main responsibilities:
-- **Client Development & Referral**: Leverage industry resources and professional background to refer potential clients to Party A, providing client background information and requirement analysis
-- **Business Negotiation Support**: Assist Party A in client requirement communication, technical solution presentation, and business term negotiation until formal contract execution
-- **Project Implementation Coordination**: Serve as a communication bridge between Party A and clients during project implementation, assisting in resolving client queries, requirement changes, and other issues
-- **Delivery Confirmation & Payment Collection**: Assist in promoting project acceptance, delivery confirmation, and payment collection to ensure successful project completion
-- **Client Relationship Maintenance**: Maintain client relationships after project delivery, identifying renewal and additional purchase opportunities
+1.3 **Party B's Responsibilities as Account Manager**:
+- **Client Development**: Proactively develop potential clients, conduct client requirement research and background analysis
+- **Business Negotiation**: Lead client requirement communication, technical solution presentation, and business term negotiation to execute formal contracts
+- **Project Management**: Serve as the single point of contact for clients, track project progress throughout, and coordinate communication between clients and Party A's technical team
+- **Problem Resolution**: Take charge of handling client queries, requirement changes, complaints, and other issues during the project
+- **Delivery & Payment Collection**: Responsible for promoting project acceptance, delivery confirmation, and urging client payments
+- **Client Maintenance**: Maintain client relationships after project completion, identifying renewal and additional purchase opportunities
 
-**Note**: Party B is required to participate throughout the entire process from client development to project delivery, not merely providing client leads. Commission is settled after actual client payment, reflecting Party B's responsibility for project success.
+1.4 **Party A's Responsibilities as Technology Service Provider**:
+- **Technical Solution Design**: Provide professional technical solutions based on client requirements
+- **Project Development & Implementation**: Complete project development, testing, deployment, and other work as specified in the contract
+- **Technical Support**: Cooperate with Party B in client communication, providing necessary technical explanations and support
+- **After-sales Service**: Provide technical maintenance and issue resolution after project launch
+
+**Note**: Party B is the primary responsible party for sales and client relationships, while Party A focuses on technical delivery. Both parties collaborate to ensure client satisfaction and project success.
 
 ## ARTICLE 2: COMMISSION STRUCTURE
 
