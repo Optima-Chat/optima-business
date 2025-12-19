@@ -1,4 +1,5 @@
-# SALES CONSULTANT AGREEMENT
+# BUSINESS DEVELOPMENT PARTNER AGREEMENT
+## 商务拓展合伙人合作协议
 
 **This Agreement is entered into on __________ (Date)**
 
@@ -9,7 +10,7 @@
 - Registered Address: Room 1001(H), 10/F., Harbour Crystal Centre, 100 Granville Road, Tsim Sha Tsui, Hong Kong
 - Email: business@optima.chat
 
-**Party B (Sales Consultant):**
+**Party B (BD Partner):**
 - Name/Company Name: __________
 - ID/Business Registration No.: __________
 - Address: __________
@@ -18,7 +19,7 @@
 
 ## ARTICLE 1: SCOPE OF COOPERATION
 
-1.1 Party B, as an independent sales consultant of Party A, shall act as **Account Manager** with full responsibility for client development, contract execution, project delivery coordination, and client relationship management. Party A, as the technology service provider, shall be responsible for technical solution design, development implementation, and technical support.
+1.1 Party B, as Party A's **Business Development Partner (BD Partner)**, shall act as Account Manager with full responsibility for client development, contract execution, project delivery coordination, and client relationship management. Party A, as the technology service provider, shall be responsible for technical solution design, development implementation, and technical support.
 
 1.2 Party A's business scope includes but is not limited to:
 - AI software development services

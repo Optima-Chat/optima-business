@@ -1,10 +1,10 @@
-# 销售顾问合同模板 / Sales Consultant Agreement Templates
+# 商务拓展合伙人合同模板 / BD Partner Agreement Templates
 
 ## 文件清单 / File List
 
-- `sales-consultant-agreement-zh.md` - 中文版销售顾问合作协议
-- `sales-consultant-agreement-en.md` - English Version Sales Consultant Agreement
-- `client-referral-template.xlsx` - 客户推荐登记表模板（需要创建）
+- `bd-partner-agreement-zh.md` - 中文版商务拓展合伙人合作协议
+- `bd-partner-agreement-en.md` - English Version Business Development Partner Agreement
+- `client-referral-template.csv` - 客户推荐登记表模板
 
 ## 佣金计算方式 / Commission Structure
 
@@ -34,23 +34,23 @@
 
 ### 1. 签约前准备 / Pre-signing Preparation
 
-- [ ] 确认顾问身份和行业背景
-- [ ] 索取顾问的身份证明/商业登记证
+- [ ] 确认 BD 合伙人身份和行业背景
+- [ ] 索取 BD 合伙人的身份证明/商业登记证
 - [ ] 索取银行账户信息
 - [ ] 进行背景调查（可选）
 
 ### 2. 合同填写 / Contract Completion
 
-- [ ] 填写乙方（顾问）基本信息
+- [ ] 填写乙方（BD 合伙人）基本信息
 - [ ] 确认合作期限（默认12个月）
 - [ ] 确认佣金结算方式（默认30个工作日）
 - [ ] 双方签字盖章
 
-### 3. 销售顾问作为客户经理的工作流程 / Sales Consultant as Account Manager Workflow
+### 3. BD 合伙人作为客户经理的工作流程 / BD Partner as Account Manager Workflow
 
-**核心定位**：销售顾问 = 客户经理（主导销售），公司 = 技术服务商（提供技术支持）
+**核心定位**：BD 合伙人 = 客户经理（主导销售），公司 = 技术服务商（提供技术支持）
 
-**销售顾问的角色**：
+**BD 合伙人的角色**：
 - ✅ 客户的唯一对接人（Single Point of Contact）
 - ✅ 销售和客户关系的第一责任人
 - ✅ 主导商务谈判、项目管理、回款催收
@@ -58,14 +58,14 @@
 
 **完整工作流程**：
 
-1. **客户开发**：顾问主动开发潜在客户，通过邮件报备客户信息（使用附件2模板）
+1. **客户开发**：BD 合伙人主动开发潜在客户，通过邮件报备客户信息（使用附件2模板）
 2. **公司确认**：公司3个工作日内确认客户归属，提供技术方案支持
-3. **商务谈判**：顾问主导需求沟通、方案讲解、价格谈判（公司技术团队配合）
-4. **合同签订**：顾问负责促成合同签订，确保商务条款清晰
-5. **项目管理**：顾问作为客户唯一对接人，协调客户与技术团队，跟进项目进度
-6. **问题处理**：顾问主导处理客户疑问、需求变更、投诉等问题
-7. **交付回款**：顾问负责推动验收、交付确认及催收款项
-8. **客户维护**：顾问持续维护客户关系，挖掘续约和增购机会
+3. **商务谈判**：BD 合伙人主导需求沟通、方案讲解、价格谈判（公司技术团队配合）
+4. **合同签订**：BD 合伙人负责促成合同签订，确保商务条款清晰
+5. **项目管理**：BD 合伙人作为客户唯一对接人，协调客户与技术团队，跟进项目进度
+6. **问题处理**：BD 合伙人主导处理客户疑问、需求变更、投诉等问题
+7. **交付回款**：BD 合伙人负责推动验收、交付确认及催收款项
+8. **客户维护**：BD 合伙人持续维护客户关系，挖掘续约和增购机会
 9. **佣金结算**：客户付款到账后30个工作日内结算佣金
 
 ### 4. 佣金结算 / Commission Settlement
@@ -73,7 +73,7 @@
 **所需材料 / Required Documents:**
 - 客户已签订的正式合同副本
 - 客户付款凭证
-- 顾问开具的发票（如适用）或签收确认
+- BD 合伙人开具的发票（如适用）或签收确认
 
 **结算时间 / Settlement Timeline:**
 - 客户付款到账后 30 个工作日内
@@ -101,15 +101,15 @@
 
 ## 税务处理 / Tax Treatment
 
-### 香港个人顾问 / HK Individual Consultant
+### 香港个人 BD 合伙人 / HK Individual BD Partner
 - 公司按香港税法代扣薪俸税（如适用）
 - 年度总佣金超过一定金额需自行报税
 
-### 内地个人顾问 / Mainland Individual Consultant
+### 内地个人 BD 合伙人 / Mainland Individual BD Partner
 - 需代扣代缴个人所得税（劳务报酬）
 - 税率：20%（单次超过2万元可能适用加成征收）
 
-### 公司顾问 / Corporate Consultant
+### 公司 BD 合伙人 / Corporate BD Partner
 - 双方各自承担税务义务
 - 需提供增值税发票
 
@@ -129,7 +129,7 @@ A: 能。保护期内（12个月）的所有续约、增购你都享有佣金，
 
 A: 佣金在客户实际付款后才结算。如果客户逾期超过6个月未付款，可与公司协商特殊处理。
 
-### Q4: 我可以同时为多家AI公司做顾问吗？
+### Q4: 我可以同时为多家AI公司做 BD 合伙人吗？
 
 A: 可以，但不能为直接竞争对手服务。建议服务不同行业或不同细分领域的公司。
 
