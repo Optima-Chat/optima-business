@@ -99,19 +99,17 @@ export default function Hero() {
                   {/* 悬停光效 */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <div className="relative flex flex-col h-full">
-                    {/* Icon - fixed height */}
-                    <div className="text-4xl mb-3 h-12 flex items-center">
+                  <div className="relative">
+                    {/* Icon */}
+                    <div className="text-4xl mb-3">
                       {item.icon}
                     </div>
-                    {/* Title - fixed height for alignment */}
-                    <div className={`text-2xl md:text-3xl font-bold bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent mb-2 break-words leading-tight h-16 md:h-20 flex items-start`}>
+                    {/* Title - with proper wrapping for long text */}
+                    <div className={`text-2xl md:text-3xl font-bold bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent mb-2 break-words leading-tight`}>
                       {item.title}
                     </div>
-                    {/* Subtitle - fixed height */}
-                    <div className="text-sm font-semibold text-foreground h-10 flex items-start">{item.subtitle}</div>
-                    {/* Description - flexible height */}
-                    <div className="text-xs text-muted-foreground mt-2 flex-1">
+                    <div className="text-sm font-semibold text-foreground">{item.subtitle}</div>
+                    <div className="text-xs text-muted-foreground mt-2">
                       {item.description}
                     </div>
                   </div>
