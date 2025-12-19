@@ -100,8 +100,13 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="relative">
-                    <div className={`text-3xl font-bold bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent mb-2`}>
-                      {item.icon} {item.title}
+                    {/* Icon */}
+                    <div className="text-4xl mb-3">
+                      {item.icon}
+                    </div>
+                    {/* Title - with proper wrapping for long text */}
+                    <div className={`text-2xl md:text-3xl font-bold bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent mb-2 break-words leading-tight`}>
+                      {item.title}
                     </div>
                     <div className="text-sm font-semibold text-foreground">{item.subtitle}</div>
                     <div className="text-xs text-muted-foreground mt-2">
