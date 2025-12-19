@@ -71,7 +71,7 @@
 
 3.2 **Protection Period**:
 - For clients confirmed as attributed to Party B, Party B shall be entitled to commissions on all renewals and additional purchases from such clients for 12 months after the initial contract
-- Commission for renewals/additional purchases shall be calculated at 50% of the rates above (i.e., 7.5% for 0-500k, 9% for 500k-1M, 10% for above 1M)
+- Commission for renewals/additional purchases shall be calculated at the same rates as initial contracts (refer to Article 2)
 
 3.3 **Client Loss**:
 - If a client is proactively contacted by Party A during the protection period (for projects not referred by Party B), Party B shall still be entitled to renewal commissions
