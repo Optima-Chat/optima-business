@@ -27,9 +27,13 @@
 - AI technology services including computer vision and natural language processing
 
 1.3 Party B's main responsibilities:
-- Leverage industry resources and professional background to refer potential clients to Party A
-- Assist Party A in initial client communication and requirement understanding
-- Facilitate the execution of formal contracts between Party A and clients
+- **Client Development & Referral**: Leverage industry resources and professional background to refer potential clients to Party A, providing client background information and requirement analysis
+- **Business Negotiation Support**: Assist Party A in client requirement communication, technical solution presentation, and business term negotiation until formal contract execution
+- **Project Implementation Coordination**: Serve as a communication bridge between Party A and clients during project implementation, assisting in resolving client queries, requirement changes, and other issues
+- **Delivery Confirmation & Payment Collection**: Assist in promoting project acceptance, delivery confirmation, and payment collection to ensure successful project completion
+- **Client Relationship Maintenance**: Maintain client relationships after project delivery, identifying renewal and additional purchase opportunities
+
+**Note**: Party B is required to participate throughout the entire process from client development to project delivery, not merely providing client leads. Commission is settled after actual client payment, reflecting Party B's responsibility for project success.
 
 ## ARTICLE 2: COMMISSION STRUCTURE
 
