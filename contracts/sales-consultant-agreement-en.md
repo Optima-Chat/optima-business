@@ -58,7 +58,7 @@
 - If the client has already been contacted through other channels, Party A has the right to refuse attribution
 
 3.2 **Protection Period**:
-- For clients confirmed as attributed to Party B, Party B shall be entitled to commissions on all renewals and additional purchases from such clients for 24 months after the initial contract
+- For clients confirmed as attributed to Party B, Party B shall be entitled to commissions on all renewals and additional purchases from such clients for 12 months after the initial contract
 - Commission for renewals/additional purchases shall be calculated at 50% of the rates above (i.e., 7.5% for 0-500k, 9% for 500k-1M, 10% for above 1M)
 
 3.3 **Client Loss**:
