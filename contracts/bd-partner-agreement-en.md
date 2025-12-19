@@ -137,7 +137,7 @@
 8.4 Party A has the right to terminate this Agreement immediately in the following circumstances:
 - Party B seriously violates confidentiality obligations or non-compete restrictions
 - Party B makes false commitments to clients, damaging Party A's reputation
-- Party B fails to refer any valid client leads for 6 consecutive months
+- Party B fails to close any paid clients (contract value ≥ 100,000 RMB/HKD) for 12 consecutive months
 
 ## ARTICLE 9: DISPUTE RESOLUTION
 
