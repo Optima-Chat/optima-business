@@ -71,10 +71,10 @@
         "title": "Inventory & Supply Chain Decisions",
         "description": "Connect inventory, sales, and logistics data to get real-time restocking advice, stockout alerts, and supply chain optimization. From reactive to data-driven proactive decisions.",
         "cases": [
-          { "industry": "Apparel Leader", "result": "R&D cycle shortened from 100 to 27 days (-73%), only 40% initial orders, rest placed based on rolling data" },
-          { "industry": "Logistics Giant", "result": "Delivery efficiency +50%, labor costs -30%, AI-powered supply chain decision support across network" },
-          { "industry": "Dairy Conglomerate", "result": "41 Agents across supply chain, delivery cycle -55%, operating costs -32%" },
-          { "industry": "FMCG Giant (China)", "result": "Dynamic fulfillment routing per order, logistics costs -10%, receiving efficiency +30%" }
+          { "industry": "Apparel", "result": "R&D cycle reduced by over 70%, rolling data-driven ordering replacing bulk purchases" },
+          { "industry": "Logistics", "result": "Delivery efficiency improved over 50%, labor costs significantly reduced, network-wide AI decision support" },
+          { "industry": "FMCG", "result": "Multiple Agents across full supply chain, delivery cycle cut in half, operating costs significantly down" },
+          { "industry": "Consumer Goods", "result": "Dynamic fulfillment decisions, logistics costs and receiving efficiency both significantly optimized" }
         ],
         "keywords": ["Inventory Alerts", "Stockout Prediction", "Restocking", "Dynamic Fulfillment", "Supply Chain"]
       },
@@ -84,10 +84,10 @@
         "title": "Natural Language Data Query & Decisions",
         "description": "Query enterprise data in natural language, with automatic root cause analysis and report generation. Reduce data insights from days to seconds.",
         "cases": [
-          { "industry": "Auto Group", "result": "BI 'Ask Data' assistant covers 9 business domains across R&D, production, supply, and sales" },
-          { "industry": "Coffee Chain", "result": "Business insights reduced from 2-3 days (request→data team→execute→return) to instant conversation" },
-          { "industry": "Joint-Stock Bank", "result": "184 AI scenarios, ¥390M economic value in 6 months, saving 4.75M work hours" },
-          { "industry": "City Commercial Bank", "result": "Executive monthly reports from 20 hours to 0.5 hours, decision response speed +80%" }
+          { "industry": "Automotive", "result": "BI assistant covers multiple business domains across R&D, production, supply, and sales" },
+          { "industry": "Retail Chain", "result": "Business insights reduced from days to instant conversation, bypassing traditional data request workflows" },
+          { "industry": "Banking", "result": "Hundreds of AI scenarios deployed, generating hundreds of millions in economic value within months" },
+          { "industry": "Financial Services", "result": "Executive report preparation time reduced by 95%+, decision response speed significantly improved" }
         ],
         "keywords": ["NL Query", "Auto Attribution", "Report Generation", "Real-time Analytics", "Decision Support"]
       },
@@ -97,10 +97,10 @@
         "title": "Marketing & Operations Optimization",
         "description": "Feed marketing data, user behavior, and operational metrics into the Agent for automatic analysis, strategy optimization, and content generation. From intuition-driven to data-driven operations.",
         "cases": [
-          { "industry": "Chain Restaurant", "result": "AI store manager serves 40K frontline staff, marketing CTR +40%, conversion +25%, operational efficiency +39%" },
-          { "industry": "Coffee New Retail", "result": "AI ordering 99% accuracy, 100K+ daily triggers, full coverage from ordering to R&D to store replenishment" },
-          { "industry": "Electronics Group", "result": "Livestream patrol Agent: dwell time +12%, violations -50%; customer service ticket efficiency +80%" },
-          { "industry": "Dairy Enterprise", "result": "180+ AI scenarios, content production cycle -60%+, labor costs -90%" }
+          { "industry": "Restaurant Chain", "result": "AI store manager serving tens of thousands of frontline staff, marketing CTR and conversion both significantly up" },
+          { "industry": "New Retail", "result": "AI-assisted accuracy 99%+, hundreds of thousands of daily interactions, full business chain coverage" },
+          { "industry": "Electronics", "result": "Livestream patrol Agent improving dwell time, customer service ticket efficiency up over 80%" },
+          { "industry": "Consumer Brands", "result": "Hundreds of AI scenarios, content production cycle reduced by 60%+, labor investment significantly down" }
         ],
         "keywords": ["Precision Marketing", "ROAS Optimization", "Content Generation", "Ops Analytics", "User Insights"]
       },
@@ -110,10 +110,10 @@
         "title": "Enterprise Intelligence Hub",
         "description": "Deploy cross-department Agent networks, encoding industry knowledge into reusable decision models. From point tools to an enterprise-wide intelligence hub.",
         "cases": [
-          { "industry": "Appliance Manufacturer", "result": "5,000+ Agents deployed, saving 3.96M hours, cost savings target raised from ¥20M to ¥100M" },
-          { "industry": "Express Delivery Giant", "result": "Decision model efficiency +120x, covering 20+ scenarios including demand forecasting and route optimization" },
-          { "industry": "Financial Conglomerate", "result": "200+ scenarios, 2.2B AI service calls, annual cost savings of ¥10B" },
-          { "industry": "Semiconductor Fab", "result": "35,000+ industrial mechanism models, OEE +7.2%, saving $5.3M annually" }
+          { "industry": "Manufacturing", "result": "Thousands of Agents deployed, saving millions of work hours, cost savings targets continuously raised" },
+          { "industry": "Logistics", "result": "Decision model efficiency improved 100x+, covering demand forecasting, route optimization and more" },
+          { "industry": "Financial Group", "result": "200+ scenarios, billions of AI service calls, significant annual cost savings" },
+          { "industry": "Semiconductor", "result": "Tens of thousands of industrial models, OEE significantly improved, saving millions annually" }
         ],
         "keywords": ["Multi-Agent", "Knowledge Encoding", "Cross-dept Decisions", "Cost Reduction", "Scale Deployment"]
       }
