@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   description: "Optima Pulse — 实时感知企业脉搏，做出最优决策。通过自然语言对话查询企业数据、讨论决策、设置行动。",
   keywords: ["企业决策", "AI Agent", "数据查询", "电商运营", "库存管理", "广告优化", "决策助手", "自然语言"],
   authors: [{ name: "Optima AI Limited" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Optima Pulse - 企业决策 Agent",
     description: "实时感知企业脉搏，做出最优决策。自然语言对话查询数据、讨论决策、设置行动。",
