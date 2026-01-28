@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useTranslations, useLocale } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
 import Container from "./container"
@@ -10,7 +10,7 @@ import { motion } from "framer-motion"
 import { localeNames } from '@/i18n/request'
 
 // 简约科技感 Logo 组件
-function Logo() {
+function Logo({ light }: { light?: boolean }) {
   return (
     <div className="flex items-center gap-2">
       {/* Logo 图标 - 抽象的 AI 符号 */}
@@ -31,7 +31,7 @@ function Logo() {
         </motion.div>
       </div>
       {/* 文字 */}
-      <span className="text-xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
+      <span className={`text-xl font-bold ${light ? 'text-white' : 'bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent'}`}>
         Optima Pulse
       </span>
     </div>
@@ -41,10 +41,25 @@ function Logo() {
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [langMenuOpen, setLangMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const t = useTranslations('nav')
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
+
+  // Check if on homepage
+  const isHome = pathname === `/${locale}` || pathname === `/${locale}/`
+
+  // Detect scroll for transparent → solid transition
+  useEffect(() => {
+    if (!isHome) return
+    const onScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [isHome])
+
+  const transparent = isHome && !scrolled && !mobileMenuOpen
+  const linkColor = transparent ? 'text-white/90 hover:text-white' : 'text-foreground/80 hover:text-foreground'
 
   // Extract current locale from pathname to ensure it's always up-to-date
   const currentLocale = pathname.split('/')[1] || locale
@@ -57,37 +72,41 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      transparent
+        ? 'bg-transparent'
+        : 'bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm border-b border-border'
+    }`}>
       <Container>
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center space-x-2">
-            <Logo />
+            <Logo light={transparent} />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
             <Link
               href={`/${locale}`}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className={`text-sm font-medium transition-colors ${linkColor}`}
             >
               {t('home')}
             </Link>
             <Link
               href={`/${locale}/product`}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className={`text-sm font-medium transition-colors ${linkColor}`}
             >
               {t('product')}
             </Link>
             <Link
               href={`/${locale}/cases`}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className={`text-sm font-medium transition-colors ${linkColor}`}
             >
               {t('cases')}
             </Link>
             <Link
               href={`/${locale}/contact`}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className={`text-sm font-medium transition-colors ${linkColor}`}
             >
               {t('contact')}
             </Link>
@@ -96,7 +115,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
+                className={`text-sm font-medium transition-colors flex items-center gap-1 ${linkColor}`}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
@@ -122,7 +141,11 @@ export default function Navbar() {
 
             <Link href={`/${locale}/contact`}>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-md hover:shadow-lg transition-all duration-300">
+                <Button className={`transition-all duration-300 ${
+                  transparent
+                    ? 'bg-white/20 backdrop-blur-sm border border-white/40 text-white hover:bg-white/30 shadow-lg'
+                    : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 shadow-md hover:shadow-lg'
+                }`}>
                   {t('startConsulting')}
                 </Button>
               </motion.div>
@@ -135,7 +158,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg
-              className="h-6 w-6"
+              className={`h-6 w-6 ${transparent ? 'text-white' : ''}`}
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
