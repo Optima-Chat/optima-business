@@ -217,9 +217,6 @@
     "viewAll": "查看全部案例",
     "pageTitle": "技术实力",
     "pageSubtitle": "Optima Pulse 背后的技术团队已交付多个企业级 AI 项目",
-    "industry": "行业",
-    "techStack": "技术栈",
-    "achievements": "关键成果",
     "contactCTA": "想了解更多案例详情？",
     "contactLink": "联系我们咨询 →",
     "items": [
@@ -227,163 +224,79 @@
         "id": "mcp-agentic-platform",
         "title": "企业级 AI Agent 开发平台",
         "industry": "AI 基础设施",
-        "description": "基于标准协议的企业级 AI Agent 平台，支持 20+ 主流 AI 模型",
+        "description": "基于标准协议的企业级 AI Agent 平台，支持 20+ 主流 AI 模型，提供有状态对话、工作空间文件系统和多租户认证。",
         "techStack": ["AI Agent 框架", "Next.js", "WebSocket", "Zustand", "多模态 AI"],
         "achievements": [
           "集成 20+ AI 模型（GPT-4/Claude/Gemini）",
           "有状态对话系统，智能上下文管理",
           "工作空间文件系统 + 智能文件引用",
-          "多租户认证（GitHub/Google OAuth）"
-        ],
-        "highlights": [
-          "统一协议管理多 AI 服务",
-          "虚拟化消息列表支持超长对话",
-          "专业搜索引擎集成",
-          "电商平台深度集成",
-          "工具调用生命周期管理",
-          "个人 API 密钥配置"
-        ],
-        "scale": {
-          "codeLines": "15+ 独立服务，工业级架构",
-          "repos": "agentic-chat, mcp-host, user-auth"
-        },
-        "tags": ["agentic-ai", "mcp", "multi-modal"],
-        "order": 1
+          "15+ 独立服务，工业级架构"
+        ]
       },
       {
         "id": "ecommerce-ai-agent",
         "title": "电商运营 AI Agent",
         "industry": "电商 SaaS",
-        "description": "智能电商助手，自然语言管理店铺全流程",
+        "description": "智能电商助手，自然语言管理店铺全流程，覆盖商品、订单、库存、广告等 10+ 业务模块。",
         "techStack": ["AI Agent 引擎", "TypeScript", "WebSocket", "视频生成引擎"],
         "achievements": [
           "10+ 业务模块集成",
           "多执行模式（流式/无头/服务器）",
           "AI 图像/视频生成集成",
-          "广告自动化投放"
-        ],
-        "highlights": [
-          "商品/订单/库存智能管理",
-          "国际化翻译自动化",
-          "AI 选品调研与分析",
-          "BI 数据分析与洞察",
-          "上下文可视化 + 实时统计",
-          "会话恢复 + 多对话管理"
-        ],
-        "scale": {
-          "codeLines": "commerce-cli + optima-agent",
-          "repos": "NPM 包，全球可用"
-        },
-        "tags": ["agentic-ai", "ecommerce", "automation"],
-        "order": 2
+          "国际化翻译自动化"
+        ]
       },
       {
         "id": "intelligent-customer-service",
         "title": "母婴智能客服平台",
         "industry": "母婴电商",
-        "description": "多轮对话智能客服系统，获得 7 项软件著作权",
+        "description": "多轮对话智能客服系统，获得 7 项软件著作权，覆盖意图识别、知识库检索、用户画像等能力。",
         "techStack": ["NLP", "知识图谱", "对话管理", "Python", "PostgreSQL"],
         "achievements": [
-          "7 个软件著作权申请",
+          "7 个软件著作权",
           "智能催拍催付营销系统",
           "用户标签智能分析系统",
-          "AI客服训练与优化系统"
-        ],
-        "highlights": [
-          "多轮对话引擎",
-          "意图识别 + 知识库检索",
-          "用户画像与标签管理",
-          "营销数据全链路追踪",
-          "SKU级用户行为分析",
-          "7x24小时自动响应"
-        ],
-        "scale": {
-          "codeLines": "7 个独立系统",
-          "repos": "Optima-Unicall 组织"
-        },
-        "tags": ["nlp", "knowledge-graph", "agentic-ai"],
-        "order": 3
+          "7x24 小时自动响应"
+        ]
       },
       {
         "id": "ai-content-generation",
         "title": "AI 内容生成引擎",
         "industry": "AI 创作",
-        "description": "自研 AI 工作流引擎，支持图像和视频自动化生成",
+        "description": "自研 AI 工作流引擎，支持图像和视频自动化生成，提供可视化工作流编排和标准化 API 接口。",
         "techStack": ["工作流引擎", "深度学习", "TypeScript", "WebSocket", "Docker"],
         "achievements": [
           "可视化工作流编排",
           "标准化 API 接口",
           "图像和视频批量生成",
-          "无缝集成业务系统"
-        ],
-        "highlights": [
-          "预置模板库",
-          "RESTful API 封装",
-          "异步任务队列",
-          "实时生成状态推送",
-          "多租户资源隔离",
           "GPU 资源调度优化"
-        ],
-        "scale": {
-          "codeLines": "核心引擎 + 业务集成",
-          "repos": "标准化 API 接口"
-        },
-        "tags": ["video-generation", "image-generation", "automation"],
-        "order": 4
+        ]
       },
       {
         "id": "ai-photo-selection",
         "title": "AI 照片智能选片系统",
         "industry": "影视制作",
-        "description": "基于 CLIP + FAISS + MUSIQ 的智能照片筛选系统",
+        "description": "基于 CLIP + FAISS + MUSIQ 的智能照片筛选系统，性能提升 80 倍。",
         "techStack": ["CLIP", "FAISS", "MUSIQ", "TypeScript", "Python", "RabbitMQ"],
         "achievements": [
           "1000 张照片 4.4 分钟处理",
           "性能提升 80 倍（6小时 → 4.4分钟）",
           "自动相似度聚类 + 质量评分",
           "流式处理架构 + GPU 优化"
-        ],
-        "highlights": [
-          "CLIP 视觉特征提取",
-          "FAISS 高效相似度检索",
-          "MUSIQ 图像质量评估",
-          "分布式任务队列（RabbitMQ）",
-          "实时监控告警",
-          "可扩展到视频处理"
-        ],
-        "scale": {
-          "budget": "20 万元",
-          "duration": "2 个月快速交付"
-        },
-        "tags": ["computer-vision", "deep-learning", "high-performance"],
-        "order": 5
+        ]
       },
       {
         "id": "ai-product-scout",
         "title": "AI 智能选品与数据分析",
         "industry": "电商 SaaS",
-        "description": "Amazon 产品分析 + BI 数据洞察，赋能电商决策",
+        "description": "Amazon 产品分析 + BI 数据洞察，赋能电商决策，提供实时看板和趋势预测。",
         "techStack": ["数据挖掘", "BI 分析", "React", "Python", "时序数据库"],
         "achievements": [
-          "Amazon 产品数据抓取与分析",
+          "Amazon 产品数据分析",
           "销售趋势预测与选品建议",
           "BI 看板实时更新",
-          "SKU 级用户行为追踪"
-        ],
-        "highlights": [
-          "产品竞争力分析",
-          "市场趋势洞察",
-          "用户行为热力图",
-          "自动化报表生成",
-          "异常检测告警",
-          "A/B 测试分析"
-        ],
-        "scale": {
-          "codeLines": "optima-scout + optima-bi",
-          "repos": "电商数据智能平台"
-        },
-        "tags": ["data-engineering", "recommendation", "bi-analytics"],
-        "order": 6
+          "异常检测告警"
+        ]
       }
     ]
   },
@@ -424,41 +337,100 @@
     "errorMessage": "请稍后重试或直接发送邮件给我们"
   },
   "product": {
-    "title": "Optima Pulse 产品介绍",
-    "subtitle": "企业决策 Agent，通过 CLI 工具接入企业数据源，用领域 Skills 编码业务知识，让用户以自然语言对话方式查询数据和讨论决策",
-    "architectureTitle": "三层架构",
-    "architectureSubtitle": "CLI 工具 + 领域 Skills + Agent 编排",
-    "verticalTitle": "首个垂直行业：电商",
-    "verticalSubtitle": "电商商家数据源标准化，决策场景清晰且高频",
-    "skillsTitle": "电商核心 Skills",
-    "skills": [
-      { "name": "库存健康诊断", "input": "库存数据 + 销售趋势", "output": "补货建议 + 预计断货时间" },
-      { "name": "广告效果评估", "input": "广告花费 + 转化数据", "output": "ROAS 分析 + 优化建议" },
-      { "name": "商品表现排名", "input": "销售 + 退货 + 评价数据", "output": "商品健康度评分 + 行动建议" },
-      { "name": "定价策略建议", "input": "成本 + 竞品价格 + 销量弹性", "output": "最优价格区间" },
-      { "name": "退货原因分析", "input": "退货数据 + 评价文本", "output": "根因归类 + 改进建议" },
-      { "name": "现金流预测", "input": "收入 + 支出 + 账期数据", "output": "未来 N 天现金流预测" },
-      { "name": "选品趋势分析", "input": "市场数据 + 搜索趋势", "output": "品类机会评估" }
+    "title": "Optima Pulse",
+    "subtitle": "企业决策 Agent — 用自然语言对话查询数据、分析问题、获得决策建议",
+    "architectureTitle": "三层架构，深度理解业务",
+    "architectureSubtitle": "轻量接入、领域深耕、智能编排 — 三层解耦设计让 Pulse 适配任何行业",
+    "architectureItems": [
+      {
+        "id": "cli-tools",
+        "icon": "/icons/cli-tools.png",
+        "title": "CLI 工具层",
+        "label": "数据接入",
+        "description": "每个数据源对应一个 CLI 工具，标准化接口即插即用。新增数据源只需编写一个 CLI，无需搭建 ETL 管道。",
+        "details": ["电商平台 API", "广告平台 API", "支付/财务系统", "ERP / 物流 API", "数据库直连"]
+      },
+      {
+        "id": "skills",
+        "icon": "/icons/skills-brain.png",
+        "title": "Skills 层",
+        "label": "领域知识",
+        "description": "将行业专家的判断逻辑编码为可复用的 Skills。更换行业只需更换一套 Skills，核心引擎保持不变。",
+        "details": ["库存健康诊断", "广告效果评估", "定价策略建议", "退货原因分析", "现金流预测", "选品趋势分析"]
+      },
+      {
+        "id": "agent",
+        "icon": "/icons/agent-chat.png",
+        "title": "Agent 层",
+        "label": "编排与推理",
+        "description": "理解用户意图，自动调用工具获取数据，选择合适的 Skills 进行分析。支持多轮对话、追问澄清和主动建议。",
+        "details": ["意图理解", "工具调用", "多轮对话", "追问澄清", "主动建议", "预警设置"]
+      }
     ],
-    "dataSourcesTitle": "支持的数据源",
-    "dataSources": [
-      { "name": "Shopify", "priority": "P0" },
-      { "name": "Amazon Seller Central", "priority": "P0" },
-      { "name": "Google Ads", "priority": "P1" },
-      { "name": "Meta Ads", "priority": "P1" },
-      { "name": "Stripe / PayPal", "priority": "P1" },
-      { "name": "物流 API", "priority": "P2" },
-      { "name": "QuickBooks / Xero", "priority": "P2" },
-      { "name": "Google Analytics", "priority": "P2" }
+    "capabilitiesTitle": "核心能力",
+    "capabilitiesSubtitle": "从数据接入到决策输出，覆盖企业决策全流程",
+    "capabilities": [
+      {
+        "title": "自然语言查询",
+        "description": "用日常语言直接提问，无需学习 SQL 或 BI 工具。系统自动理解意图、查询数据、返回结构化答案。"
+      },
+      {
+        "title": "多数据源接入",
+        "description": "通过 CLI 工具标准化接入各类企业数据源，包括电商平台、广告系统、ERP、财务软件和数据库。"
+      },
+      {
+        "title": "领域知识编码",
+        "description": "将行业专家经验编码为可复用的 Skills，让 Agent 具备垂直行业的专业判断能力。"
+      },
+      {
+        "title": "决策建议生成",
+        "description": "不只返回数据，而是结合业务上下文给出可执行的建议，并说明推理依据。"
+      },
+      {
+        "title": "实时监控预警",
+        "description": "设定业务指标阈值，Agent 持续监控并在异常时主动通知，从被动查询变为主动预警。"
+      },
+      {
+        "title": "多轮对话追问",
+        "description": "支持连续追问、补充条件、切换视角，像和业务专家对话一样深入探讨问题。"
+      }
     ],
-    "pricingTitle": "定价方向",
-    "pricingPlans": [
-      { "name": "Starter", "target": "单店铺小卖家", "features": ["2 个数据源接入", "基础 Skills", "基础对话"] },
-      { "name": "Growth", "target": "多店铺 / 多平台", "features": ["5+ 数据源接入", "全部 Skills", "预警通知", "多轮决策对话"] },
-      { "name": "Enterprise", "target": "品牌商 / 大卖家", "features": ["无限数据源", "自定义 Skills", "私有部署", "专属技术支持"] }
+    "workflowTitle": "如何使用",
+    "workflowSubtitle": "四步开始，快速上线",
+    "workflowSteps": [
+      {
+        "step": "1",
+        "title": "接入数据源",
+        "description": "通过 CLI 工具连接您的业务系统 — 电商平台、广告系统、ERP、数据库等。标准化接口，无需 ETL。"
+      },
+      {
+        "step": "2",
+        "title": "配置领域知识",
+        "description": "选择或自定义行业 Skills，将您的业务判断逻辑编码到系统中，让 Agent 理解您的行业。"
+      },
+      {
+        "step": "3",
+        "title": "自然语言对话",
+        "description": "用日常语言提问，Agent 自动调用工具、分析数据、结合 Skills 给出专业回答和建议。"
+      },
+      {
+        "step": "4",
+        "title": "获得决策建议",
+        "description": "收到带有推理过程的决策建议，可以继续追问、设置预警、或让 Agent 执行后续动作。"
+      }
     ],
-    "ctaTitle": "立即开始",
-    "ctaSubtitle": "联系我们，了解 Optima Pulse 如何为您的业务定制决策方案",
+    "industriesTitle": "适用行业",
+    "industriesSubtitle": "可复用架构，适配多个垂直行业",
+    "industries": [
+      { "name": "电商", "description": "库存管理、广告优化、选品分析、退货诊断" },
+      { "name": "零售", "description": "门店运营、供应链决策、促销策略、会员分析" },
+      { "name": "物流", "description": "路线优化、配送效率、仓储管理、成本控制" },
+      { "name": "金融", "description": "风险评估、投资分析、合规监控、客户洞察" },
+      { "name": "制造", "description": "生产排程、设备维护、质量控制、供应商管理" },
+      { "name": "快消", "description": "需求预测、渠道管理、新品策略、市场分析" }
+    ],
+    "ctaTitle": "开始使用 Optima Pulse",
+    "ctaSubtitle": "告诉我们您的业务场景，我们为您定制专属的决策方案",
     "ctaButton": "预约演示"
   },
   "footer": {

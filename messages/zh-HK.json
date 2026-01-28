@@ -217,9 +217,6 @@
     "viewAll": "查看全部案例",
     "pageTitle": "技術實力",
     "pageSubtitle": "Optima Pulse 背後的技術團隊已交付多個企業級 AI 項目",
-    "industry": "行業",
-    "techStack": "技術棧",
-    "achievements": "關鍵成果",
     "contactCTA": "想了解更多案例詳情？",
     "contactLink": "聯絡我們諮詢 →",
     "items": [
@@ -227,73 +224,79 @@
         "id": "mcp-agentic-platform",
         "title": "企業級 AI Agent 開發平台",
         "industry": "AI 基礎設施",
-        "description": "基於標準協議的企業級 AI Agent 平台，支持 20+ 主流 AI 模型",
+        "description": "基於標準協議的企業級 AI Agent 平台，支持 20+ 主流 AI 模型，提供有狀態對話、工作空間文件系統和多租戶認證。",
         "techStack": ["AI Agent 框架", "Next.js", "WebSocket", "Zustand", "多模態 AI"],
-        "achievements": ["集成 20+ AI 模型（GPT-4/Claude/Gemini）","有狀態對話系統，智能上下文管理","工作空間文件系統 + 智能文件引用","多租戶認證（GitHub/Google OAuth）"],
-        "highlights": ["統一協議管理多 AI 服務","虛擬化消息列表支持超長對話","專業搜索引擎集成","電商平台深度集成","工具調用生命週期管理","個人 API 密鑰配置"],
-        "scale": {"codeLines": "15+ 獨立服務，工業級架構","repos": "agentic-chat, mcp-host, user-auth"},
-        "tags": ["agentic-ai", "mcp", "multi-modal"],
-        "order": 1
+        "achievements": [
+          "集成 20+ AI 模型（GPT-4/Claude/Gemini）",
+          "有狀態對話系統，智能上下文管理",
+          "工作空間文件系統 + 智能文件引用",
+          "15+ 獨立服務，工業級架構"
+        ]
       },
       {
         "id": "ecommerce-ai-agent",
         "title": "電商運營 AI Agent",
         "industry": "電商 SaaS",
-        "description": "智能電商助手，自然語言管理店鋪全流程",
+        "description": "智能電商助手，自然語言管理店鋪全流程，覆蓋商品、訂單、庫存、廣告等 10+ 業務模組。",
         "techStack": ["AI Agent 引擎", "TypeScript", "WebSocket", "視頻生成引擎"],
-        "achievements": ["10+ 業務模組集成","多執行模式（流式/無頭/服務器）","AI 圖像/視頻生成集成","廣告自動化投放"],
-        "highlights": ["商品/訂單/庫存智能管理","國際化翻譯自動化","AI 選品調研與分析","BI 數據分析與洞察","上下文可視化 + 實時統計","會話恢復 + 多對話管理"],
-        "scale": {"codeLines": "commerce-cli + optima-agent","repos": "NPM 包，全球可用"},
-        "tags": ["agentic-ai", "ecommerce", "automation"],
-        "order": 2
+        "achievements": [
+          "10+ 業務模組集成",
+          "多執行模式（流式/無頭/服務器）",
+          "AI 圖像/視頻生成集成",
+          "國際化翻譯自動化"
+        ]
       },
       {
         "id": "intelligent-customer-service",
         "title": "母嬰智能客服平台",
         "industry": "母嬰電商",
-        "description": "多輪對話智能客服系統，獲得 7 項軟件著作權",
+        "description": "多輪對話智能客服系統，獲得 7 項軟件著作權，覆蓋意圖識別、知識庫檢索、用戶畫像等能力。",
         "techStack": ["NLP", "知識圖譜", "對話管理", "Python", "PostgreSQL"],
-        "achievements": ["7 個軟件著作權申請","智能催拍催付營銷系統","用戶標籤智能分析系統","AI客服訓練與優化系統"],
-        "highlights": ["多輪對話引擎","意圖識別 + 知識庫檢索","用戶畫像與標籤管理","營銷數據全鏈路追蹤","SKU級用戶行為分析","7x24小時自動響應"],
-        "scale": {"codeLines": "7 個獨立系統","repos": "Optima-Unicall 組織"},
-        "tags": ["nlp", "knowledge-graph", "agentic-ai"],
-        "order": 3
+        "achievements": [
+          "7 個軟件著作權",
+          "智能催拍催付營銷系統",
+          "用戶標籤智能分析系統",
+          "7x24 小時自動響應"
+        ]
       },
       {
         "id": "ai-content-generation",
         "title": "AI 內容生成引擎",
         "industry": "AI 創作",
-        "description": "自研 AI 工作流引擎，支持圖像和視頻自動化生成",
+        "description": "自研 AI 工作流引擎，支持圖像和視頻自動化生成，提供可視化工作流編排和標準化 API 接口。",
         "techStack": ["工作流引擎", "深度學習", "TypeScript", "WebSocket", "Docker"],
-        "achievements": ["可視化工作流編排","標準化 API 接口","圖像和視頻批量生成","無縫集成業務系統"],
-        "highlights": ["預置模板庫","RESTful API 封裝","異步任務隊列","實時生成狀態推送","多租戶資源隔離","GPU 資源調度優化"],
-        "scale": {"codeLines": "核心引擎 + 業務集成","repos": "標準化 API 接口"},
-        "tags": ["video-generation", "image-generation", "automation"],
-        "order": 4
+        "achievements": [
+          "可視化工作流編排",
+          "標準化 API 接口",
+          "圖像和視頻批量生成",
+          "GPU 資源調度優化"
+        ]
       },
       {
         "id": "ai-photo-selection",
         "title": "AI 照片智能選片系統",
         "industry": "影視製作",
-        "description": "基於 CLIP + FAISS + MUSIQ 的智能照片篩選系統",
+        "description": "基於 CLIP + FAISS + MUSIQ 的智能照片篩選系統，性能提升 80 倍。",
         "techStack": ["CLIP", "FAISS", "MUSIQ", "TypeScript", "Python", "RabbitMQ"],
-        "achievements": ["1000 張照片 4.4 分鐘處理","性能提升 80 倍（6小時 → 4.4分鐘）","自動相似度聚類 + 質量評分","流式處理架構 + GPU 優化"],
-        "highlights": ["CLIP 視覺特徵提取","FAISS 高效相似度檢索","MUSIQ 圖像質量評估","分佈式任務隊列（RabbitMQ）","實時監控告警","可擴展到視頻處理"],
-        "scale": {"budget": "20 萬元","duration": "2 個月快速交付"},
-        "tags": ["computer-vision", "deep-learning", "high-performance"],
-        "order": 5
+        "achievements": [
+          "1000 張照片 4.4 分鐘處理",
+          "性能提升 80 倍（6小時 → 4.4分鐘）",
+          "自動相似度聚類 + 質量評分",
+          "流式處理架構 + GPU 優化"
+        ]
       },
       {
         "id": "ai-product-scout",
         "title": "AI 智能選品與數據分析",
         "industry": "電商 SaaS",
-        "description": "Amazon 產品分析 + BI 數據洞察，賦能電商決策",
+        "description": "Amazon 產品分析 + BI 數據洞察，賦能電商決策，提供實時看板和趨勢預測。",
         "techStack": ["數據挖掘", "BI 分析", "React", "Python", "時序數據庫"],
-        "achievements": ["Amazon 產品數據抓取與分析","銷售趨勢預測與選品建議","BI 看板實時更新","SKU 級用戶行為追蹤"],
-        "highlights": ["產品競爭力分析","市場趨勢洞察","用戶行為熱力圖","自動化報表生成","異常檢測告警","A/B 測試分析"],
-        "scale": {"codeLines": "optima-scout + optima-bi","repos": "電商數據智能平台"},
-        "tags": ["data-engineering", "recommendation", "bi-analytics"],
-        "order": 6
+        "achievements": [
+          "Amazon 產品數據分析",
+          "銷售趨勢預測與選品建議",
+          "BI 看板實時更新",
+          "異常檢測告警"
+        ]
       }
     ]
   },
@@ -334,41 +337,100 @@
     "errorMessage": "請稍後重試或直接發送郵件給我們"
   },
   "product": {
-    "title": "Optima Pulse 產品介紹",
-    "subtitle": "企業決策 Agent，通過 CLI 工具接入企業數據源，用領域 Skills 編碼業務知識，讓用戶以自然語言對話方式查詢數據和討論決策",
-    "architectureTitle": "三層架構",
-    "architectureSubtitle": "CLI 工具 + 領域 Skills + Agent 編排",
-    "verticalTitle": "首個垂直行業：電商",
-    "verticalSubtitle": "電商商家數據源標準化，決策場景清晰且高頻",
-    "skillsTitle": "電商核心 Skills",
-    "skills": [
-      { "name": "庫存健康診斷", "input": "庫存數據 + 銷售趨勢", "output": "補貨建議 + 預計斷貨時間" },
-      { "name": "廣告效果評估", "input": "廣告花費 + 轉化數據", "output": "ROAS 分析 + 優化建議" },
-      { "name": "商品表現排名", "input": "銷售 + 退貨 + 評價數據", "output": "商品健康度評分 + 行動建議" },
-      { "name": "定價策略建議", "input": "成本 + 競品價格 + 銷量彈性", "output": "最優價格區間" },
-      { "name": "退貨原因分析", "input": "退貨數據 + 評價文本", "output": "根因歸類 + 改進建議" },
-      { "name": "現金流預測", "input": "收入 + 支出 + 賬期數據", "output": "未來 N 天現金流預測" },
-      { "name": "選品趨勢分析", "input": "市場數據 + 搜索趨勢", "output": "品類機會評估" }
+    "title": "Optima Pulse",
+    "subtitle": "企業決策 Agent — 用自然語言對話查詢數據、分析問題、獲得決策建議",
+    "architectureTitle": "三層架構，深度理解業務",
+    "architectureSubtitle": "輕量接入、領域深耕、智能編排 — 三層解耦設計讓 Pulse 適配任何行業",
+    "architectureItems": [
+      {
+        "id": "cli-tools",
+        "icon": "/icons/cli-tools.png",
+        "title": "CLI 工具層",
+        "label": "數據接入",
+        "description": "每個數據源對應一個 CLI 工具，標準化接口即插即用。新增數據源只需編寫一個 CLI，無需搭建 ETL 管道。",
+        "details": ["電商平台 API", "廣告平台 API", "支付/財務系統", "ERP / 物流 API", "數據庫直連"]
+      },
+      {
+        "id": "skills",
+        "icon": "/icons/skills-brain.png",
+        "title": "Skills 層",
+        "label": "領域知識",
+        "description": "將行業專家的判斷邏輯編碼為可複用的 Skills。更換行業只需更換一套 Skills，核心引擎保持不變。",
+        "details": ["庫存健康診斷", "廣告效果評估", "定價策略建議", "退貨原因分析", "現金流預測", "選品趨勢分析"]
+      },
+      {
+        "id": "agent",
+        "icon": "/icons/agent-chat.png",
+        "title": "Agent 層",
+        "label": "編排與推理",
+        "description": "理解用戶意圖，自動調用工具獲取數據，選擇合適的 Skills 進行分析。支持多輪對話、追問澄清和主動建議。",
+        "details": ["意圖理解", "工具調用", "多輪對話", "追問澄清", "主動建議", "預警設置"]
+      }
     ],
-    "dataSourcesTitle": "支持的數據源",
-    "dataSources": [
-      { "name": "Shopify", "priority": "P0" },
-      { "name": "Amazon Seller Central", "priority": "P0" },
-      { "name": "Google Ads", "priority": "P1" },
-      { "name": "Meta Ads", "priority": "P1" },
-      { "name": "Stripe / PayPal", "priority": "P1" },
-      { "name": "物流 API", "priority": "P2" },
-      { "name": "QuickBooks / Xero", "priority": "P2" },
-      { "name": "Google Analytics", "priority": "P2" }
+    "capabilitiesTitle": "核心能力",
+    "capabilitiesSubtitle": "從數據接入到決策輸出，覆蓋企業決策全流程",
+    "capabilities": [
+      {
+        "title": "自然語言查詢",
+        "description": "用日常語言直接提問，無需學習 SQL 或 BI 工具。系統自動理解意圖、查詢數據、返回結構化答案。"
+      },
+      {
+        "title": "多數據源接入",
+        "description": "通過 CLI 工具標準化接入各類企業數據源，包括電商平台、廣告系統、ERP、財務軟件和數據庫。"
+      },
+      {
+        "title": "領域知識編碼",
+        "description": "將行業專家經驗編碼為可複用的 Skills，讓 Agent 具備垂直行業的專業判斷能力。"
+      },
+      {
+        "title": "決策建議生成",
+        "description": "不只返回數據，而是結合業務上下文給出可執行的建議，並說明推理依據。"
+      },
+      {
+        "title": "實時監控預警",
+        "description": "設定業務指標閾值，Agent 持續監控並在異常時主動通知，從被動查詢變為主動預警。"
+      },
+      {
+        "title": "多輪對話追問",
+        "description": "支持連續追問、補充條件、切換視角，像和業務專家對話一樣深入探討問題。"
+      }
     ],
-    "pricingTitle": "定價方向",
-    "pricingPlans": [
-      { "name": "Starter", "target": "單店鋪小賣家", "features": ["2 個數據源接入", "基礎 Skills", "基礎對話"] },
-      { "name": "Growth", "target": "多店鋪 / 多平台", "features": ["5+ 數據源接入", "全部 Skills", "預警通知", "多輪決策對話"] },
-      { "name": "Enterprise", "target": "品牌商 / 大賣家", "features": ["無限數據源", "自定義 Skills", "私有部署", "專屬技術支持"] }
+    "workflowTitle": "如何使用",
+    "workflowSubtitle": "四步開始，快速上線",
+    "workflowSteps": [
+      {
+        "step": "1",
+        "title": "接入數據源",
+        "description": "通過 CLI 工具連接您的業務系統 — 電商平台、廣告系統、ERP、數據庫等。標準化接口，無需 ETL。"
+      },
+      {
+        "step": "2",
+        "title": "配置領域知識",
+        "description": "選擇或自定義行業 Skills，將您的業務判斷邏輯編碼到系統中，讓 Agent 理解您的行業。"
+      },
+      {
+        "step": "3",
+        "title": "自然語言對話",
+        "description": "用日常語言提問，Agent 自動調用工具、分析數據、結合 Skills 給出專業回答和建議。"
+      },
+      {
+        "step": "4",
+        "title": "獲得決策建議",
+        "description": "收到帶有推理過程的決策建議，可以繼續追問、設置預警、或讓 Agent 執行後續動作。"
+      }
     ],
-    "ctaTitle": "立即開始",
-    "ctaSubtitle": "聯絡我們，了解 Optima Pulse 如何為您的業務定制決策方案",
+    "industriesTitle": "適用行業",
+    "industriesSubtitle": "可複用架構，適配多個垂直行業",
+    "industries": [
+      { "name": "電商", "description": "庫存管理、廣告優化、選品分析、退貨診斷" },
+      { "name": "零售", "description": "門店運營、供應鏈決策、促銷策略、會員分析" },
+      { "name": "物流", "description": "路線優化、配送效率、倉儲管理、成本控制" },
+      { "name": "金融", "description": "風險評估、投資分析、合規監控、客戶洞察" },
+      { "name": "製造", "description": "生產排程、設備維護、質量控制、供應商管理" },
+      { "name": "快消", "description": "需求預測、渠道管理、新品策略、市場分析" }
+    ],
+    "ctaTitle": "開始使用 Optima Pulse",
+    "ctaSubtitle": "告訴我們您的業務場景，我們為您定制專屬的決策方案",
     "ctaButton": "預約演示"
   },
   "footer": {

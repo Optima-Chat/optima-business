@@ -217,9 +217,6 @@
     "viewAll": "View All Cases",
     "pageTitle": "Tech Expertise",
     "pageSubtitle": "The team behind Optima Pulse has delivered multiple enterprise-grade AI projects",
-    "industry": "Industry",
-    "techStack": "Tech Stack",
-    "achievements": "Key Achievements",
     "contactCTA": "Want to learn more about our cases?",
     "contactLink": "Contact us for consultation →",
     "items": [
@@ -227,73 +224,79 @@
         "id": "mcp-agentic-platform",
         "title": "Enterprise AI Agent Development Platform",
         "industry": "AI Infrastructure",
-        "description": "Enterprise-grade AI Agent platform based on standard protocols, supporting 20+ mainstream AI models",
+        "description": "Enterprise-grade AI Agent platform based on standard protocols, supporting 20+ mainstream AI models with stateful conversations, workspace file system, and multi-tenant authentication.",
         "techStack": ["AI Agent Framework", "Next.js", "WebSocket", "Zustand", "Multi-modal AI"],
-        "achievements": ["Integrated 20+ AI models (GPT-4/Claude/Gemini)","Stateful conversation system with intelligent context management","Workspace file system + intelligent file references","Multi-tenant authentication (GitHub/Google OAuth)"],
-        "highlights": ["Unified protocol for managing multiple AI services","Virtualized message list supporting ultra-long conversations","Professional search engine integration","Deep e-commerce platform integration","Tool invocation lifecycle management","Personal API key configuration"],
-        "scale": {"codeLines": "15+ independent services, industrial-grade architecture","repos": "agentic-chat, mcp-host, user-auth"},
-        "tags": ["agentic-ai", "mcp", "multi-modal"],
-        "order": 1
+        "achievements": [
+          "Integrated 20+ AI models (GPT-4/Claude/Gemini)",
+          "Stateful conversation system with intelligent context management",
+          "Workspace file system + intelligent file references",
+          "15+ independent services, industrial-grade architecture"
+        ]
       },
       {
         "id": "ecommerce-ai-agent",
         "title": "E-commerce Operations AI Agent",
         "industry": "E-commerce SaaS",
-        "description": "Intelligent e-commerce assistant for natural language store management",
+        "description": "Intelligent e-commerce assistant for natural language store management, covering products, orders, inventory, advertising, and 10+ business modules.",
         "techStack": ["AI Agent Engine", "TypeScript", "WebSocket", "Video Generation Engine"],
-        "achievements": ["10+ business modules integrated","Multiple execution modes (streaming/headless/server)","AI image/video generation integration","Automated ad placement"],
-        "highlights": ["Intelligent product/order/inventory management","Automated internationalization translation","AI product research and analysis","BI data analysis and insights","Context visualization + real-time statistics","Session recovery + multi-conversation management"],
-        "scale": {"codeLines": "commerce-cli + optima-agent","repos": "NPM package, globally available"},
-        "tags": ["agentic-ai", "ecommerce", "automation"],
-        "order": 2
+        "achievements": [
+          "10+ business modules integrated",
+          "Multiple execution modes (streaming/headless/server)",
+          "AI image/video generation integration",
+          "Automated internationalization translation"
+        ]
       },
       {
         "id": "intelligent-customer-service",
         "title": "Maternity & Infant Intelligent Customer Service Platform",
         "industry": "Maternity & Infant E-commerce",
-        "description": "Multi-turn dialogue intelligent customer service system, awarded 7 software copyrights",
+        "description": "Multi-turn dialogue intelligent customer service system, awarded 7 software copyrights, covering intent recognition, knowledge base retrieval, and user profiling.",
         "techStack": ["NLP", "Knowledge Graph", "Dialogue Management", "Python", "PostgreSQL"],
-        "achievements": ["7 software copyright applications","Intelligent reminder marketing system","User tag intelligent analysis system","AI customer service training & optimization system"],
-        "highlights": ["Multi-turn dialogue engine","Intent recognition + knowledge base retrieval","User profiling and tag management","Marketing data full-link tracking","SKU-level user behavior analysis","7x24 automatic response"],
-        "scale": {"codeLines": "7 independent systems","repos": "Optima-Unicall organization"},
-        "tags": ["nlp", "knowledge-graph", "agentic-ai"],
-        "order": 3
+        "achievements": [
+          "7 software copyrights",
+          "Intelligent reminder marketing system",
+          "User tag intelligent analysis system",
+          "7x24 automatic response"
+        ]
       },
       {
         "id": "ai-content-generation",
         "title": "AI Content Generation Engine",
         "industry": "AI Creation",
-        "description": "Self-developed AI workflow engine supporting automated image and video generation",
+        "description": "Self-developed AI workflow engine supporting automated image and video generation, with visual workflow orchestration and standardized API interfaces.",
         "techStack": ["Workflow Engine", "Deep Learning", "TypeScript", "WebSocket", "Docker"],
-        "achievements": ["Visual workflow orchestration","Standardized API interface","Batch image and video generation","Seamless business system integration"],
-        "highlights": ["Preset template library","RESTful API encapsulation","Asynchronous task queue","Real-time generation status push","Multi-tenant resource isolation","GPU resource scheduling optimization"],
-        "scale": {"codeLines": "Core engine + business integration","repos": "Standardized API interface"},
-        "tags": ["video-generation", "image-generation", "automation"],
-        "order": 4
+        "achievements": [
+          "Visual workflow orchestration",
+          "Standardized API interface",
+          "Batch image and video generation",
+          "GPU resource scheduling optimization"
+        ]
       },
       {
         "id": "ai-photo-selection",
         "title": "AI Intelligent Photo Selection System",
         "industry": "Film & TV Production",
-        "description": "Intelligent photo screening system based on CLIP + FAISS + MUSIQ",
+        "description": "Intelligent photo screening system based on CLIP + FAISS + MUSIQ, achieving 80x performance improvement.",
         "techStack": ["CLIP", "FAISS", "MUSIQ", "TypeScript", "Python", "RabbitMQ"],
-        "achievements": ["Process 1000 photos in 4.4 minutes","80x performance improvement (6 hours → 4.4 minutes)","Automatic similarity clustering + quality scoring","Streaming architecture + GPU optimization"],
-        "highlights": ["CLIP visual feature extraction","FAISS efficient similarity search","MUSIQ image quality assessment","Distributed task queue (RabbitMQ)","Real-time monitoring and alerts","Scalable to video processing"],
-        "scale": {"budget": "200,000 CNY","duration": "2-month rapid delivery"},
-        "tags": ["computer-vision", "deep-learning", "high-performance"],
-        "order": 5
+        "achievements": [
+          "Process 1000 photos in 4.4 minutes",
+          "80x performance improvement (6 hours → 4.4 minutes)",
+          "Automatic similarity clustering + quality scoring",
+          "Streaming architecture + GPU optimization"
+        ]
       },
       {
         "id": "ai-product-scout",
         "title": "AI Intelligent Product Selection & Data Analysis",
         "industry": "E-commerce SaaS",
-        "description": "Amazon product analysis + BI data insights empowering e-commerce decisions",
+        "description": "Amazon product analysis + BI data insights empowering e-commerce decisions, with real-time dashboards and trend forecasting.",
         "techStack": ["Data Mining", "BI Analysis", "React", "Python", "Time-series Database"],
-        "achievements": ["Amazon product data scraping and analysis","Sales trend forecasting and product recommendations","Real-time BI dashboard updates","SKU-level user behavior tracking"],
-        "highlights": ["Product competitiveness analysis","Market trend insights","User behavior heatmap","Automated report generation","Anomaly detection alerts","A/B testing analysis"],
-        "scale": {"codeLines": "optima-scout + optima-bi","repos": "E-commerce data intelligence platform"},
-        "tags": ["data-engineering", "recommendation", "bi-analytics"],
-        "order": 6
+        "achievements": [
+          "Amazon product data analysis",
+          "Sales trend forecasting and product recommendations",
+          "Real-time BI dashboard updates",
+          "Anomaly detection alerts"
+        ]
       }
     ]
   },
@@ -334,41 +337,100 @@
     "errorMessage": "Please try again later or send us an email directly"
   },
   "product": {
-    "title": "Optima Pulse Product",
-    "subtitle": "Enterprise decision Agent that connects to enterprise data sources via CLI tools, encodes business knowledge through domain Skills, and lets users query data and discuss decisions via natural language",
-    "architectureTitle": "Three-Layer Architecture",
-    "architectureSubtitle": "CLI Tools + Domain Skills + Agent Orchestration",
-    "verticalTitle": "First Vertical: E-commerce",
-    "verticalSubtitle": "Standardized e-commerce data sources, clear and high-frequency decision scenarios",
-    "skillsTitle": "E-commerce Core Skills",
-    "skills": [
-      { "name": "Inventory Health Diagnosis", "input": "Inventory data + sales trends", "output": "Restocking advice + estimated stockout time" },
-      { "name": "Ad Performance Evaluation", "input": "Ad spend + conversion data", "output": "ROAS analysis + optimization advice" },
-      { "name": "Product Performance Ranking", "input": "Sales + returns + review data", "output": "Product health score + action items" },
-      { "name": "Pricing Strategy", "input": "Cost + competitor prices + demand elasticity", "output": "Optimal price range" },
-      { "name": "Return Analysis", "input": "Return data + review text", "output": "Root cause classification + improvement suggestions" },
-      { "name": "Cash Flow Forecast", "input": "Revenue + expenses + payment terms", "output": "N-day cash flow forecast" },
-      { "name": "Product Selection Trends", "input": "Market data + search trends", "output": "Category opportunity assessment" }
+    "title": "Optima Pulse",
+    "subtitle": "Enterprise Decision Agent — Query data, analyze issues, and get decision recommendations through natural language",
+    "architectureTitle": "Three-Layer Architecture, Deep Business Understanding",
+    "architectureSubtitle": "Lightweight integration, domain expertise, intelligent orchestration — a decoupled design that adapts to any industry",
+    "architectureItems": [
+      {
+        "id": "cli-tools",
+        "icon": "/icons/cli-tools.png",
+        "title": "CLI Tools Layer",
+        "label": "Data Access",
+        "description": "Each data source maps to a CLI tool with standardized plug-and-play interfaces. Adding a new data source only requires writing a CLI — no ETL pipeline needed.",
+        "details": ["E-commerce Platform APIs", "Ad Platform APIs", "Payment/Finance Systems", "ERP / Logistics APIs", "Direct Database Connection"]
+      },
+      {
+        "id": "skills",
+        "icon": "/icons/skills-brain.png",
+        "title": "Skills Layer",
+        "label": "Domain Knowledge",
+        "description": "Encode industry experts' judgment logic into reusable Skills. Switching industries means switching Skills — the core engine stays the same.",
+        "details": ["Inventory Health Diagnosis", "Ad Performance Evaluation", "Pricing Strategy", "Return Analysis", "Cash Flow Forecast", "Product Selection Trends"]
+      },
+      {
+        "id": "agent",
+        "icon": "/icons/agent-chat.png",
+        "title": "Agent Layer",
+        "label": "Orchestration & Reasoning",
+        "description": "Understands user intent, automatically invokes tools for data, and selects appropriate Skills for analysis. Supports multi-turn dialogue, follow-up questions, and proactive suggestions.",
+        "details": ["Intent Understanding", "Tool Invocation", "Multi-turn Dialogue", "Follow-up Questions", "Proactive Suggestions", "Alert Setup"]
+      }
     ],
-    "dataSourcesTitle": "Supported Data Sources",
-    "dataSources": [
-      { "name": "Shopify", "priority": "P0" },
-      { "name": "Amazon Seller Central", "priority": "P0" },
-      { "name": "Google Ads", "priority": "P1" },
-      { "name": "Meta Ads", "priority": "P1" },
-      { "name": "Stripe / PayPal", "priority": "P1" },
-      { "name": "Logistics API", "priority": "P2" },
-      { "name": "QuickBooks / Xero", "priority": "P2" },
-      { "name": "Google Analytics", "priority": "P2" }
+    "capabilitiesTitle": "Core Capabilities",
+    "capabilitiesSubtitle": "From data integration to decision output, covering the full enterprise decision workflow",
+    "capabilities": [
+      {
+        "title": "Natural Language Queries",
+        "description": "Ask questions in everyday language — no SQL or BI tools required. The system automatically understands intent, queries data, and returns structured answers."
+      },
+      {
+        "title": "Multi-Source Data Integration",
+        "description": "Standardized integration with various enterprise data sources via CLI tools, including e-commerce platforms, ad systems, ERPs, finance software, and databases."
+      },
+      {
+        "title": "Domain Knowledge Encoding",
+        "description": "Encode industry expert experience into reusable Skills, giving the Agent professional judgment capabilities for vertical industries."
+      },
+      {
+        "title": "Decision Recommendations",
+        "description": "Goes beyond returning data — provides actionable recommendations with business context and explains the reasoning behind them."
+      },
+      {
+        "title": "Real-time Monitoring & Alerts",
+        "description": "Set business metric thresholds and the Agent continuously monitors, proactively notifying you of anomalies — from reactive queries to proactive alerts."
+      },
+      {
+        "title": "Multi-turn Dialogue",
+        "description": "Support continuous follow-ups, additional conditions, and perspective switching — explore issues in depth like talking to a business expert."
+      }
     ],
-    "pricingTitle": "Pricing",
-    "pricingPlans": [
-      { "name": "Starter", "target": "Single-store sellers", "features": ["2 data source integrations", "Basic Skills", "Basic dialogue"] },
-      { "name": "Growth", "target": "Multi-store / Multi-platform", "features": ["5+ data source integrations", "All Skills", "Alert notifications", "Multi-turn decision dialogue"] },
-      { "name": "Enterprise", "target": "Brands / Large sellers", "features": ["Unlimited data sources", "Custom Skills", "Private deployment", "Dedicated support"] }
+    "workflowTitle": "How It Works",
+    "workflowSubtitle": "Four steps to get started",
+    "workflowSteps": [
+      {
+        "step": "1",
+        "title": "Connect Data Sources",
+        "description": "Connect your business systems via CLI tools — e-commerce platforms, ad systems, ERPs, databases, etc. Standardized interfaces, no ETL needed."
+      },
+      {
+        "step": "2",
+        "title": "Configure Domain Knowledge",
+        "description": "Select or customize industry Skills, encoding your business judgment logic into the system so the Agent understands your industry."
+      },
+      {
+        "step": "3",
+        "title": "Ask in Natural Language",
+        "description": "Ask questions in everyday language. The Agent automatically invokes tools, analyzes data, and combines Skills to give professional answers and recommendations."
+      },
+      {
+        "step": "4",
+        "title": "Get Decision Recommendations",
+        "description": "Receive decision recommendations with reasoning, then continue asking follow-ups, set alerts, or let the Agent execute subsequent actions."
+      }
     ],
-    "ctaTitle": "Get Started",
-    "ctaSubtitle": "Contact us to learn how Optima Pulse can customize a decision solution for your business",
+    "industriesTitle": "Industries",
+    "industriesSubtitle": "Reusable architecture that adapts to multiple vertical industries",
+    "industries": [
+      { "name": "E-commerce", "description": "Inventory management, ad optimization, product selection, return diagnosis" },
+      { "name": "Retail", "description": "Store operations, supply chain decisions, promotions, member analytics" },
+      { "name": "Logistics", "description": "Route optimization, delivery efficiency, warehouse management, cost control" },
+      { "name": "Finance", "description": "Risk assessment, investment analysis, compliance monitoring, customer insights" },
+      { "name": "Manufacturing", "description": "Production scheduling, equipment maintenance, quality control, supplier management" },
+      { "name": "FMCG", "description": "Demand forecasting, channel management, new product strategy, market analysis" }
+    ],
+    "ctaTitle": "Start Using Optima Pulse",
+    "ctaSubtitle": "Tell us your business scenario and we'll customize a decision solution for you",
     "ctaButton": "Book Demo"
   },
   "footer": {

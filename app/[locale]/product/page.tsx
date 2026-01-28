@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
+import Image from 'next/image'
 import Container from "@/components/layout/container"
 import { locales } from '@/i18n/request'
 
@@ -21,15 +22,36 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'product' })
 
-  const skills = t.raw('skills') as Array<{ name: string; input: string; output: string }>
-  const dataSources = t.raw('dataSources') as Array<{ name: string; priority: string }>
-  const pricingPlans = t.raw('pricingPlans') as Array<{ name: string; target: string; features: string[] }>
+  const architectureItems = t.raw('architectureItems') as Array<{
+    id: string
+    icon: string
+    title: string
+    label: string
+    description: string
+    details: string[]
+  }>
+
+  const capabilities = t.raw('capabilities') as Array<{
+    title: string
+    description: string
+  }>
+
+  const workflowSteps = t.raw('workflowSteps') as Array<{
+    step: string
+    title: string
+    description: string
+  }>
+
+  const industries = t.raw('industries') as Array<{
+    name: string
+    description: string
+  }>
 
   return (
     <div className="py-20">
       <Container>
         {/* Page Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-24">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             {t('title')}
           </h1>
@@ -39,105 +61,108 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
         </div>
 
         {/* Architecture Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-2">{t('architectureTitle')}</h2>
-          <p className="text-center text-muted-foreground mb-10">{t('architectureSubtitle')}</p>
-
-          <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl border border-slate-200 p-8 font-mono text-sm leading-relaxed overflow-x-auto">
-            <pre className="text-slate-700 whitespace-pre">{`┌─────────────────────────────────────────────────┐
-│  对话层（用户界面）                                │
-│  自然语言输入 → Agent 编排 → 结构化回答 + 建议     │
-├─────────────────────────────────────────────────┤
-│  Agent 层（编排与推理）                            │
-│  理解意图 → 选择工具 → 调用数据 → 结合知识 → 回答  │
-├──────────────────┬──────────────────────────────┤
-│  Skills 层       │  CLI 工具层                    │
-│  （领域知识）     │  （数据获取）                   │
-│                  │                               │
-│  · 库存管理策略   │  · 电商平台 API                │
-│  · 定价建议逻辑   │  · 广告平台 API                │
-│  · 退货原因分析   │  · ERP/财务系统                │
-│  · 补货时机判断   │  · 物流追踪 API                │
-│  · 广告ROI评估   │  · 数据库直连                  │
-├──────────────────┴──────────────────────────────┤
-│  数据源                                          │
-│  Shopify | Amazon | Google Ads | Meta Ads        │
-│  Stripe | QuickBooks | 物流API | 自有数据库        │
-└─────────────────────────────────────────────────┘`}</pre>
-          </div>
-        </div>
-
-        {/* First Vertical */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-2">{t('verticalTitle')}</h2>
-          <p className="text-center text-muted-foreground mb-10">{t('verticalSubtitle')}</p>
-
-          {/* Skills Table */}
-          <div className="mb-12">
-            <h3 className="text-xl font-semibold mb-6 text-center">{t('skillsTitle')}</h3>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-slate-50">
-                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold">Skill</th>
-                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold">Input</th>
-                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold">Output</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {skills.map((skill) => (
-                    <tr key={skill.name} className="hover:bg-slate-50 transition-colors">
-                      <td className="border border-slate-200 px-4 py-3 text-sm font-medium">{skill.name}</td>
-                      <td className="border border-slate-200 px-4 py-3 text-sm text-muted-foreground">{skill.input}</td>
-                      <td className="border border-slate-200 px-4 py-3 text-sm text-muted-foreground">{skill.output}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+        <div className="mb-28">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-3">{t('architectureTitle')}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t('architectureSubtitle')}</p>
           </div>
 
-          {/* Data Sources */}
-          <div className="mb-12">
-            <h3 className="text-xl font-semibold mb-6 text-center">{t('dataSourcesTitle')}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-              {dataSources.map((ds) => (
-                <div key={ds.name} className="bg-white border border-slate-200 rounded-lg p-4 text-center hover:border-blue-300 hover:shadow-md transition-all">
-                  <p className="text-sm font-medium">{ds.name}</p>
-                  <span className={`text-xs mt-1 inline-block px-2 py-0.5 rounded-full ${
-                    ds.priority === 'P0' ? 'bg-blue-100 text-blue-700' :
-                    ds.priority === 'P1' ? 'bg-cyan-100 text-cyan-700' :
-                    'bg-slate-100 text-slate-600'
-                  }`}>
-                    {ds.priority}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Pricing */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-10">{t('pricingTitle')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+          <div className="space-y-20">
+            {architectureItems.map((item, index) => (
               <div
-                key={plan.name}
-                className={`bg-white border rounded-2xl p-6 transition-all hover:shadow-lg ${
-                  index === 1 ? 'border-blue-400 shadow-md ring-2 ring-blue-100' : 'border-slate-200'
+                key={item.id}
+                className={`flex flex-col md:flex-row items-center gap-10 md:gap-16 ${
+                  index % 2 === 1 ? 'md:flex-row-reverse' : ''
                 }`}
               >
-                <h3 className="text-xl font-bold mb-1">{plan.name}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{plan.target}</p>
-                <ul className="space-y-2">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2 text-sm">
-                      <span className="text-green-500 mt-0.5 flex-shrink-0">&#10003;</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex-1 w-full">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                      {item.label}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {item.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.details.map((detail) => (
+                      <span
+                        key={detail}
+                        className="text-sm text-muted-foreground border border-slate-200 rounded-full px-3 py-1"
+                      >
+                        {detail}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex-1 w-full">
+                  <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={600}
+                      height={450}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Capabilities Section */}
+        <div className="mb-28">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-3">{t('capabilitiesTitle')}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t('capabilitiesSubtitle')}</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {capabilities.map((cap, index) => (
+              <div key={index}>
+                <h3 className="text-lg font-semibold mb-2">{cap.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{cap.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Workflow Section */}
+        <div className="mb-28">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-3">{t('workflowTitle')}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t('workflowSubtitle')}</p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-12">
+            {workflowSteps.map((step) => (
+              <div key={step.step} className="flex gap-6">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-white font-bold text-lg">
+                  {step.step}
+                </div>
+                <div className="pt-1">
+                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Industries Section */}
+        <div className="mb-28">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-3">{t('industriesTitle')}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t('industriesSubtitle')}</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {industries.map((industry) => (
+              <div key={industry.name}>
+                <h3 className="text-lg font-semibold mb-1">{industry.name}</h3>
+                <p className="text-sm text-muted-foreground">{industry.description}</p>
               </div>
             ))}
           </div>
