@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useTranslations } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Card, CardHeader, CardTitle } from "@/components/ui/card"
@@ -84,44 +85,46 @@ export default function Differentiation() {
           ))}
         </div>
 
-        {/* Credential cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        {/* Credentials */}
+        <div className="space-y-16 mt-16">
           {credentials.map((cred, index) => (
             <motion.div
               key={cred.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.5, delay: 0.45 + index * 0.15 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+              transition={{ duration: 0.6, delay: 0.45 + index * 0.2 }}
             >
-              <Card className="h-full group hover:border-blue-400 bg-white border-slate-200 shadow-md hover:shadow-2xl hover:shadow-blue-100/50 transition-all duration-300 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-300" />
+              <div className="w-full md:w-1/2 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src={cred.icon}
+                  alt={cred.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-                <CardHeader className="relative">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-3xl">{cred.icon}</span>
-                    <CardTitle className="text-lg font-bold group-hover:text-blue-600 transition-colors">
-                      {cred.title}
-                    </CardTitle>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-                    {cred.description}
-                  </p>
+              <div className="w-full md:w-1/2">
+                <h3 className="text-2xl font-bold mb-3">
+                  {cred.title}
+                </h3>
+                <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                  {cred.description}
+                </p>
 
-                  <div className="grid grid-cols-4 gap-3">
-                    {cred.stats.map((stat) => (
-                      <div key={stat.label} className="text-center">
-                        <div className="text-lg font-bold text-blue-600">
-                          {stat.value}
-                        </div>
-                        <div className="text-xs text-muted-foreground mt-0.5">
-                          {stat.label}
-                        </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  {cred.stats.map((stat) => (
+                    <div key={stat.label}>
+                      <div className="text-2xl font-bold text-blue-600">
+                        {stat.value}
                       </div>
-                    ))}
-                  </div>
-                </CardHeader>
-              </Card>
+                      <div className="text-xs text-muted-foreground mt-1">
+                        {stat.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

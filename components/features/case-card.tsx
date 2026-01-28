@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Case } from "@/types"
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { DollarSign, Clock, Code, GitBranch } from "lucide-react"
 
 interface CaseCardProps {
   case: Case
@@ -110,25 +111,25 @@ export default function CaseCard({ case: caseData }: CaseCardProps) {
           <div className="grid grid-cols-2 gap-2 text-xs">
             {caseData.scale.budget && (
               <div className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50">
-                <span className="text-base">💰</span>
+                <DollarSign className="w-4 h-4 shrink-0" />
                 <span>{caseData.scale.budget}</span>
               </div>
             )}
             {caseData.scale.duration && (
               <div className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50">
-                <span className="text-base">⏱️</span>
+                <Clock className="w-4 h-4 shrink-0" />
                 <span>{caseData.scale.duration}</span>
               </div>
             )}
             {caseData.scale.codeLines && (
               <div className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50">
-                <span className="text-base">📦</span>
+                <Code className="w-4 h-4 shrink-0" />
                 <span>{caseData.scale.codeLines}</span>
               </div>
             )}
             {caseData.scale.repos && (
               <div className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-blue-50">
-                <span className="text-base">🔗</span>
+                <GitBranch className="w-4 h-4 shrink-0" />
                 <span>{caseData.scale.repos}</span>
               </div>
             )}

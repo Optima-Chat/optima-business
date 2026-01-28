@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useTranslations } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -51,19 +52,22 @@ export default function ProductArchitecture() {
               <Card className="relative h-full group hover:border-blue-400 bg-gradient-to-br from-white via-white to-slate-50 border-slate-200 shadow-md hover:shadow-2xl hover:shadow-blue-100/50 transition-all duration-300 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-cyan-500/0 group-hover:from-blue-500/5 group-hover:to-cyan-500/5 transition-all duration-300" />
 
-                <CardHeader className="relative">
-                  <div className="flex items-center gap-3 mb-4">
-                    <motion.div
-                      className="text-4xl"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      {item.icon}
-                    </motion.div>
-                    <Badge variant="secondary" className="text-xs bg-blue-50 text-blue-700 border-blue-200">
+                <div className="relative w-full aspect-[2/1] overflow-hidden">
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+                  <div className="absolute bottom-3 left-4">
+                    <Badge variant="secondary" className="text-xs bg-blue-50/90 text-blue-700 border-blue-200 backdrop-blur-sm">
                       {item.label}
                     </Badge>
                   </div>
+                </div>
+
+                <CardHeader className="relative pt-3">
                   <CardTitle className="text-xl mb-3 group-hover:text-blue-600 transition-colors">
                     {item.title}
                   </CardTitle>

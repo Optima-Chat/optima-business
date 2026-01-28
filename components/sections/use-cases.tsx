@@ -1,8 +1,8 @@
 "use client"
 
+import Image from "next/image"
 import { useTranslations } from 'next-intl'
 import Container from "@/components/layout/container"
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
@@ -46,59 +46,60 @@ export default function UseCases() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-20">
           {items.map((item, index) => (
             <motion.div
               key={item.id}
+              className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <Card className="h-full group hover:border-blue-400 hover:shadow-xl hover:shadow-blue-100/50 transition-all duration-300 bg-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-cyan-500/0 group-hover:from-blue-500/5 group-hover:to-cyan-500/5 transition-all duration-300" />
+              <div className="w-full md:w-1/2 relative aspect-[4/3] rounded-xl overflow-hidden">
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-                <CardHeader className="relative">
-                  <div className="text-3xl mb-2">{item.icon}</div>
-                  <CardTitle className="text-xl mb-2 group-hover:text-blue-600 transition-colors">
-                    {item.title}
-                  </CardTitle>
-                  <CardDescription className="text-base mb-4">
-                    {item.description}
-                  </CardDescription>
+              <div className="w-full md:w-1/2">
+                <h3 className="text-2xl font-bold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-base text-muted-foreground leading-relaxed mb-5">
+                  {item.description}
+                </p>
 
-                  {/* Real enterprise cases */}
-                  <div className="space-y-2.5 mb-4">
-                    {item.cases.map((caseItem) => (
-                      <div
-                        key={caseItem.industry}
-                        className="bg-slate-50 border border-slate-200 rounded-lg p-3 hover:bg-blue-50/50 hover:border-blue-200 transition-colors"
-                      >
-                        <div className="flex items-start gap-2">
-                          <span className="font-semibold text-sm text-slate-800 whitespace-nowrap shrink-0">
-                            {caseItem.industry}
-                          </span>
-                          <span className="text-sm text-slate-600 leading-relaxed">
-                            {caseItem.result}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                <div className="space-y-3 mb-5">
+                  {item.cases.map((caseItem) => (
+                    <div
+                      key={caseItem.industry}
+                      className="flex items-start gap-3"
+                    >
+                      <span className="font-semibold text-sm text-blue-600 whitespace-nowrap shrink-0">
+                        {caseItem.industry}
+                      </span>
+                      <span className="text-sm text-slate-600 leading-relaxed">
+                        {caseItem.result}
+                      </span>
+                    </div>
+                  ))}
+                </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {item.keywords.map((keyword) => (
-                      <Badge
-                        key={keyword}
-                        variant="secondary"
-                        className="text-xs hover:bg-blue-100 hover:text-blue-700 transition-colors cursor-default"
-                      >
-                        {keyword}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardHeader>
-              </Card>
+                <div className="flex flex-wrap gap-2">
+                  {item.keywords.map((keyword) => (
+                    <Badge
+                      key={keyword}
+                      variant="secondary"
+                      className="text-xs"
+                    >
+                      {keyword}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useTranslations, useLocale } from 'next-intl'
 import Container from "@/components/layout/container"
 import { Button } from "@/components/ui/button"
@@ -59,7 +60,7 @@ export default function Hero() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12">
             {[
               {
-                icon: "🔌",
+                icon: "/icons/cli-tools.png",
                 title: t('card1Title'),
                 subtitle: t('card1Subtitle'),
                 description: t('card1Desc'),
@@ -67,7 +68,7 @@ export default function Hero() {
                 delay: 0.4
               },
               {
-                icon: "🧠",
+                icon: "/icons/skills-brain.png",
                 title: t('card2Title'),
                 subtitle: t('card2Subtitle'),
                 description: t('card2Desc'),
@@ -75,7 +76,7 @@ export default function Hero() {
                 delay: 0.5
               },
               {
-                icon: "💬",
+                icon: "/icons/agent-chat.png",
                 title: t('card3Title'),
                 subtitle: t('card3Subtitle'),
                 description: t('card3Desc'),
@@ -90,13 +91,20 @@ export default function Hero() {
                 transition={{ duration: 0.6, delay: item.delay, ease: "easeOut" }}
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
               >
-                <Card className="p-6 h-full bg-white/95 backdrop-blur-sm border-2 border-slate-200 shadow-lg hover:shadow-2xl hover:shadow-blue-100/50 hover:border-blue-300 transition-all duration-300 relative overflow-hidden group">
+                <Card className="h-full bg-white/95 backdrop-blur-sm border-2 border-slate-200 shadow-lg hover:shadow-2xl hover:shadow-blue-100/50 hover:border-blue-300 transition-all duration-300 relative overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <div className="relative">
-                    <div className="text-4xl mb-3">
-                      {item.icon}
-                    </div>
+                  <div className="relative w-full aspect-[2/1] overflow-hidden rounded-t-lg">
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+                  </div>
+
+                  <div className="relative p-6 pt-2">
                     <div className={`text-2xl md:text-3xl font-bold bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent mb-2 break-words leading-tight`}>
                       {item.title}
                     </div>

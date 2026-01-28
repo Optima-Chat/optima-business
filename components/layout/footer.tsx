@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useTranslations, useLocale } from 'next-intl'
 import Container from "./container"
 import { motion } from "framer-motion"
+import { Mail, MapPin } from "lucide-react"
 
 // Logo 组件（复用 Navbar 的设计）
 function FooterLogo() {
@@ -106,13 +107,13 @@ export default function Footer() {
                     whileHover={{ x: 3 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <span className="text-base">📧</span>
+                    <Mail className="w-4 h-4 shrink-0" />
                     <span className="group-hover:underline">{tCommon('email')}</span>
                   </motion.a>
                 </li>
                 <li className="text-xs text-muted-foreground leading-relaxed">
                   <div className="flex items-start gap-2">
-                    <span className="text-base mt-0.5">📍</span>
+                    <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
                     <div>
                       <div className="whitespace-pre-line mb-1">{tContact('addressZh')}</div>
                       <p className="text-[10px] text-muted-foreground/70 mt-1 whitespace-pre-line">

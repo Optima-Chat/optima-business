@@ -37,7 +37,7 @@
     "items": [
       {
         "id": "cli-tools",
-        "icon": "🔌",
+        "icon": "/icons/cli-tools.png",
         "title": "CLI Tools Layer",
         "label": "Data Access",
         "description": "Each data source = one CLI tool. Standardized interfaces, plug and play. Adding a new data source requires no ETL pipeline — just write a CLI tool.",
@@ -45,7 +45,7 @@
       },
       {
         "id": "skills",
-        "icon": "🧠",
+        "icon": "/icons/skills-brain.png",
         "title": "Skills Layer",
         "label": "Domain Knowledge",
         "description": "Encode industry experts' judgment into reusable Skills. Switch industries = switch Skills, the core engine stays the same.",
@@ -53,7 +53,7 @@
       },
       {
         "id": "agent",
-        "icon": "💬",
+        "icon": "/icons/agent-chat.png",
         "title": "Agent Layer",
         "label": "Orchestration & Reasoning",
         "description": "Understands user intent, invokes tools for data, selects Skills for analysis. Supports multi-turn dialogue, follow-up questions, and proactive suggestions.",
@@ -67,7 +67,7 @@
     "items": [
       {
         "id": "supply-chain",
-        "icon": "📦",
+        "icon": "/icons/supply-chain.png",
         "title": "Inventory & Supply Chain Decisions",
         "description": "Connect inventory, sales, and logistics data to get real-time restocking advice, stockout alerts, and supply chain optimization. From reactive to data-driven proactive decisions.",
         "cases": [
@@ -80,7 +80,7 @@
       },
       {
         "id": "data-decision",
-        "icon": "🔍",
+        "icon": "/icons/data-query.png",
         "title": "Natural Language Data Query & Decisions",
         "description": "Query enterprise data in natural language, with automatic root cause analysis and report generation. Reduce data insights from days to seconds.",
         "cases": [
@@ -93,7 +93,7 @@
       },
       {
         "id": "marketing-ops",
-        "icon": "📊",
+        "icon": "/icons/marketing-ops.png",
         "title": "Marketing & Operations Optimization",
         "description": "Feed marketing data, user behavior, and operational metrics into the Agent for automatic analysis, strategy optimization, and content generation. From intuition-driven to data-driven operations.",
         "cases": [
@@ -106,7 +106,7 @@
       },
       {
         "id": "enterprise-agent",
-        "icon": "🏢",
+        "icon": "/icons/enterprise-hub.png",
         "title": "Enterprise Intelligence Hub",
         "description": "Deploy cross-department Agent networks, encoding industry knowledge into reusable decision models. From point tools to an enterprise-wide intelligence hub.",
         "cases": [
@@ -187,7 +187,7 @@
     "credentials": [
       {
         "id": "production",
-        "icon": "🚀",
+        "icon": "/icons/production-system.png",
         "title": "Production-Deployed Commercial System",
         "description": "Optima Pulse is not a slide deck. Our team has built and operates a full AI e-commerce system with end-to-end delivery from data to decisions.",
         "stats": [
@@ -199,7 +199,7 @@
       },
       {
         "id": "research",
-        "icon": "🎓",
+        "icon": "/icons/hkust-research.png",
         "title": "HKUST Research Backing",
         "description": "Core team from HKUST iSING Lab (Dept. of Computer Science & Engineering), specializing in large-scale AI systems, data center networking, and machine learning systems research.",
         "stats": [
