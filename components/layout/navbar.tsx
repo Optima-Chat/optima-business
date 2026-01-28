@@ -32,7 +32,7 @@ function Logo() {
       </div>
       {/* 文字 */}
       <span className="text-xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
-        Optima AI
+        Optima Pulse
       </span>
     </div>
   )
@@ -72,6 +72,12 @@ export default function Navbar() {
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
               {t('home')}
+            </Link>
+            <Link
+              href={`/${locale}/product`}
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
+              {t('product')}
             </Link>
             <Link
               href={`/${locale}/cases`}
@@ -155,6 +161,13 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('home')}
+            </Link>
+            <Link
+              href={`/${locale}/product`}
+              className="block text-sm font-medium text-foreground/80 hover:text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('product')}
             </Link>
             <Link
               href={`/${locale}/cases`}

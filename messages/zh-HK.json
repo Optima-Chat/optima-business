@@ -2,93 +2,221 @@
   "common": {
     "companyName": "極致智能科技有限公司",
     "companyNameEn": "Optima AI Limited",
-    "companyShort": "Optima AI",
-    "businessScope": "人工智能軟件開發 · 大數據技術",
-    "businessScopeDetail": "應用與解決方案",
-    "tagline": "AI 驅動的全棧技術服務",
+    "companyShort": "Optima Pulse",
+    "businessScope": "企業決策 Agent",
+    "businessScopeDetail": "用自然語言對話查詢數據、討論決策",
+    "tagline": "實時感知企業脈搏，做出最優決策",
     "email": "business@optima.chat"
   },
   "nav": {
     "home": "首頁",
-    "cases": "案例",
+    "product": "產品",
+    "cases": "技術實力",
     "contact": "聯絡我們",
-    "startConsulting": "開始諮詢"
+    "startConsulting": "預約演示"
   },
   "hero": {
-    "title": "極致智能 Optima AI",
-    "subtitle": "AI 驅動的全棧技術服務",
-    "description": "從算法到產品，端到端交付",
-    "agenticAI": "Agentic AI",
-    "agenticAISubtitle": "企業級 AI Agent",
-    "agenticAIDesc": "智能決策、工具調用、多輪對話",
-    "aiCreation": "AI 創作",
-    "aiCreationSubtitle": "圖像/視頻生成",
-    "aiCreationDesc": "工作流編排、自動化創作、風格遷移",
-    "discriminativeModel": "判別模型",
-    "discriminativeModelSubtitle": "CV + BI 分析",
-    "discriminativeModelDesc": "特徵提取、相似度檢索、數據洞察",
-    "viewCases": "查看案例"
+    "title": "Optima Pulse",
+    "subtitle": "實時感知企業脈搏，做出最優決策",
+    "description": "用自然語言對話查詢數據、討論決策、設置行動",
+    "card1Title": "數據接入",
+    "card1Subtitle": "CLI 工具層",
+    "card1Desc": "輕量接入企業數據源，無需 ETL 管道",
+    "card2Title": "領域知識",
+    "card2Subtitle": "Skills 層",
+    "card2Desc": "行業專家經驗編碼為可複用 Skills",
+    "card3Title": "智能對話",
+    "card3Subtitle": "Agent 層",
+    "card3Desc": "自然語言查詢、分析、建議、行動",
+    "bookDemo": "預約演示",
+    "learnProduct": "了解產品"
   },
-  "capabilities": {
-    "title": "核心能力",
-    "subtitle": "深度 AI 技術 × 全棧工程能力 × 快速交付",
+  "architecture": {
+    "title": "產品架構",
+    "subtitle": "三層設計，輕量接入，深度理解",
     "items": [
       {
-        "id": "deep-ai",
-        "icon": "🤖",
-        "title": "深度AI能力",
-        "description": "CLIP、FAISS、MUSIQ 等前沿模型，計算機視覺、NLP、推薦系統全覆蓋。GPU集群優化，性能提升數十倍。"
+        "id": "cli-tools",
+        "icon": "🔌",
+        "title": "CLI 工具層",
+        "label": "數據獲取",
+        "description": "每個數據源 = 一個 CLI 工具。標準化接口，即插即用。新增數據源無需 ETL 管道，寫一個 CLI 即可接入。",
+        "details": ["Shopify / Amazon API", "Google Ads / Meta Ads", "Stripe / PayPal", "ERP / 財務系統", "數據庫直連"]
       },
       {
-        "id": "full-stack",
-        "icon": "🚀",
-        "title": "全棧交付",
-        "description": "從前端 React/Next.js 到後端 Python/Node.js，數據庫到消息隊列，完整架構設計。Docker/K8s 部署，監控告警一站式。"
+        "id": "skills",
+        "icon": "🧠",
+        "title": "Skills 層",
+        "label": "領域知識",
+        "description": "將行業專家的判斷邏輯編碼為可複用的 Skills。換行業 = 換一套 Skills，核心引擎不變。",
+        "details": ["庫存健康診斷", "廣告效果評估", "商品表現排名", "定價策略建議", "退貨原因分析", "現金流預測"]
       },
       {
-        "id": "fast-iteration",
-        "icon": "⚡",
-        "title": "快速迭代",
-        "description": "2個月交付企業級系統。頂級團隊，騰訊/阿里/港科大背景。敏捷開發，持續交付，快速響應需求變化。"
+        "id": "agent",
+        "icon": "💬",
+        "title": "Agent 層",
+        "label": "編排與推理",
+        "description": "理解用戶意圖，調用工具獲取數據，選擇 Skills 分析，支持多輪對話、追問澄清、主動建議。",
+        "details": ["意圖理解", "工具調用", "多輪對話", "追問澄清", "主動建議", "設置預警"]
       }
     ]
   },
-  "businessScope": {
-    "title": "業務範圍",
-    "subtitle": "全方位 AI 技術服務，覆蓋計算機視覺、NLP、推薦系統、數據工程",
+  "useCases": {
+    "title": "企業已驗證的 AI 決策場景",
+    "subtitle": "這些場景已在國內頭部企業落地，並產出可量化的降本增效結果 — Optima Pulse 將同樣的能力帶給成長型企業",
     "items": [
       {
-        "id": "computer-vision",
-        "title": "計算機視覺",
-        "description": "圖像識別、視頻分析、質量評估、目標檢測",
-        "keywords": ["CLIP", "YOLO", "目標檢測", "圖像分類", "OCR", "人臉識別"]
+        "id": "supply-chain",
+        "icon": "📦",
+        "title": "庫存與供應鏈決策",
+        "description": "接入庫存、銷售、物流數據，實時輸出補貨建議、斷貨預警、供應鏈優化方案。從被動響應到數據驅動的主動決策。",
+        "cases": [
+          { "industry": "服裝龍頭", "result": "研發週期從 100 天縮短至 27 天（-73%），首期訂單僅 40%，其餘按數據滾動下單" },
+          { "industry": "物流巨頭", "result": "配送效率提升 50%，人力成本降低 30%，供應鏈輔助決策系統覆蓋全網" },
+          { "industry": "乳業集團", "result": "41 個 Agent 覆蓋供應鏈，交付週期縮短 55%，經營成本降低 32%" },
+          { "industry": "日化巨頭（中國區）", "result": "動態履約決策，物流成本降低 10%，收貨效率提高 30%" }
+        ],
+        "keywords": ["庫存預警", "斷貨預測", "補貨建議", "動態履約", "供應鏈優化"]
       },
       {
-        "id": "nlp",
-        "title": "自然語言處理",
-        "description": "智能客服、文本分析、多語言支持、語義理解",
-        "keywords": ["對話系統", "情感分析", "文本分類", "命名實體識別", "機器翻譯"]
+        "id": "data-decision",
+        "icon": "🔍",
+        "title": "自然語言數據查詢與決策",
+        "description": "用自然語言直接查詢企業數據，自動歸因分析、生成報告，將數據洞察從「天級」縮短到「秒級」。",
+        "cases": [
+          { "industry": "汽車集團", "result": "BI 問數助手覆蓋研產供銷 9 大領域，從固定報表到任意組合查詢" },
+          { "industry": "連鎖咖啡", "result": "業務洞察從 2-3 天（提需求→數據部門→執行→返回）縮短為即時對話" },
+          { "industry": "股份制銀行", "result": "184 個 AI 場景，半年經濟效益 3.9 億元，節省 475 萬小時" },
+          { "industry": "城市商業銀行", "result": "管理層動態月報從 20 小時縮短至 0.5 小時，決策響應速度提升 80%" }
+        ],
+        "keywords": ["自然語言查詢", "自動歸因", "報告生成", "實時分析", "輔助決策"]
       },
       {
-        "id": "recommendation",
-        "title": "推薦系統",
-        "description": "個性化推薦、用戶畫像、精準營銷、協同過濾",
-        "keywords": ["協同過濾", "深度學習推薦", "實時推薦", "冷啟動", "A/B測試"]
+        "id": "marketing-ops",
+        "icon": "📊",
+        "title": "營銷與運營優化",
+        "description": "將營銷數據、用戶行為、運營指標接入 Agent，自動分析效果、優化策略、生成內容。從經驗驅動到數據驅動的精準運營。",
+        "cases": [
+          { "industry": "連鎖餐飲", "result": "AI 店長覆蓋 4 萬名一線店員，營銷點擊率提升 40%，轉化率提升 25%，運營效率提升 39%" },
+          { "industry": "咖啡新零售", "result": "AI 點單準確率 99%，日均喚起 10 萬+，全鏈路覆蓋點單、研發、銷量預測、門店訂貨" },
+          { "industry": "家電集團", "result": "直播巡檢 Agent 停留時長提升 12%、違規率下降 50%；客服工單效率提升 80%" },
+          { "industry": "乳品企業", "result": "180+ AI 場景，內容製作週期縮短 60%+，人力成本降低 90%" }
+        ],
+        "keywords": ["精準營銷", "ROAS 優化", "內容生成", "運營分析", "用戶洞察"]
       },
       {
-        "id": "data-engineering",
-        "title": "數據工程",
-        "description": "高性能計算、分佈式系統、實時處理、大數據分析",
-        "keywords": ["數據管道", "實時計算", "離線分析", "數據倉庫", "BI平台"]
+        "id": "enterprise-agent",
+        "icon": "🏢",
+        "title": "企業級智能決策中樞",
+        "description": "部署跨部門的 Agent 網絡，將行業知識編碼為可複用的決策模型。從單點工具到企業級智能中樞。",
+        "cases": [
+          { "industry": "家電製造龍頭", "result": "5000+ Agent 已部署，節省 396 萬小時，降本目標從 2000 萬追加到 1 億元" },
+          { "industry": "快遞巨頭", "result": "決策大模型效率提升 120 倍，覆蓋銷量預測、路線優化等 20+ 場景" },
+          { "industry": "綜合金融集團", "result": "200+ 場景，22 億次 AI 服務，年化成本節約 100 億元" },
+          { "industry": "半導體製造", "result": "35,000+ 工業機理模型，設備綜合效率(OEE)提升 7.2%，年省 530 萬美元" }
+        ],
+        "keywords": ["多Agent協同", "行業知識編碼", "跨部門決策", "降本增效", "規模化部署"]
+      }
+    ]
+  },
+  "conversation": {
+    "title": "像和專家對話一樣使用數據",
+    "subtitle": "不只是返回數據，而是理解業務語境、給建議、能追問、能設置後續動作",
+    "messages": [
+      {
+        "role": "user",
+        "content": "上周哪個 SKU 退貨率最高？"
+      },
+      {
+        "role": "assistant",
+        "content": "運動鞋 SKU-2031，退貨率 12.3%，主要原因是尺碼偏小（佔退貨原因 68%）。\n建議：在商品頁增加\"偏小半碼\"的提示，參考 SKU-1892 做過類似調整後退貨率降了 40%。"
+      },
+      {
+        "role": "user",
+        "content": "跟供應商聊過了，他們說下一批會調整楦型。那我現在庫存還夠賣多久？"
+      },
+      {
+        "role": "assistant",
+        "content": "按過去 7 天日均銷量 43 雙，當前庫存 312 雙，還能賣 7.3 天。\n但如果退貨率降到正常水平（~5%），淨銷量會提升，大概 6 天就會斷貨。\n要不要現在下補貨單？"
+      },
+      {
+        "role": "user",
+        "content": "先別，等新批次到了再說。幫我盯著，庫存低於 100 雙提醒我。"
+      },
+      {
+        "role": "assistant",
+        "content": "好的，已設置庫存預警：SKU-2031 低於 100 雙時通知你。"
+      }
+    ]
+  },
+  "differentiation": {
+    "title": "為什麼選擇 Optima Pulse",
+    "subtitle": "與傳統工具的根本區別",
+    "categories": [
+      {
+        "id": "vs-bi",
+        "title": "vs 傳統 BI",
+        "competitor": "帆軟 / Tableau / Power BI",
+        "items": [
+          { "label": "不需要數據工程師建模和維護" },
+          { "label": "不需要學習複雜的工具操作" },
+          { "label": "輸出\"建議\"而非\"圖表\"" }
+        ]
+      },
+      {
+        "id": "vs-ai",
+        "title": "vs 通用 AI",
+        "competitor": "ChatGPT / Claude / 文心一言",
+        "items": [
+          { "label": "直連企業真實數據，非基於粘貼信息" },
+          { "label": "內置行業 Skills，無需自己寫 Prompt" },
+          { "label": "能設置預警和後續動作" }
+        ]
+      },
+      {
+        "id": "vs-chatbi",
+        "title": "vs Chat BI",
+        "competitor": "FineChatBI / Smartbi / 數勢",
+        "items": [
+          { "label": "輕量接入（CLI 工具，非 ETL 管道）" },
+          { "label": "決策導向而非數據展示導向" },
+          { "label": "垂直行業深度（電商 Skills）" }
+        ]
+      }
+    ],
+    "credentials": [
+      {
+        "id": "production",
+        "icon": "🚀",
+        "title": "已投產的商業系統",
+        "description": "Optima Pulse 不是 PPT 產品。團隊已構建並運營完整的 AI 電商系統，具備從數據到決策的端到端交付能力。",
+        "stats": [
+          { "value": "180+", "label": "生產級 API 接口" },
+          { "value": "13", "label": "AI Agent Skills" },
+          { "value": "27", "label": "代碼倉庫" },
+          { "value": "116 萬+", "label": "行代碼" }
+        ]
+      },
+      {
+        "id": "research",
+        "icon": "🎓",
+        "title": "香港科技大學科研背書",
+        "description": "核心團隊來自香港科技大學 iSING Lab（計算機科學與工程系），專注大規模 AI 系統、數據中心網絡與機器學習系統研究。",
+        "stats": [
+          { "value": "HKUST", "label": "iSING Lab" },
+          { "value": "160+", "label": "GPU 集群規模" },
+          { "value": "23.5 萬+", "label": "GPU 計算時數" },
+          { "value": "AI Sys", "label": "核心研究方向" }
+        ]
       }
     ]
   },
   "cases": {
-    "title": "精選案例",
-    "subtitle": "深度 AI 技術，端到端交付，實際業務驗證",
+    "title": "技術實力",
+    "subtitle": "Optima Pulse 背後的技術團隊已交付多個企業級 AI 項目",
     "viewAll": "查看全部案例",
-    "pageTitle": "項目案例",
-    "pageSubtitle": "深度 AI 技術，端到端交付，實際業務驗證",
+    "pageTitle": "技術實力",
+    "pageSubtitle": "Optima Pulse 背後的技術團隊已交付多個企業級 AI 項目",
     "industry": "行業",
     "techStack": "技術棧",
     "achievements": "關鍵成果",
@@ -170,28 +298,31 @@
     ]
   },
   "cta": {
-    "title": "準備開啟您的 AI 項目？",
-    "subtitle": "我們的技術團隊隨時為您提供專業的 AI 解決方案",
-    "startNow": "立即諮詢",
+    "title": "讓數據驅動每一個商業決策",
+    "subtitle": "告訴我們您的業務場景，我們為您定制專屬的 Pulse 方案",
+    "startNow": "預約演示",
     "sendEmail": "發送郵件"
   },
   "contact": {
-    "title": "開始您的 AI 項目",
-    "subtitle": "填寫表單或發送郵件，我們的技術團隊將盡快與您聯絡",
+    "title": "預約 Pulse 演示",
+    "subtitle": "填寫表單或發送郵件，我們將為您安排專屬演示",
     "infoTitle": "聯絡方式",
     "infoSubtitle": "我們會盡快回覆您的諮詢",
     "companyName": "公司名稱",
     "businessScope": "業務範圍",
-    "businessScopeText": "人工智能軟件開發\n大數據技術應用與解決方案",
+    "businessScopeText": "企業決策 Agent\n自然語言數據查詢與決策輔助",
     "emailConsulting": "郵箱諮詢",
     "hongKongOffice": "香港辦公室",
     "addressZh": "香港尖沙咀加連威老道100號\n港晶中心10樓1001(H)室",
     "addressEn": "Room 1001(H), 10/F., Harbour Crystal Centre,\n100 Granville Road, Tsim Sha Tsui, HK",
-    "formTitle": "在線諮詢",
+    "formTitle": "預約演示",
     "formSubtitle": "填寫表單，我們將盡快與您聯絡",
     "name": "姓名",
     "company": "公司",
     "phone": "電話",
+    "businessScenario": "業務場景",
+    "businessScenarioPlaceholder": "請選擇您的業務場景",
+    "businessScenarioOptions": ["電商運營", "廣告投放", "庫存管理", "數據分析", "其他"],
     "message": "需求描述",
     "submit": "提交諮詢",
     "submitting": "提交中...",
@@ -201,6 +332,44 @@
     "successMessage": "我們已收到您的諮詢，將盡快與您聯絡",
     "errorTitle": "提交失敗",
     "errorMessage": "請稍後重試或直接發送郵件給我們"
+  },
+  "product": {
+    "title": "Optima Pulse 產品介紹",
+    "subtitle": "企業決策 Agent，通過 CLI 工具接入企業數據源，用領域 Skills 編碼業務知識，讓用戶以自然語言對話方式查詢數據和討論決策",
+    "architectureTitle": "三層架構",
+    "architectureSubtitle": "CLI 工具 + 領域 Skills + Agent 編排",
+    "verticalTitle": "首個垂直行業：電商",
+    "verticalSubtitle": "電商商家數據源標準化，決策場景清晰且高頻",
+    "skillsTitle": "電商核心 Skills",
+    "skills": [
+      { "name": "庫存健康診斷", "input": "庫存數據 + 銷售趨勢", "output": "補貨建議 + 預計斷貨時間" },
+      { "name": "廣告效果評估", "input": "廣告花費 + 轉化數據", "output": "ROAS 分析 + 優化建議" },
+      { "name": "商品表現排名", "input": "銷售 + 退貨 + 評價數據", "output": "商品健康度評分 + 行動建議" },
+      { "name": "定價策略建議", "input": "成本 + 競品價格 + 銷量彈性", "output": "最優價格區間" },
+      { "name": "退貨原因分析", "input": "退貨數據 + 評價文本", "output": "根因歸類 + 改進建議" },
+      { "name": "現金流預測", "input": "收入 + 支出 + 賬期數據", "output": "未來 N 天現金流預測" },
+      { "name": "選品趨勢分析", "input": "市場數據 + 搜索趨勢", "output": "品類機會評估" }
+    ],
+    "dataSourcesTitle": "支持的數據源",
+    "dataSources": [
+      { "name": "Shopify", "priority": "P0" },
+      { "name": "Amazon Seller Central", "priority": "P0" },
+      { "name": "Google Ads", "priority": "P1" },
+      { "name": "Meta Ads", "priority": "P1" },
+      { "name": "Stripe / PayPal", "priority": "P1" },
+      { "name": "物流 API", "priority": "P2" },
+      { "name": "QuickBooks / Xero", "priority": "P2" },
+      { "name": "Google Analytics", "priority": "P2" }
+    ],
+    "pricingTitle": "定價方向",
+    "pricingPlans": [
+      { "name": "Starter", "target": "單店鋪小賣家", "features": ["2 個數據源接入", "基礎 Skills", "基礎對話"] },
+      { "name": "Growth", "target": "多店鋪 / 多平台", "features": ["5+ 數據源接入", "全部 Skills", "預警通知", "多輪決策對話"] },
+      { "name": "Enterprise", "target": "品牌商 / 大賣家", "features": ["無限數據源", "自定義 Skills", "私有部署", "專屬技術支持"] }
+    ],
+    "ctaTitle": "立即開始",
+    "ctaSubtitle": "聯絡我們，了解 Optima Pulse 如何為您的業務定制決策方案",
+    "ctaButton": "預約演示"
   },
   "footer": {
     "navigation": "導航",

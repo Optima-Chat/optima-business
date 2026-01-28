@@ -21,7 +21,7 @@ function FooterLogo() {
         </div>
       </div>
       <span className="text-lg font-semibold bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
-        Optima AI
+        Optima Pulse
       </span>
     </div>
   )
@@ -36,6 +36,7 @@ export default function Footer() {
 
   const navLinks = [
     { href: `/${locale}`, label: tNav('home') },
+    { href: `/${locale}/product`, label: tNav('product') },
     { href: `/${locale}/cases`, label: tNav('cases') },
     { href: `/${locale}/contact`, label: tNav('contact') }
   ]

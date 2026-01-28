@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'contact' })
 
   return {
-    title: `${t('title')} | Optima AI`,
+    title: `${t('title')} | Optima Pulse`,
     description: t('subtitle'),
   }
 }

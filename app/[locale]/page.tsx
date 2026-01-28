@@ -1,7 +1,8 @@
 import Hero from "@/components/sections/hero"
-import CoreCapabilities from "@/components/sections/core-capabilities"
-import BusinessScope from "@/components/sections/business-scope"
-import FeaturedCases from "@/components/sections/featured-cases"
+import ProductArchitecture from "@/components/sections/product-architecture"
+import UseCases from "@/components/sections/use-cases"
+import ConversationDemo from "@/components/sections/conversation-demo"
+import Differentiation from "@/components/sections/differentiation"
 import CTASection from "@/components/sections/cta-section"
 import { locales } from '@/i18n/request'
 
@@ -16,9 +17,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <Hero />
-      <CoreCapabilities />
-      <BusinessScope />
-      <FeaturedCases />
+      <ProductArchitecture />
+      <UseCases />
+      <ConversationDemo />
+      <Differentiation />
       <CTASection />
     </>
   )

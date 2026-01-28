@@ -2,93 +2,221 @@
   "common": {
     "companyName": "極致智能科技有限公司",
     "companyNameEn": "Optima AI Limited",
-    "companyShort": "Optima AI",
-    "businessScope": "AI Software Development · Big Data Technology",
-    "businessScopeDetail": "Applications & Solutions",
-    "tagline": "AI-Driven Full-Stack Technology Services",
+    "companyShort": "Optima Pulse",
+    "businessScope": "Enterprise Decision Agent",
+    "businessScopeDetail": "Query data and discuss decisions through natural language",
+    "tagline": "Real-time business pulse, optimal decisions",
     "email": "business@optima.chat"
   },
   "nav": {
     "home": "Home",
-    "cases": "Cases",
+    "product": "Product",
+    "cases": "Tech Expertise",
     "contact": "Contact Us",
-    "startConsulting": "Get Started"
+    "startConsulting": "Book Demo"
   },
   "hero": {
-    "title": "Optima AI",
-    "subtitle": "AI-Driven Full-Stack Technology Services",
-    "description": "From Algorithms to Products, End-to-End Delivery",
-    "agenticAI": "Agentic AI",
-    "agenticAISubtitle": "Enterprise AI Agent",
-    "agenticAIDesc": "Intelligent decision-making, tool invocation, multi-turn dialogue",
-    "aiCreation": "AI Creation",
-    "aiCreationSubtitle": "Image/Video Generation",
-    "aiCreationDesc": "Workflow orchestration, automated creation, style transfer",
-    "discriminativeModel": "Discriminative Models",
-    "discriminativeModelSubtitle": "CV + BI Analysis",
-    "discriminativeModelDesc": "Feature extraction, similarity search, data insights",
-    "viewCases": "View Cases"
+    "title": "Optima Pulse",
+    "subtitle": "Real-time business pulse, optimal decisions",
+    "description": "Query data, discuss decisions, and set actions through natural language",
+    "card1Title": "Data Access",
+    "card1Subtitle": "CLI Tools Layer",
+    "card1Desc": "Lightweight integration with enterprise data sources, no ETL needed",
+    "card2Title": "Domain Knowledge",
+    "card2Subtitle": "Skills Layer",
+    "card2Desc": "Industry expert experience encoded as reusable Skills",
+    "card3Title": "Smart Dialogue",
+    "card3Subtitle": "Agent Layer",
+    "card3Desc": "Natural language queries, analysis, recommendations, actions",
+    "bookDemo": "Book Demo",
+    "learnProduct": "Learn More"
   },
-  "capabilities": {
-    "title": "Core Capabilities",
-    "subtitle": "Deep AI Technology × Full-Stack Engineering × Rapid Delivery",
+  "architecture": {
+    "title": "Product Architecture",
+    "subtitle": "Three-layer design, lightweight integration, deep understanding",
     "items": [
       {
-        "id": "deep-ai",
-        "icon": "🤖",
-        "title": "Deep AI Capabilities",
-        "description": "Cutting-edge models like CLIP, FAISS, MUSIQ. Full coverage of computer vision, NLP, and recommendation systems. GPU cluster optimization for 10x+ performance boost."
+        "id": "cli-tools",
+        "icon": "🔌",
+        "title": "CLI Tools Layer",
+        "label": "Data Access",
+        "description": "Each data source = one CLI tool. Standardized interfaces, plug and play. Adding a new data source requires no ETL pipeline — just write a CLI tool.",
+        "details": ["Shopify / Amazon API", "Google Ads / Meta Ads", "Stripe / PayPal", "ERP / Finance Systems", "Direct Database Connection"]
       },
       {
-        "id": "full-stack",
-        "icon": "🚀",
-        "title": "Full-Stack Delivery",
-        "description": "From React/Next.js frontend to Python/Node.js backend, databases to message queues, complete architecture design. Docker/K8s deployment with monitoring and alerting all-in-one."
+        "id": "skills",
+        "icon": "🧠",
+        "title": "Skills Layer",
+        "label": "Domain Knowledge",
+        "description": "Encode industry experts' judgment into reusable Skills. Switch industries = switch Skills, the core engine stays the same.",
+        "details": ["Inventory Health Diagnosis", "Ad Performance Evaluation", "Product Performance Ranking", "Pricing Strategy", "Return Analysis", "Cash Flow Forecast"]
       },
       {
-        "id": "fast-iteration",
-        "icon": "⚡",
-        "title": "Rapid Iteration",
-        "description": "Deliver enterprise-grade systems in 2 months. Top-tier team with Tencent/Alibaba/HKUST backgrounds. Agile development, continuous delivery, quick response to changing requirements."
+        "id": "agent",
+        "icon": "💬",
+        "title": "Agent Layer",
+        "label": "Orchestration & Reasoning",
+        "description": "Understands user intent, invokes tools for data, selects Skills for analysis. Supports multi-turn dialogue, follow-up questions, and proactive suggestions.",
+        "details": ["Intent Understanding", "Tool Invocation", "Multi-turn Dialogue", "Follow-up Questions", "Proactive Suggestions", "Alert Setup"]
       }
     ]
   },
-  "businessScope": {
-    "title": "Business Scope",
-    "subtitle": "Comprehensive AI Technology Services: Computer Vision, NLP, Recommendation Systems, Data Engineering",
+  "useCases": {
+    "title": "AI Decision Scenarios Validated by Enterprises",
+    "subtitle": "These scenarios are proven at leading Chinese enterprises with quantifiable ROI — Optima Pulse brings the same capabilities to growing businesses",
     "items": [
       {
-        "id": "computer-vision",
-        "title": "Computer Vision",
-        "description": "Image recognition, video analysis, quality assessment, object detection",
-        "keywords": ["CLIP", "YOLO", "Object Detection", "Image Classification", "OCR", "Face Recognition"]
+        "id": "supply-chain",
+        "icon": "📦",
+        "title": "Inventory & Supply Chain Decisions",
+        "description": "Connect inventory, sales, and logistics data to get real-time restocking advice, stockout alerts, and supply chain optimization. From reactive to data-driven proactive decisions.",
+        "cases": [
+          { "industry": "Apparel Leader", "result": "R&D cycle shortened from 100 to 27 days (-73%), only 40% initial orders, rest placed based on rolling data" },
+          { "industry": "Logistics Giant", "result": "Delivery efficiency +50%, labor costs -30%, AI-powered supply chain decision support across network" },
+          { "industry": "Dairy Conglomerate", "result": "41 Agents across supply chain, delivery cycle -55%, operating costs -32%" },
+          { "industry": "FMCG Giant (China)", "result": "Dynamic fulfillment routing per order, logistics costs -10%, receiving efficiency +30%" }
+        ],
+        "keywords": ["Inventory Alerts", "Stockout Prediction", "Restocking", "Dynamic Fulfillment", "Supply Chain"]
       },
       {
-        "id": "nlp",
-        "title": "Natural Language Processing",
-        "description": "Intelligent customer service, text analysis, multilingual support, semantic understanding",
-        "keywords": ["Dialogue Systems", "Sentiment Analysis", "Text Classification", "Named Entity Recognition", "Machine Translation"]
+        "id": "data-decision",
+        "icon": "🔍",
+        "title": "Natural Language Data Query & Decisions",
+        "description": "Query enterprise data in natural language, with automatic root cause analysis and report generation. Reduce data insights from days to seconds.",
+        "cases": [
+          { "industry": "Auto Group", "result": "BI 'Ask Data' assistant covers 9 business domains across R&D, production, supply, and sales" },
+          { "industry": "Coffee Chain", "result": "Business insights reduced from 2-3 days (request→data team→execute→return) to instant conversation" },
+          { "industry": "Joint-Stock Bank", "result": "184 AI scenarios, ¥390M economic value in 6 months, saving 4.75M work hours" },
+          { "industry": "City Commercial Bank", "result": "Executive monthly reports from 20 hours to 0.5 hours, decision response speed +80%" }
+        ],
+        "keywords": ["NL Query", "Auto Attribution", "Report Generation", "Real-time Analytics", "Decision Support"]
       },
       {
-        "id": "recommendation",
-        "title": "Recommendation Systems",
-        "description": "Personalized recommendations, user profiling, precision marketing, collaborative filtering",
-        "keywords": ["Collaborative Filtering", "Deep Learning Recommendation", "Real-time Recommendation", "Cold Start", "A/B Testing"]
+        "id": "marketing-ops",
+        "icon": "📊",
+        "title": "Marketing & Operations Optimization",
+        "description": "Feed marketing data, user behavior, and operational metrics into the Agent for automatic analysis, strategy optimization, and content generation. From intuition-driven to data-driven operations.",
+        "cases": [
+          { "industry": "Chain Restaurant", "result": "AI store manager serves 40K frontline staff, marketing CTR +40%, conversion +25%, operational efficiency +39%" },
+          { "industry": "Coffee New Retail", "result": "AI ordering 99% accuracy, 100K+ daily triggers, full coverage from ordering to R&D to store replenishment" },
+          { "industry": "Electronics Group", "result": "Livestream patrol Agent: dwell time +12%, violations -50%; customer service ticket efficiency +80%" },
+          { "industry": "Dairy Enterprise", "result": "180+ AI scenarios, content production cycle -60%+, labor costs -90%" }
+        ],
+        "keywords": ["Precision Marketing", "ROAS Optimization", "Content Generation", "Ops Analytics", "User Insights"]
       },
       {
-        "id": "data-engineering",
-        "title": "Data Engineering",
-        "description": "High-performance computing, distributed systems, real-time processing, big data analysis",
-        "keywords": ["Data Pipelines", "Real-time Computing", "Offline Analysis", "Data Warehouse", "BI Platform"]
+        "id": "enterprise-agent",
+        "icon": "🏢",
+        "title": "Enterprise Intelligence Hub",
+        "description": "Deploy cross-department Agent networks, encoding industry knowledge into reusable decision models. From point tools to an enterprise-wide intelligence hub.",
+        "cases": [
+          { "industry": "Appliance Manufacturer", "result": "5,000+ Agents deployed, saving 3.96M hours, cost savings target raised from ¥20M to ¥100M" },
+          { "industry": "Express Delivery Giant", "result": "Decision model efficiency +120x, covering 20+ scenarios including demand forecasting and route optimization" },
+          { "industry": "Financial Conglomerate", "result": "200+ scenarios, 2.2B AI service calls, annual cost savings of ¥10B" },
+          { "industry": "Semiconductor Fab", "result": "35,000+ industrial mechanism models, OEE +7.2%, saving $5.3M annually" }
+        ],
+        "keywords": ["Multi-Agent", "Knowledge Encoding", "Cross-dept Decisions", "Cost Reduction", "Scale Deployment"]
+      }
+    ]
+  },
+  "conversation": {
+    "title": "Use data like talking to an expert",
+    "subtitle": "Not just returning data — understanding business context, giving advice, asking follow-ups, setting actions",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Which SKU had the highest return rate last week?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sneakers SKU-2031, return rate 12.3%, main reason: sizing runs small (68% of returns).\nSuggestion: Add a \"runs half size small\" note on the product page. SKU-1892 made a similar change and return rate dropped 40%."
+      },
+      {
+        "role": "user",
+        "content": "Talked to the supplier, they'll adjust the last next batch. How long will my current stock last?"
+      },
+      {
+        "role": "assistant",
+        "content": "At 43 pairs daily average over the past 7 days, current stock of 312 pairs will last 7.3 days.\nHowever, if returns drop to normal levels (~5%), net sales will increase and you'd run out in about 6 days.\nWant me to draft a restock order?"
+      },
+      {
+        "role": "user",
+        "content": "Not yet, let's wait for the new batch. Keep an eye on it — alert me when stock drops below 100 pairs."
+      },
+      {
+        "role": "assistant",
+        "content": "Done. Inventory alert set: you'll be notified when SKU-2031 drops below 100 pairs."
+      }
+    ]
+  },
+  "differentiation": {
+    "title": "Why Optima Pulse",
+    "subtitle": "Fundamentally different from traditional tools",
+    "categories": [
+      {
+        "id": "vs-bi",
+        "title": "vs Traditional BI",
+        "competitor": "FineReport / Tableau / Power BI",
+        "items": [
+          { "label": "No data engineers needed for modeling and maintenance" },
+          { "label": "No complex tool training required" },
+          { "label": "Outputs \"recommendations\" not \"charts\"" }
+        ]
+      },
+      {
+        "id": "vs-ai",
+        "title": "vs General AI",
+        "competitor": "ChatGPT / Claude / Gemini",
+        "items": [
+          { "label": "Connected to real enterprise data, not copy-paste" },
+          { "label": "Built-in industry Skills, no prompt engineering needed" },
+          { "label": "Can set alerts and follow-up actions" }
+        ]
+      },
+      {
+        "id": "vs-chatbi",
+        "title": "vs Chat BI",
+        "competitor": "FineChatBI / Smartbi / SwiftAgent",
+        "items": [
+          { "label": "Lightweight integration (CLI tools, not ETL pipelines)" },
+          { "label": "Decision-oriented, not data-display-oriented" },
+          { "label": "Deep vertical industry expertise (E-commerce Skills)" }
+        ]
+      }
+    ],
+    "credentials": [
+      {
+        "id": "production",
+        "icon": "🚀",
+        "title": "Production-Deployed Commercial System",
+        "description": "Optima Pulse is not a slide deck. Our team has built and operates a full AI e-commerce system with end-to-end delivery from data to decisions.",
+        "stats": [
+          { "value": "180+", "label": "Production APIs" },
+          { "value": "13", "label": "AI Agent Skills" },
+          { "value": "27", "label": "Code Repositories" },
+          { "value": "1.16M+", "label": "Lines of Code" }
+        ]
+      },
+      {
+        "id": "research",
+        "icon": "🎓",
+        "title": "HKUST Research Backing",
+        "description": "Core team from HKUST iSING Lab (Dept. of Computer Science & Engineering), specializing in large-scale AI systems, data center networking, and machine learning systems research.",
+        "stats": [
+          { "value": "HKUST", "label": "iSING Lab" },
+          { "value": "160+", "label": "GPU Cluster Scale" },
+          { "value": "235K+", "label": "GPU Hours" },
+          { "value": "AI Sys", "label": "Core Research Focus" }
+        ]
       }
     ]
   },
   "cases": {
-    "title": "Featured Cases",
-    "subtitle": "Deep AI Technology, End-to-End Delivery, Proven in Production",
+    "title": "Tech Expertise",
+    "subtitle": "The team behind Optima Pulse has delivered multiple enterprise-grade AI projects",
     "viewAll": "View All Cases",
-    "pageTitle": "Project Cases",
-    "pageSubtitle": "Deep AI Technology, End-to-End Delivery, Proven in Production",
+    "pageTitle": "Tech Expertise",
+    "pageSubtitle": "The team behind Optima Pulse has delivered multiple enterprise-grade AI projects",
     "industry": "Industry",
     "techStack": "Tech Stack",
     "achievements": "Key Achievements",
@@ -170,28 +298,31 @@
     ]
   },
   "cta": {
-    "title": "Ready to Start Your AI Project?",
-    "subtitle": "Our technical team is ready to provide professional AI solutions",
-    "startNow": "Get Started",
+    "title": "Let data drive every business decision",
+    "subtitle": "Tell us your business scenario, we'll customize a Pulse solution for you",
+    "startNow": "Book Demo",
     "sendEmail": "Send Email"
   },
   "contact": {
-    "title": "Start Your AI Project",
-    "subtitle": "Fill out the form or send us an email, our technical team will contact you soon",
+    "title": "Book a Pulse Demo",
+    "subtitle": "Fill out the form or send us an email, we'll arrange a personalized demo for you",
     "infoTitle": "Contact Information",
     "infoSubtitle": "We will respond to your inquiry as soon as possible",
     "companyName": "Company Name",
     "businessScope": "Business Scope",
-    "businessScopeText": "AI Software Development\nBig Data Technology Applications & Solutions",
+    "businessScopeText": "Enterprise Decision Agent\nNatural Language Data Query & Decision Support",
     "emailConsulting": "Email Consultation",
     "hongKongOffice": "Hong Kong Office",
     "addressZh": "香港尖沙咀加連威老道100號\n港晶中心10樓1001(H)室",
     "addressEn": "Room 1001(H), 10/F., Harbour Crystal Centre,\n100 Granville Road, Tsim Sha Tsui, HK",
-    "formTitle": "Online Consultation",
+    "formTitle": "Book Demo",
     "formSubtitle": "Fill out the form and we will contact you soon",
     "name": "Name",
     "company": "Company",
     "phone": "Phone",
+    "businessScenario": "Business Scenario",
+    "businessScenarioPlaceholder": "Select your business scenario",
+    "businessScenarioOptions": ["E-commerce Operations", "Ad Placement", "Inventory Management", "Data Analysis", "Other"],
     "message": "Message",
     "submit": "Submit Inquiry",
     "submitting": "Submitting...",
@@ -201,6 +332,44 @@
     "successMessage": "We have received your inquiry and will contact you soon",
     "errorTitle": "Submission Failed",
     "errorMessage": "Please try again later or send us an email directly"
+  },
+  "product": {
+    "title": "Optima Pulse Product",
+    "subtitle": "Enterprise decision Agent that connects to enterprise data sources via CLI tools, encodes business knowledge through domain Skills, and lets users query data and discuss decisions via natural language",
+    "architectureTitle": "Three-Layer Architecture",
+    "architectureSubtitle": "CLI Tools + Domain Skills + Agent Orchestration",
+    "verticalTitle": "First Vertical: E-commerce",
+    "verticalSubtitle": "Standardized e-commerce data sources, clear and high-frequency decision scenarios",
+    "skillsTitle": "E-commerce Core Skills",
+    "skills": [
+      { "name": "Inventory Health Diagnosis", "input": "Inventory data + sales trends", "output": "Restocking advice + estimated stockout time" },
+      { "name": "Ad Performance Evaluation", "input": "Ad spend + conversion data", "output": "ROAS analysis + optimization advice" },
+      { "name": "Product Performance Ranking", "input": "Sales + returns + review data", "output": "Product health score + action items" },
+      { "name": "Pricing Strategy", "input": "Cost + competitor prices + demand elasticity", "output": "Optimal price range" },
+      { "name": "Return Analysis", "input": "Return data + review text", "output": "Root cause classification + improvement suggestions" },
+      { "name": "Cash Flow Forecast", "input": "Revenue + expenses + payment terms", "output": "N-day cash flow forecast" },
+      { "name": "Product Selection Trends", "input": "Market data + search trends", "output": "Category opportunity assessment" }
+    ],
+    "dataSourcesTitle": "Supported Data Sources",
+    "dataSources": [
+      { "name": "Shopify", "priority": "P0" },
+      { "name": "Amazon Seller Central", "priority": "P0" },
+      { "name": "Google Ads", "priority": "P1" },
+      { "name": "Meta Ads", "priority": "P1" },
+      { "name": "Stripe / PayPal", "priority": "P1" },
+      { "name": "Logistics API", "priority": "P2" },
+      { "name": "QuickBooks / Xero", "priority": "P2" },
+      { "name": "Google Analytics", "priority": "P2" }
+    ],
+    "pricingTitle": "Pricing",
+    "pricingPlans": [
+      { "name": "Starter", "target": "Single-store sellers", "features": ["2 data source integrations", "Basic Skills", "Basic dialogue"] },
+      { "name": "Growth", "target": "Multi-store / Multi-platform", "features": ["5+ data source integrations", "All Skills", "Alert notifications", "Multi-turn decision dialogue"] },
+      { "name": "Enterprise", "target": "Brands / Large sellers", "features": ["Unlimited data sources", "Custom Skills", "Private deployment", "Dedicated support"] }
+    ],
+    "ctaTitle": "Get Started",
+    "ctaSubtitle": "Contact us to learn how Optima Pulse can customize a decision solution for your business",
+    "ctaButton": "Book Demo"
   },
   "footer": {
     "navigation": "Navigation",

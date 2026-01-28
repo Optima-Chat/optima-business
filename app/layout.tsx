@@ -7,17 +7,17 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Optima AI - AI 技术定制开发服务",
-    template: "%s | Optima AI",
+    default: "Optima Pulse - 企业决策 Agent",
+    template: "%s | Optima Pulse",
   },
-  description: "極致智能科技有限公司（Optima AI Limited）- 专注人工智能软件开发、大数据技术应用与解决方案。从算法到产品，端到端交付。",
-  keywords: ["AI开发", "AI定制", "人工智能软件开发", "大数据技术", "计算机视觉", "NLP", "推荐系统", "深度学习"],
+  description: "Optima Pulse — 实时感知企业脉搏，做出最优决策。通过自然语言对话查询企业数据、讨论决策、设置行动。",
+  keywords: ["企业决策", "AI Agent", "数据查询", "电商运营", "库存管理", "广告优化", "决策助手", "自然语言"],
   authors: [{ name: "Optima AI Limited" }],
   openGraph: {
-    title: "Optima AI - AI 技术定制开发服务",
-    description: "人工智能软件开发、大数据技术应用与解决方案。从算法到产品，端到端交付。",
+    title: "Optima Pulse - 企业决策 Agent",
+    description: "实时感知企业脉搏，做出最优决策。自然语言对话查询数据、讨论决策、设置行动。",
     url: "https://optima-ai.biz",
-    siteName: "Optima AI",
+    siteName: "Optima Pulse",
     locale: "zh_CN",
     type: "website",
   },

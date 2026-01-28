@@ -74,7 +74,7 @@ export async function POST(request: Request) {
     // 发送邮件通知
     const resendClient = getResendClient()
     const emailResult = await resendClient.emails.send({
-      from: "Optima AI 官网 <noreply@optima.sh>",
+      from: "Optima Pulse 官网 <noreply@optima.sh>",
       to: "business@optima.chat",
       subject: `[官网咨询] ${validatedData.name}${validatedData.company ? ` - ${validatedData.company}` : ""}`,
       html: `
@@ -136,7 +136,7 @@ export async function POST(request: Request) {
           <body>
             <div class="header">
               <h2 style="margin: 0;">🔔 新的咨询表单</h2>
-              <p style="margin: 5px 0 0 0; opacity: 0.9;">来自 Optima AI 官网</p>
+              <p style="margin: 5px 0 0 0; opacity: 0.9;">来自 Optima Pulse 官网</p>
             </div>
 
             <div class="content">
@@ -184,7 +184,7 @@ export async function POST(request: Request) {
             </div>
 
             <div class="footer">
-              <p>此邮件由 Optima AI 官网自动发送</p>
+              <p>此邮件由 Optima Pulse 官网自动发送</p>
               <p>请及时回复客户咨询</p>
             </div>
           </body>
